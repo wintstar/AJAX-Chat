@@ -3,7 +3,7 @@ Blueimp's AJAX Chat
 
 forked from Frug/AJAX-Chat [Branch: psr-4](https://github.com/Frug/AJAX-Chat/tree/psr-4)
 
-=================================================================================================
+==========================================================================================
 
 INFO
 ----
@@ -19,10 +19,10 @@ Optional
 --------
 If you do not want to use Composer, you can use the autoloader from the bootstrap directory. This autoloader is equivalent to PSR-4.
 
-Open public/index.php and change:
+Open public/index.php and public/install.php and change:
 
 with Composer:
-```` 
+````
 // Include Class libraries:
 // if you don't want to use Composer then commented without // the autoloader to vendor and use the bootstrap to bootstrap
 
@@ -31,9 +31,9 @@ require(AJAX_CHAT_PATH.'vendor/autoload.php');
 
 // without Composer. Autoloader is equivalent to PSR-4
 // require(AJAX_CHAT_PATH.'bootstrap/autoload.php');
-```` 
+````
 **without** Composer:
-```` 
+````
 // Include Class libraries:
 // if you don't want to use Composer then commented without // the autoloader to vendor and use the bootstrap to bootstrap
 
@@ -42,13 +42,13 @@ require(AJAX_CHAT_PATH.'vendor/autoload.php');
 
 // without Composer. Autoloader is equivalent to PSR-4
 require(AJAX_CHAT_PATH.'bootstrap/autoload.php');
-```` 
+````
 
 .htacces
 --------
 for root directory
-(you may have to add RewriteBase depending on the server configuration)  
-```` 
+(you may have to add RewriteBase depending on the server configuration)
+````
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	#
@@ -63,9 +63,9 @@ for root directory
 	RewriteCond %{REQUEST_URI} !^public
 	RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
-```` 
+````
 for public directory
-```` 
+````
 <IfModule mod_rewrite.c>
 	<IfModule mod_negotiation.c>
 		Options -MultiViews -Indexes
@@ -87,9 +87,9 @@ for public directory
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule ^ index.php [L]
 </IfModule>
-```` 
+````
 
-=================================================================================================
+==========================================================================================
 
 AJAX stands for "Asynchronous JavaScript and XML".
 The AJAX Chat clients (the user browsers) use JavaScript to query the web server for updates.
@@ -175,5 +175,5 @@ Planned changes in this repository
     - public/js/lang/*.js  "userMenuLogsview: 'Switch to the chat protocol',"
     - src/lang/*.php       "$lang['returnToChat'] = 'Return to chat';"
     - Translators of your language **have yet to add this**. In english and german it is inserted
-  
-  <sub>(* your language)</sup>
+
+<sub>(* your language)</sup>

@@ -16,7 +16,13 @@ ini_set('display_errors', 1);
 define('AJAX_CHAT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/../');
 
 // Include Class libraries:
+// if you don't want to use Composer then commented without // the autoloader to vendor and use the bootstrap to bootstrap
+
+// with Composer
 require(AJAX_CHAT_PATH.'vendor/autoload.php');
+
+// without Composer. Autoloader is equivalent to PSR-4
+// require(AJAX_CHAT_PATH.'bootstrap/autoload.php');
 
 // Remember to set up the config file to point to your database:
 file_exists(AJAX_CHAT_PATH.'src/config.php') or die('Failed to load lib/config.php. Did you remember to create a config file based on config.php.example?');
@@ -52,7 +58,7 @@ class CustomAJAXChatInstaller extends \AjaxChat\Integrations\Standalone\CustomAJ
 			if(count($queries) <= $index) {
 				array_push($queries, $line."\n");
 			} else {
-				$queries[$index] .= $line."\n";	
+				$queries[$index] .= $line."\n";
 			}
 			// Create a new array item for each query:
 			if(substr($line, -1) == ';') {
@@ -67,7 +73,7 @@ class CustomAJAXChatInstaller extends \AjaxChat\Integrations\Standalone\CustomAJ
 		foreach($queries as $sql) {
 			// Create a new SQL query:
 			$result = $this->db->sqlQuery($sql);
-			
+
 			// Stop if an error occurs:
 			if($result->error()) {
 				echo $result->getError();
