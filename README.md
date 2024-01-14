@@ -163,7 +163,6 @@ To report bugs use github issues: https://github.com/Frug/AJAX-Chat
 Planned changes in this repository
 ----------------------------------
 
-- Fixed: Deprecated elements in Javascript
 - Fixed: Chat Logs (?view=logs), new Layout, fixed Logout, added Button return to chat
 - New: Optional use Composer
 - New: Cookie [Samesite](http://www.sjoerdlangkemper.nl/2016/04/14/preventing-csrf-with-samesite-cookie-attribute/)
@@ -182,3 +181,4 @@ Changes in this repository
 
 14.01.2024
 - Fixed: Issue [Typing errors mo3](https://github.com/Frug/AJAX-Chat/issues/293)
+- Fixed: Deprecated elements in Javascript

@@ -576,14 +576,17 @@ var ajaxChat = {
 		}
 	},
 
-	loadXML: function(str) {
+	loadXML: function (str) {
+		var ua = window.navigator.userAgent;
+		var msie = ua.indexOf("MSIE");
+
 		if(!arguments.callee.parser) {
 			try {
 				// DOMParser native implementation (Mozilla, Opera):
 				arguments.callee.parser = new DOMParser();
 			} catch(e) {
 				var customDOMParser = function() {};
-				if(navigator.appName === 'Microsoft Internet Explorer') {
+				if(msie) {
 					// IE implementation:
 					customDOMParser.prototype.parseFromString = function(str, contentType) {
 						if(!arguments.callee.XMLDOM) {
@@ -1997,13 +2000,14 @@ var ajaxChat = {
 	getScriptLinkValue: function(value) {
 		// This method returns plainText encoded values from javascript links
 		// The value has to be utf8Decoded for MSIE and Opera:
-		if(typeof arguments.callee.utf8Decode === 'undefined') {
-			switch(navigator.appName) {
-				case 'Microsoft Internet Explorer':
-				case 'Opera':
-					arguments.callee.utf8Decode = true;
-					return this.utf8Decode(value);
-				default:
+		var ua = window.navigator.userAgent;
+
+		if (typeof arguments.callee.utf8Decode === 'undefined') {
+			if (ua.indexOf("MSIE") || ua.indexOf("Opera")) {
+				arguments.callee.utf8Decode = true;
+				return this.utf8Decode(value);
+			}
+			else {
 					arguments.callee.utf8Decode = false;
 					return value;
 			}
@@ -2118,7 +2122,7 @@ var ajaxChat = {
 	insertBBCode: function(bbCode) {
 		switch(bbCode) {
 			case 'url':
-				var url = prompt(this.lang['urlDialog'], 'http://');
+				var url = prompt(this.lang['urlDialog'], 'https://');
 				if(url)
 					this.insert('[url=' + url + ']', '[/url]');
 				else

@@ -885,3 +885,14 @@ Bugfixes:
 
 Misc:
 - Database userID and channel fields changed to unsigned int.
+
+Version 0.9.0? Standalone (14.01.2024) Author wintstar
+--------------------------------------------
+New Features:
+- Added Selection use Composer or not
+
+Bugfixes:
+- Fixed: Typing errors mo3 => https://github.com/Frug/AJAX-Chat/issues/293
+
+Misc:
+- Fixed: Deprecated elements in Javascript
