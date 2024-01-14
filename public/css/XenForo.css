@@ -8,7 +8,7 @@
 @import url('custom.css');
 
 /* Main Buttons */
-#content #logoutButton,#content #submitButton,#loginForm #loginButton {
+#content #logoutButton, #content a#returnchatButton, #content #submitButton,#loginForm #loginButton {
 	font: 12pt Calibri, 'Trebuchet MS', Verdana, Geneva, Arial, Helvetica, sans-serif;
 	color: white;
 	font-weight: bold;
@@ -112,7 +112,7 @@
 
 /* Status Icon */
 #content #statusIconContainer {
-	background: url('../img/loading-sprite.png') no-repeat 0px 0px; 
+	background: url('../img/loading-sprite.png') no-repeat 0px 0px;
 }
 #content #statusIconContainer.waiting {
 	background-position: 0px -22px;
@@ -176,7 +176,7 @@
 	background-color:#F8D9D0;
 }
 #content #onlineListContainer #onlineList, #content #helpContainer #helpList, #content #settingsContainer #settingsList, #content #reportContainer #reportList {
-	padding-top: 5px;	
+	padding-top: 5px;
 }
 #content #bbCodeContainer,#content #emoticonsContainer {
 	background-color: rgb(240, 247, 252);

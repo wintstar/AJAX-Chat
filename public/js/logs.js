@@ -40,9 +40,9 @@
 	}
 
 	ajaxChat.sendMessage = function() {
-		this.getLogs();	
+		this.getLogs();
 	}
-	
+
 	ajaxChat.getLogs = function() {
 		clearTimeout(this.timer);
 		this.clearChatList();
@@ -50,7 +50,7 @@
 		this.logsCommand = null;
 		this.makeRequest(this.ajaxURL,'POST',this.getLogsCommand());
 	}
-	
+
 	ajaxChat.getLogsCommand = function() {
 		if(!this.logsCommand) {
 			if(!this.dom['inputField'].value &&
@@ -83,11 +83,6 @@
 		}
 		return true;
 	}
-	
-	ajaxChat.logout = function() {
-		clearTimeout(this.timer);
-		this.makeRequest(this.ajaxURL,'POST','logout=true');
-	}
 
 	ajaxChat.switchLanguage = function(langCode) {
 		window.location.search = '?view=logs&lang='+langCode;
@@ -107,7 +102,7 @@
 		}
 		this.timer = setTimeout('ajaxChat.updateChat(null);', timeout);
 	}
-	
+
 	ajaxChat.socketUpdate = function(data) {
 		if(this.logsMonitorMode) {
 			var xmlDoc = this.loadXML(data);
@@ -125,4 +120,3 @@
 			}
 		}
 	}
-	

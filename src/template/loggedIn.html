@@ -8,36 +8,38 @@
 	<title>[LANG]title[/LANG]</title>
 	[STYLE_SHEETS/]
 	<!--[if lt IE 8]><script type="text/javascript">var isIElt8 = true;</script><![endif]-->
-	<script src="js/chat.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="js/custom.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
-	<script src="js/config.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="js/FABridge.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/chat.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/custom.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/config.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/FABridge.js" type="text/javascript" charset="UTF-8"></script>
 	<script type="text/javascript">
 		// <![CDATA[
+			var ajax_chat_url = "./";
+
 			ajaxChat.view = {
 				debounce: false,
-				
+
 				// Use the visibility of this to guess that the user is on a mobile device
 				mobileDetectElement: 'submitButtonContainer',
-				
+
 				// Use the visibility of this to guess that the screen is tiny and hide popups
 				tinyScreenDetectElement: 'bbCodeContainer',
-				
+
 				bindPopups: function() {
 					this.bindButtonToPopup('showChannelsButton','logoutChannelInner');
 					this.bindButtonToPopup('bbCodeEmoticon','emoticonsContainer');
 					this.bindButtonToPopup('bbCodeColor','colorCodesContainer');
 				},
-				
+
 				bindButtonToPopup: function(buttonID, popupID) {
 					var buttonElement = document.getElementById(buttonID),
 						popupElement = document.getElementById(popupID);
-				
+
 					if (!buttonElement || !popupElement) {
 						return;
 					}
-					
+
 					if (this.isVisible(buttonElement) || this.isTinyScreen()) {
 						popupElement.style.display = 'none';
 						ajaxChat.addClass(popupElement, 'popup');
@@ -45,13 +47,13 @@
 						popupElement.style.display = 'block';
 						ajaxChat.removeClass(popupElement, 'popup');
 					}
-					
+
 					if (!buttonElement.linkedPopupID) { // For IE<9 we need to avoid re-attaching events.
 						buttonElement.linkedPopupID = popupID;
 						ajaxChat.addEvent(buttonElement, 'click', this.toggleButton );
 					}
 				},
-				
+
 				toggleButton: function(e) {
 					// Workaround for IE<9.
 					// If you don't care about IE8, remove the crud and use "this" to find the target.
@@ -60,15 +62,15 @@
 					target.className = (target.className === 'button' ? 'button off' : 'button');
 					ajaxChat.showHide(target.linkedPopupID);
 				},
-				
+
 				renderResize: function() {
 					var self = this;
-					
+
 					self.useDebounce(function() {
 						// to support ie8 we need to apply a height to this container and reapply it on resize
 						if (typeof isIElt8 !== 'undefined') {
 							var cont = document.getElementById('mainPanelContainer');
-							cont.removeAttribute("style"); 
+							cont.removeAttribute("style");
 							cont.style.height = cont.clientHeight;
 						}
 
@@ -88,31 +90,31 @@
 						}
 					});
 				},
-				
+
 				useDebounce: function(callback) {
 					var self = this;
 					if (self.debounce === false) {
 						self.debounce = true;
-						
+
 						setTimeout(function() {
 							callback();
 							self.debounce = false;
 						}, 100);
 					}
 				},
-				
+
 				isVisible: function(element) {
 					return element.offsetWidth > 0 || element.offsetHeight > 0;
 				},
-				
+
 				isMobile: function() {
 					return !this.isVisible(document.getElementById(this.mobileDetectElement));
 				},
-				
+
 				isTinyScreen: function() {
 					return !this.isVisible(document.getElementById(this.tinyScreenDetectElement));
 				},
-				
+
 				toggleContainer: function(containerID, hideContainerIDs) {
 					if(hideContainerIDs) {
 						for(var i=0; i<hideContainerIDs.length; i++) {
@@ -121,20 +123,19 @@
 					}
 					ajaxChat.showHide(containerID);
 				}
-				
+
 			};
-			
+
 			function initialize() {
-					
 				if(ajaxChat.view.isMobile()) {
 					ajaxChat.setSetting('blink', false);
 					ajaxChat.view.toggleContainer('onlineListContainer', ['settingsContainer','helpContainer']);
 				}
-				
+
 				ajaxChat.view.bindPopups();
-				
+
 				ajaxChat.addEvent(window, 'resize', function() { ajaxChat.view.renderResize(); } );
-				
+
 				ajaxChat.updateButton('audio', 'audioButton');
 				ajaxChat.updateButton('autoScroll', 'autoScrollButton');
 				document.getElementById('bbCodeSetting').checked = ajaxChat.getSetting('bbCode');
@@ -192,7 +193,7 @@
 			ajaxChatConfig.socketServerHost = decodeURIComponent('[SOCKET_SERVER_HOST/]');
 			ajaxChatConfig.socketServerPort = parseInt('[SOCKET_SERVER_PORT/]');
 			ajaxChatConfig.socketServerChatID = parseInt('[SOCKET_SERVER_CHAT_ID/]');
-		
+
 			ajaxChat.init(ajaxChatConfig, ajaxChatLang, true, true, true, initialize);
 		// ]]>
 	</script>
@@ -211,12 +212,12 @@
 				<label for="languageSelection">[LANG]language[/LANG]:</label>
 				<select id="languageSelection" onchange="ajaxChat.switchLanguage(this.value);">[LANGUAGE_OPTIONS/]</select>
 			</div>
-			<input type="image" src="img/pixel.gif" class="button" id="showChannelsButton" alt="[LANG]toggleHelp[/LANG]"/>
+			<input type="image" src="./img/pixel.gif" class="button" id="showChannelsButton" alt="[LANG]toggleHelp[/LANG]"/>
 		</div>
 		<div id="statusIconContainer" class="waiting"></div>
-		
+
 		<div id="mainPanelContainer">
-		
+
 			<div id="onlineListContainer">
 				<h3>[LANG]onlineUsers[/LANG]</h3>
 				<div id="onlineList"></div>
@@ -390,31 +391,31 @@
 					</dl>
 					<dl>
 						<dt><label for="soundReceiveSetting">[LANG]settingsSoundReceive[/LANG]</label></dt>
-						<dd><select id="soundReceiveSetting" onchange="ajaxChat.setSetting('soundReceive', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundReceiveSetting" onchange="ajaxChat.setSetting('soundReceive', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="soundSendSetting">[LANG]settingsSoundSend[/LANG]</label></dt>
-						<dd><select id="soundSendSetting" onchange="ajaxChat.setSetting('soundSend', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundSendSetting" onchange="ajaxChat.setSetting('soundSend', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="soundEnterSetting">[LANG]settingsSoundEnter[/LANG]</label></dt>
-						<dd><select id="soundEnterSetting" onchange="ajaxChat.setSetting('soundEnter', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundEnterSetting" onchange="ajaxChat.setSetting('soundEnter', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="soundLeaveSetting">[LANG]settingsSoundLeave[/LANG]</label></dt>
-						<dd><select id="soundLeaveSetting" onchange="ajaxChat.setSetting('soundLeave', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundLeaveSetting" onchange="ajaxChat.setSetting('soundLeave', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="soundChatBotSetting">[LANG]settingsSoundChatBot[/LANG]</label></dt>
-						<dd><select id="soundChatBotSetting" onchange="ajaxChat.setSetting('soundChatBot', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundChatBotSetting" onchange="ajaxChat.setSetting('soundChatBot', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="soundErrorSetting">[LANG]settingsSoundError[/LANG]</label></dt>
-						<dd><select id="soundErrorSetting" onchange="ajaxChat.setSetting('soundError', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundErrorSetting" onchange="ajaxChat.setSetting('soundError', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="soundPrivateSetting">[LANG]settingsSoundPrivate[/LANG]</label></dt>
-						<dd><select id="soundPrivateSetting" onchange="ajaxChat.setSetting('soundPrivate', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+						<dd><select id="soundPrivateSetting" onchange="ajaxChat.setSetting('soundPrivate', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="blinkSetting">[LANG]settingsBlink[/LANG]</label></dt>
@@ -454,13 +455,13 @@
 		</div>
 		<div id="colorCodesContainer" style="display:none;" dir="ltr"></div>
 		<div id="optionsContainer">
-			<input type="image" src="img/pixel.gif" class="button" id="helpButton" alt="[LANG]toggleHelp[/LANG]" title="[LANG]toggleHelp[/LANG]" onclick="ajaxChat.view.toggleContainer('helpContainer', ['onlineListContainer','settingsContainer']);"/>
-			<input type="image" src="img/pixel.gif" class="button" id="settingsButton" alt="[LANG]toggleSettings[/LANG]" title="[LANG]toggleSettings[/LANG]" onclick="ajaxChat.view.toggleContainer('settingsContainer', ['onlineListContainer','helpContainer']);"/>
-			<input type="image" src="img/pixel.gif" class="button" id="onlineListButton" alt="[LANG]toggleOnlineList[/LANG]" title="[LANG]toggleOnlineList[/LANG]" onclick="ajaxChat.view.toggleContainer('onlineListContainer', ['settingsContainer','helpContainer']);"/>
-			<input type="image" src="img/pixel.gif" class="button" id="audioButton" alt="[LANG]toggleAudio[/LANG]" title="[LANG]toggleAudio[/LANG]" onclick="ajaxChat.toggleSetting('audio', 'audioButton');"/>
-			<input type="image" src="img/pixel.gif" class="button" id="autoScrollButton" alt="[LANG]toggleAutoScroll[/LANG]" title="[LANG]toggleAutoScroll[/LANG]" onclick="ajaxChat.toggleSetting('autoScroll', 'autoScrollButton');"/>
+			<input type="image" src="./img/pixel.gif" class="button" id="helpButton" alt="[LANG]toggleHelp[/LANG]" title="[LANG]toggleHelp[/LANG]" onclick="ajaxChat.view.toggleContainer('helpContainer', ['onlineListContainer','settingsContainer']);"/>
+			<input type="image" src="./img/pixel.gif" class="button" id="settingsButton" alt="[LANG]toggleSettings[/LANG]" title="[LANG]toggleSettings[/LANG]" onclick="ajaxChat.view.toggleContainer('settingsContainer', ['onlineListContainer','helpContainer']);"/>
+			<input type="image" src="./img/pixel.gif" class="button" id="onlineListButton" alt="[LANG]toggleOnlineList[/LANG]" title="[LANG]toggleOnlineList[/LANG]" onclick="ajaxChat.view.toggleContainer('onlineListContainer', ['settingsContainer','helpContainer']);"/>
+			<input type="image" src="./img/pixel.gif" class="button" id="audioButton" alt="[LANG]toggleAudio[/LANG]" title="[LANG]toggleAudio[/LANG]" onclick="ajaxChat.toggleSetting('audio', 'audioButton');"/>
+			<input type="image" src="./img/pixel.gif" class="button" id="autoScrollButton" alt="[LANG]toggleAutoScroll[/LANG]" title="[LANG]toggleAutoScroll[/LANG]" onclick="ajaxChat.toggleSetting('autoScroll', 'autoScrollButton');"/>
   		</div>
-		
+
 		<!--
 			Please retain the full copyright notice below including the link to blueimp.net.
 			This not only gives respect to the amount of time given freely by the developer

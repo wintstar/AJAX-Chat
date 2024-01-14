@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s logs into the Chat.',
 	logout: '%s logs out of the Chat.',
 	logoutTimeout: '%s has been logged out (Timeout).',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s invites you to join %s.',
 	inviteto: 'Your invitation to %s to join channel %s has been sent.',
 	uninvite: '%s uninvites you from channel %s.',
-	uninviteto: 'Your uninvitation to %s for channel %s has been sent.',	
+	uninviteto: 'Your uninvitation to %s for channel %s has been sent.',
 	queryOpen: 'Private channel opened to %s.',
 	queryClose: 'Private channel to %s closed.',
 	ignoreAdded: 'Added %s to the ignore list.',
@@ -58,6 +58,7 @@ var ajaxChatLang = {
 	userMenuWhereis: 'Display channel',
 	userMenuKick: 'Kick/Ban',
 	userMenuBans: 'List banned users',
+	userMenuLogsview: 'Switch to the chat protocol',
 	userMenuWhois: 'Display IP',
 	unbanUser: 'Revoke ban of user %s',
 	joinChannel: 'Join channel %s',
@@ -87,5 +88,5 @@ var ajaxChatLang = {
 	errorSocketIO: 'Error: Connection to socket server failed (Flash IO Error).',
 	errorSocketSecurity: 'Error: Connection to socket server failed (Flash Security Error).',
 	errorDOMSyntax: 'Error: Invalid DOM Syntax (DOM ID: %s).'
-	
+
 }

@@ -896,3 +896,4 @@ Bugfixes:
 
 Misc:
 - Fixed: Deprecated elements in Javascript
+- Fixed: Chat Logs (www.your.domain.self/?view=logs), new Layout, fixed Logout, added Button return to chat

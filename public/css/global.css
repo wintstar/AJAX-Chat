@@ -25,7 +25,7 @@ body.ajax-chat {
 	margin:5px 0;
 }
 #loginContent #loginRegisteredUsers {
-    padding-top:5px;
+	padding-top:5px;
 }
 #loginContent #copyright {
 	margin:20px 0 0 0;
@@ -72,7 +72,7 @@ body.ajax-chat {
 	height:100%;
 	overflow:auto;
 }
-#content #mainPanelContainer { 
+#content #mainPanelContainer {
 	position:absolute;
 	left:20px;
 	right:20px;
@@ -149,10 +149,10 @@ body.ajax-chat {
 }
 #content #bbCodeContainer input {
 	display:block;
-	float:left; 
+	float:left;
 	margin-right:2px;
 }
-#content #bbCodeContainer #bbCodeEmoticon { 
+#content #bbCodeContainer #bbCodeEmoticon {
 	display:none;
 }
 #content #colorCodesContainer, #content #emoticonsContainer {
@@ -184,12 +184,15 @@ body.ajax-chat {
 	padding:3px 0 3px 3px;
 }
 #content #optionsContainer input {
-    vertical-align:middle;
+	vertical-align:middle;
 }
-#content #bbCodeContainer input, #content #logoutButton, #content #submitButton, #loginContent #loginButton {
+#content #bbCodeContainer input, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginContent #loginButton {
 	padding: 4px 10px;
 }
-#content #logoutButton {
+#content a#returnchatButton {
+	text-decoration: none;
+}
+#content #logoutButton, #content a#returnchatButton {
 	display:block;
 	float:left;
 	margin: 0 5px 5px 0;
@@ -287,7 +290,7 @@ body.ajax-chat {
 }
 
 /* Misc */
-#content #bbCodeContainer input, #content #optionsContainer input.button, #content #settingsContainer #settingsList input.button, #content #logoutButton, #content #submitButton, #loginContent #loginButton {
+#content #bbCodeContainer input, #content #optionsContainer input.button, #content #settingsContainer #settingsList input.button, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginContent #loginButton {
 	cursor:pointer;
 }
 
@@ -323,7 +326,7 @@ body.ajax-chat {
 
 @media (max-height: 300px) {
 	#content #inputFieldContainer #inputField { height:20px; }
-	#content #bbCodeContainer, #content #optionsContainer, #content #emoticonsContainer, #content #submitButtonContainer, 
+	#content #bbCodeContainer, #content #optionsContainer, #content #emoticonsContainer, #content #submitButtonContainer,
 	#content #statusIconContainer, #content #logoutChannelContainer { display:none; }
 	#content #inputFieldContainer { bottom: 5px; }
 	#content #mainPanelContainer { bottom:40px; top:35px; }

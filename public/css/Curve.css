@@ -1,0 +1,182 @@
+/*
+ * @package AJAX_Chat
+ * @author Sebastian Tschan
+ * @author Philip Nicolcev
+ *
+ * Color palette inspired by Simple Machines Forum style "SMF Default Theme - Curve":
+ * http://www.simplemachines.org/
+
+  * Adjustment for "SMF Default Theme - Curve":
+ * http://www.scaricare.de/
+
+ */
+@import url('global.css');
+@import url('fonts.css');
+@import url('print.css');
+@import url('custom.css');
+
+/* Buttons */
+#content #bbCodeContainer input {
+	background: rgba(232,232,232,1);
+	background: -moz-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(217,217,217,1) 22%, rgba(214,214,214,1) 26%, rgba(238,238,238,0.99) 58%, rgba(240,240,240,0.99) 79%, rgba(242,242,242,0.99) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,232,232,1)), color-stop(22%, rgba(217,217,217,1)), color-stop(26%, rgba(214,214,214,1)), color-stop(58%, rgba(238,238,238,0.99)), color-stop(79%, rgba(240,240,240,0.99)), color-stop(100%, rgba(242,242,242,0.99)));
+	background: -webkit-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(217,217,217,1) 22%, rgba(214,214,214,1) 26%, rgba(238,238,238,0.99) 58%, rgba(240,240,240,0.99) 79%, rgba(242,242,242,0.99) 100%);
+	background: -o-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(217,217,217,1) 22%, rgba(214,214,214,1) 26%, rgba(238,238,238,0.99) 58%, rgba(240,240,240,0.99) 79%, rgba(242,242,242,0.99) 100%);
+	background: -ms-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(217,217,217,1) 22%, rgba(214,214,214,1) 26%, rgba(238,238,238,0.99) 58%, rgba(240,240,240,0.99) 79%, rgba(242,242,242,0.99) 100%);
+	background: linear-gradient(to bottom, rgba(232,232,232,1) 0%, rgba(217,217,217,1) 22%, rgba(214,214,214,1) 26%, rgba(238,238,238,0.99) 58%, rgba(240,240,240,0.99) 79%, rgba(242,242,242,0.99) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#f2f2f2', GradientType=0 );
+	color:#393939;
+	font-size: 0.9em;
+	border: 1px solid #9A9A9A;
+	border-radius: 3px;
+	display: block;
+	float: left;
+	margin-right: 4px;
+}
+
+#content #bbCodeContainer input:hover {
+	background: -moz-linear-gradient(270deg, rgba(135,191,224,0.75) 10%, rgba(135,191,224,0.99) 99%, rgba(0,128,128,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(135,191,224,0.75)), color-stop(99%, rgba(135,191,224,0.99)), color-stop(100%, rgba(0,128,128,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(270deg, rgba(135,191,224,0.75) 10%, rgba(135,191,224,0.99) 99%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(270deg, rgba(135,191,224,0.75) 10%, rgba(135,191,224,0.99) 99%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(270deg, rgba(135,191,224,0.75) 10%, rgba(135,191,224,0.99) 99%, rgba(0,128,128,1) 100%); /* ie10+ */
+	background: linear-gradient(180deg, rgba(135,191,224,0.75) 10%, rgba(135,191,224,0.99) 99%, rgba(0,128,128,1) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87BFE0', endColorstr='#008080',GradientType=0 ); /* ie6-9 */
+	color:#393939;
+	font-size: 0.9em;
+	border: 1px solid #617892;
+	border-radius: 3px;
+	display: block;
+	float: left;
+	margin-right: 4px;
+}
+
+#content #submitButton {
+	background-color:#CDE7FF;
+	color:#000;
+	border:  1px solid #aaa;
+	font-weight: normal;
+}
+
+#content #logoutButton, #content a#returnchatButton,  #loginForm #loginButton {
+	background-color:#FD9604;
+	color:#fff;
+	border:  1px solid #FD9604;
+	border-radius: 6px;
+	display: block;
+	padding: 2px;
+}
+
+#content select, #loginForm select, #loginForm input, #content textarea {
+	background: #fff;
+	border: 1px solid #7f9db9;
+	color: #000;
+}
+
+#content #logoutChannelContainer select {
+	height: 22px;
+	width: auto;
+}
+
+/* Status Icon */
+#content #statusIconContainer {
+	background: url('../img/loading-sprite.png') no-repeat 0px 0px;
+}
+#content #statusIconContainer.waiting {
+	background-position: 0px -22px;
+}
+#content #statusIconContainer.retrying {
+	background-position: 0px -44px;
+}
+
+/* Other Theme Elements */
+.ajax-chat {
+	background: #f5f5f5;
+	color:#000;
+}
+.ajax-chat h1 {
+	color:#000;
+}
+.ajax-chat a {
+	color:#346;
+}
+#loginContent #errorContainer {
+	color:red;
+}
+#content input, #content select, #content textarea {
+	background-color:#FFF;
+	color:#000;
+}
+#content #chatList, #content #onlineListContainer, #content #helpContainer, #content #settingsContainer {
+	border-color:#ADADAD;
+	background-color:#FFF;
+}
+.ajax-chat .popup {
+	background: rgba(212,228,239,1);
+	background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(140,158,178,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(140,158,178,1)));
+	background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(140,158,178,1) 100%);
+	background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(140,158,178,1) 100%);
+	background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(140,158,178,1) 100%);
+	background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(140,158,178,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#8c9eb2', GradientType=0 );
+}
+#content #colorCodesContainer a {
+	border-color:black;
+}
+#content #optionsContainer input {
+	background-color:transparent;
+}
+#content .rowEven, #helpList dl:nth-child(even), #settingsList dl:nth-child(even) {
+	background-color:#E7EAEF;
+}
+#content .rowOdd, #helpList dl:nth-child(odd), #settingsList dl:nth-child(odd) {
+	background-color:#F0F4F7;
+}
+#content #chatList .rowOdd.private {
+	background-color:#F8D0D0;
+}
+#content #chatList .rowEven.private {
+	background-color:#F8D9D0;
+}
+#content .guest {
+	color:gray;
+}
+#content .user {
+	color:#000;
+}
+#content .customUser {
+	color:#915717;
+}
+#content .vip {
+	color:#915717;
+}
+#content .moderator {
+	color:#0000FF;
+}
+#content .admin {
+	color:#FF0000;
+}
+#content .chatBot {
+	color:#476C8E;
+}
+#content #chatList .chatBotErrorMessage {
+	color:red;
+}
+#content #chatList a {
+	color:#476C8E;
+}
+#content #chatList .deleteSelected {
+	border-color:red;
+}
+#content #onlineListContainer h3, #content #helpContainer h3, #content #settingsContainer h3 {
+	background-color:#8294A8;
+	color:#FFF;
+}
+
+@media (max-width: 700px) {
+	#content #emoticonsContainer {
+		background-color:#FFF;
+		border: 1px solid #ADADAD;
+	}
+}

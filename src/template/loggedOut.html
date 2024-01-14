@@ -7,11 +7,13 @@
 	<meta http-equiv="Content-Type" content="[CONTENT_TYPE/]" />
 	<title>[LANG]title[/LANG]</title>
 	[STYLE_SHEETS/]
-	<script src="js/chat.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
-	<script src="js/config.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/chat.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/config.js" type="text/javascript" charset="UTF-8"></script>
 	<script type="text/javascript">
 		// <![CDATA[
+			var ajax_chat_url = "./";
+
 			function initializeLoginPage() {
 				document.getElementById('userNameField').focus();
 				if(!ajaxChat.isCookieEnabled()) {
@@ -21,7 +23,7 @@
 					document.getElementById('errorContainer').appendChild(node);
 				}
 			}
-			
+
 			ajaxChatConfig.sessionName = '[SESSION_NAME/]';
 			ajaxChatConfig.cookieExpiration = parseInt('[COOKIE_EXPIRATION/]');
 			ajaxChatConfig.cookiePath = '[COOKIE_PATH/]';
@@ -29,6 +31,8 @@
 			ajaxChatConfig.cookieSecure = '[COOKIE_SECURE/]';
 
 			ajaxChat.init(ajaxChatConfig, ajaxChatLang, true, true, false);
+
+			ajaxChat.deleteCookies();
 		// ]]>
 	</script>
 </head>

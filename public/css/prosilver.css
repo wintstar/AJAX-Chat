@@ -2,7 +2,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @author Philip Nicolcev
- * 
+ *
  * Color palette inspired by phpBB style "prosilver":
  * http://www.phpbb.com/
  */
@@ -18,7 +18,7 @@
 }
 
 /* Buttons */
-#content #bbCodeContainer input, #content #logoutButton, #content #submitButton, #loginForm #loginButton {
+#content #bbCodeContainer input, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginForm #loginButton {
 	background-color:#F7F5F1;
 	color:#333333;
 	border: 1px solid #8a8a8a;
@@ -33,7 +33,7 @@
 
 /* Status Icon */
 #content #statusIconContainer {
-	background: url('../img/loading-sprite.png') no-repeat 0px 0px; 
+	background: url('../img/loading-sprite.png') no-repeat 0px 0px;
 }
 #content #statusIconContainer.waiting {
 	background-position: 0px -22px;
@@ -102,7 +102,7 @@
 	background-color:#FFF;
 }
 #content #colorCodesContainer {
-	box-shadow: 2px 2px 2px #777; 
+	box-shadow: 2px 2px 2px #777;
 }
 #content #colorCodesContainer a {
 	border-color:black;

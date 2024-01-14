@@ -2,7 +2,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @author Philip Nicolcev
- * 
+ *
  * Color palette inspired by Simple Machines Forum style "SMF Default Theme - Core":
  * http://www.simplemachines.org/
  */
@@ -12,7 +12,7 @@
 @import url('custom.css');
 
 /* Buttons */
-#content #bbCodeContainer input, #content #logoutButton, #content #submitButton, #loginForm #loginButton {
+#content #bbCodeContainer input, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginForm #loginButton {
 	background-color:#CDE7FF;
 	color:#333333;
 	border: 1px solid #787878;
@@ -24,7 +24,7 @@
 
 /* Status Icon */
 #content #statusIconContainer {
-	background: url('../img/loading-sprite.png') no-repeat 0px 0px; 
+	background: url('../img/loading-sprite.png') no-repeat 0px 0px;
 }
 #content #statusIconContainer.waiting {
 	background-position: 0px -22px;

@@ -1261,6 +1261,9 @@ var ajaxChat = {
 				if(this.userRole === '2' || this.userRole === '3') {
 					menu	+= '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/bans\');">'
 							+ this.lang['userMenuBans']
+							+ '</a></li>'
+							+ '<li><a href="' + ajax_chat_url + '?view=logs">'
+							+ this.lang['userMenuLogsview']
 							+ '</a></li>';
 				}
 			}
@@ -2054,6 +2057,12 @@ var ajaxChat = {
 
 	handleLogout: function(url) {
 		window.location.href = url;
+	},
+
+	tologout: function () {
+		clearTimeout(this.timer);
+		var message = 'tologout=true';
+		this.makeRequest(this.ajaxURL+"&token="+this.token,'POST',message);
 	},
 
 	toggleSetting: function(setting, buttonID) {

@@ -17,7 +17,7 @@
 .ajax-chat h1 {
 	color:#CDA6D2;
 }
-#content input, select, #content textarea, #loginButton { 
+#content input, select, #content textarea, #loginButton {
 	border: 0; box-shadow:1px 1px 4px 0px rgba(0,0,0,0.5);
 }
 #content textarea {
@@ -42,7 +42,7 @@
 	background: url('plum_images/plum.png') no-repeat bottom right rgba(0,0,0,0.3);
 }
 .ajax-chat #content .popup {
-	padding: 5px; 
+	padding: 5px;
 	box-shadow: 2px 2px 4px #000;
 	border-radius: 3px;
 	background:rgba(225,225,225,0.2);
@@ -64,7 +64,7 @@
 
 /* Status Icon */
 #content #statusIconContainer {
-	background: url('../img/loading-sprite.png') no-repeat 0px 0px; 
+	background: url('../img/loading-sprite.png') no-repeat 0px 0px;
 }
 #content #statusIconContainer.waiting {
 	background-position: 0px -22px;
@@ -73,7 +73,7 @@
 	background-position: 0px -44px;
 }
 
-#content #bbCodeContainer input, #content #logoutButton, #content #submitButton, #loginButton {
+#content #bbCodeContainer input, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginButton {
 	background-color:#461124;
 	color:#DAABBC;
 }

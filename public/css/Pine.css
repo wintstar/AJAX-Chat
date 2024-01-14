@@ -7,7 +7,7 @@
 @import url('print.css');
 @import url('custom.css');
 
-#content input, select, #content textarea, #loginButton { 
+#content input, select, #content textarea, #loginButton {
 	border: 0;
 }
 #loginButton{
@@ -71,7 +71,7 @@ input, select {
 
 /* Status Icon */
 #content #statusIconContainer {
-	background: url('../img/loading-sprite.png') no-repeat 0px 0px; 
+	background: url('../img/loading-sprite.png') no-repeat 0px 0px;
 }
 #content #statusIconContainer.waiting {
 	background-position: 0px -22px;
@@ -80,7 +80,7 @@ input, select {
 	background-position: 0px -44px;
 }
 
-#content #bbCodeContainer input, #content #logoutButton, #content #submitButton, #loginButton {
+#content #bbCodeContainer input, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginButton {
 	background-color:#4C9C1F;
 	color:#fff;
 	padding:6px 12px

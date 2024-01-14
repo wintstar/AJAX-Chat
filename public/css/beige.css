@@ -9,7 +9,7 @@
 @import url('custom.css');
 
 /* Buttons */
-#content #bbCodeContainer input, #content #logoutButton, #content #submitButton, #loginForm #loginButton {
+#content #bbCodeContainer input, #content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginForm #loginButton {
 	background-color:#d9ce72;
 	color:#333333;
 	border:1px solid #c8b360;
@@ -25,7 +25,7 @@
 
 /* Status Icon */
 #content #statusIconContainer {
-	background:url('../img/loading-sprite.png') no-repeat 0px 0px; 
+	background:url('../img/loading-sprite.png') no-repeat 0px 0px;
 }
 #content #statusIconContainer.waiting {
 	background-position: 0px -22px;

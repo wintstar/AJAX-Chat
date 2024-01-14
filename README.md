@@ -44,8 +44,11 @@ require(AJAX_CHAT_PATH.'vendor/autoload.php');
 require(AJAX_CHAT_PATH.'bootstrap/autoload.php');
 ````
 
-.htacces
+.htaccess
 --------
+
+Create a file and save it as .htaccess and then add it to the respective directory.
+
 for root directory
 (you may have to add RewriteBase depending on the server configuration)
 ````
@@ -163,22 +166,22 @@ To report bugs use github issues: https://github.com/Frug/AJAX-Chat
 Planned changes in this repository
 ----------------------------------
 
-- Fixed: Chat Logs (?view=logs), new Layout, fixed Logout, added Button return to chat
-- New: Optional use Composer
 - New: Cookie [Samesite](http://www.sjoerdlangkemper.nl/2016/04/14/preventing-csrf-with-samesite-cookie-attribute/)
     - new setting in src/config.php "$config['sessioncookieSamesite']". Default set "Lax"
     - new setting in public/js/config.js "cookieSamesite". Default set "Lax"
 - New: Set Cookies after login and delete Cookies after logout
+
+Changes in this repository
+--------------------------
+
+14.01.2024
+- New: Optional use Composer
+- Fixed: Issue [Typing errors mo3](https://github.com/Frug/AJAX-Chat/issues/293)
+- Fixed: Deprecated elements in Javascript
+- Fixed: Chat Logs (www.your.domain.self/?view=logs), new Layout, fixed Logout, added Button return to chat
 - New: Language strings:
     - public/js/lang/*.js  "userMenuLogsview: 'Switch to the chat protocol',"
     - src/lang/*.php       "$lang['returnToChat'] = 'Return to chat';"
     - Translators of your language **have yet to add this**. In english and german it is inserted
 
 <sub>(* your language)</sup>
-
-Changes in this repository
---------------------------
-
-14.01.2024
-- Fixed: Issue [Typing errors mo3](https://github.com/Frug/AJAX-Chat/issues/293)
-- Fixed: Deprecated elements in Javascript
