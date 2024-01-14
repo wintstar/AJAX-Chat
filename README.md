@@ -3,7 +3,7 @@ Blueimp's AJAX Chat
 
 forked from Frug/AJAX-Chat [Branch: psr-4](https://github.com/Frug/AJAX-Chat/tree/psr-4)
 
-==========================================================================================
+=======================================================================================
 
 INFO
 ----
@@ -89,7 +89,7 @@ for public directory
 </IfModule>
 ````
 
-==========================================================================================
+=======================================================================================
 
 AJAX stands for "Asynchronous JavaScript and XML".
 The AJAX Chat clients (the user browsers) use JavaScript to query the web server for updates.
@@ -163,7 +163,6 @@ To report bugs use github issues: https://github.com/Frug/AJAX-Chat
 Planned changes in this repository
 ----------------------------------
 
-- Fixed: Issue [Typing errors mo3](https://github.com/Frug/AJAX-Chat/issues/293)
 - Fixed: Deprecated elements in Javascript
 - Fixed: Chat Logs (?view=logs), new Layout, fixed Logout, added Button return to chat
 - New: Optional use Composer
@@ -177,3 +176,9 @@ Planned changes in this repository
     - Translators of your language **have yet to add this**. In english and german it is inserted
 
 <sub>(* your language)</sup>
+
+Changes in this repository
+--------------------------
+
+14.01.2024
+- Fixed: Issue [Typing errors mo3](https://github.com/Frug/AJAX-Chat/issues/293)

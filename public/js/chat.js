@@ -92,8 +92,8 @@ var ajaxChat = {
 	inUrlBBCode: null,
 	flashSounds: null,
 	debug: null,
-	
-	init: function(config, lang, initSettings, initStyle, initialize, initializeFunction, finalizeFunction) {	
+
+	init: function(config, lang, initSettings, initStyle, initialize, initializeFunction, finalizeFunction) {
 		this.httpRequest		= {};
 		this.usersList			= [];
 		this.userNamesList		= [];
@@ -660,7 +660,7 @@ var ajaxChat = {
 	},
 
 	initializeHTML5Sounds: function() {
-		var audio, mo3, ogg;
+		var audio, mp3, ogg;
 		try {
 			audio = document.createElement('audio');
 			mp3 = !!(audio.canPlayType && audio.canPlayType('audio/mpeg;').replace(/no/, ''));
@@ -2754,20 +2754,20 @@ var ajaxChat = {
 			maxWidth = this.dom['chatList'].offsetWidth-50;
 			maxHeight = this.dom['chatList'].offsetHeight-50;
 			link =  '<img class="bbCodeImage" style="max-width:'
-                    + maxWidth
-                    + 'px; max-height:'
-                    + maxHeight
-                    + 'px;" src="'
-                    + url
-                    + '" alt="" onload="ajaxChat.updateChatlistView();"/>';
-            if(!this.inUrlBBCode) {
-                link =  '<a href="'
-                        + url
-                        + '" onclick="window.open(this.href); return false;">'
-                        + link
-                        + '</a>';
-            }
-            return link;
+					+ maxWidth
+					+ 'px; max-height:'
+					+ maxHeight
+					+ 'px;" src="'
+					+ url
+					+ '" alt="" onload="ajaxChat.updateChatlistView();"/>';
+			if(!this.inUrlBBCode) {
+				link =  '<a href="'
+						+ url
+						+ '" onclick="window.open(this.href); return false;">'
+						+ link
+						+ '</a>';
+			}
+			return link;
 		}
 		return url;
 	},
@@ -2921,8 +2921,8 @@ var ajaxChat = {
 			if(a.getAttribute('rel').indexOf('style') !== -1 && a.getAttribute('title')) {
 				a.disabled = true;
 				if(a.getAttribute('title') === title) {
-	                a.disabled = false;
-	                titleFound = true;
+					a.disabled = false;
+					titleFound = true;
 				}
 			}
 		}
