@@ -79,5 +79,4 @@ class MySQLiQuery {
 	function free() {
 		$this->_result->free();
 	}
-	
 }

@@ -23,7 +23,7 @@ class Template {
 
 	function __construct(&$ajaxChat, $templateFile, $contentType=null) {
 		$this->ajaxChat = $ajaxChat;
-		$this->_regExpTemplateTags = '/\[(\w+?)(?:(?:\/)|(?:\](.+?)\[\/\1))\]/s';		
+		$this->_regExpTemplateTags = '/\[(\w+?)(?:(?:\/)|(?:\](.+?)\[\/\1))\]/s';
 		$this->_templateFile = $templateFile;
 		$this->_contentType = $contentType;
 	}
@@ -44,14 +44,14 @@ class Template {
 
 	function parseContent() {
 		$this->_parsedContent = $this->getContent();
-		
-		// Remove the XML declaration if the content-type is not xml:		
+
+		// Remove the XML declaration if the content-type is not xml:
 		if($this->_contentType && (strpos($this->_contentType,'xml') === false)) {
 			$doctypeStart = strpos($this->_parsedContent, '<!DOCTYPE ');
 			if($doctypeStart !== false) {
 				// Removing the XML declaration (in front of the document type) prevents IE<7 to go into "Quirks mode":
-				$this->_parsedContent = substr($this->_parsedContent, $doctypeStart);	
-			}		
+				$this->_parsedContent = substr($this->_parsedContent, $doctypeStart);
+			}
 		}
 
 		// Replace template tags ([TAG/] and [TAG]content[/TAG]) and return parsed template content:
@@ -64,7 +64,7 @@ class Template {
 				return $this->ajaxChat->htmlEncode($this->ajaxChat->getChatURL());
 
 			case 'LANG':
-				return $this->ajaxChat->htmlEncode($this->ajaxChat->getLang((isset($tagData[2]) ? $tagData[2] : null)));				
+				return $this->ajaxChat->htmlEncode($this->ajaxChat->getLang((isset($tagData[2]) ? $tagData[2] : null)));
 			case 'LANG_CODE':
 				return $this->ajaxChat->getLangCode();
 
@@ -73,13 +73,13 @@ class Template {
 
 			case 'CONTENT_ENCODING':
 				return $this->ajaxChat->getConfig('contentEncoding');
-					
+
 			case 'CONTENT_TYPE':
 				return $this->_contentType;
-		
+
 			case 'LOGIN_URL':
 				return ($this->ajaxChat->getRequestVar('view') == 'logs') ? './?view=logs' : './';
-				
+
 			case 'USER_NAME_MAX_LENGTH':
 				return $this->ajaxChat->getConfig('userNameMaxLength');
 			case 'MESSAGE_TEXT_MAX_LENGTH':
@@ -87,10 +87,10 @@ class Template {
 
 			case 'LOGIN_CHANNEL_ID':
 				return $this->ajaxChat->getValidRequestChannelID();
-				
+
 			case 'SESSION_NAME':
 				return $this->ajaxChat->getConfig('sessionName');
-				
+
 			case 'COOKIE_EXPIRATION':
 				return $this->ajaxChat->getConfig('sessionCookieLifeTime');
 			case 'COOKIE_PATH':
@@ -99,7 +99,9 @@ class Template {
 				return $this->ajaxChat->getConfig('sessionCookieDomain');
 			case 'COOKIE_SECURE':
 				return $this->ajaxChat->getConfig('sessionCookieSecure');
-				
+			case 'COOKIE_SAMESITE':
+				return $this->ajaxChat->getConfig('sessioncookieSamesite');
+
 			case 'CHAT_BOT_NAME':
 				return rawurlencode($this->ajaxChat->getConfig('chatBotName'));
 			case 'CHAT_BOT_ID':
@@ -147,14 +149,14 @@ class Template {
 
 			case 'STYLE_SHEETS':
 				return $this->getStyleSheetLinkTags();
-				
+
 			case 'CHANNEL_OPTIONS':
 				return $this->getChannelOptionTags();
 			case 'STYLE_OPTIONS':
 				return $this->getStyleOptionTags();
 			case 'LANGUAGE_OPTIONS':
 				return $this->getLanguageOptionTags();
-			
+
 			case 'ERROR_MESSAGES':
 				return $this->getErrorMessageTags();
 
@@ -175,9 +177,9 @@ class Template {
 					return 'write_forbidden';
 				else
 					return 'write_allowed';
-                        case 'TOKEN':
-                                return session_id();
-			
+			case 'TOKEN':
+				return session_id();
+
 			default:
 				return $this->ajaxChat->replaceCustomTemplateTags($tagData[1], (isset($tagData[2]) ? $tagData[2] : null));
 		}
@@ -210,7 +212,7 @@ class Template {
 		$styleSheets = '';
 		foreach($this->ajaxChat->getConfig('styleAvailable') as $style) {
 			$alternate = ($style == $this->ajaxChat->getConfig('styleDefault')) ? '' : 'alternate ';
-			$styleSheets .= '<link rel="'.$alternate.'stylesheet" type="text/css" href="css/'.rawurlencode($style).'.css" title="'.$this->ajaxChat->htmlEncode($style).'"/>';
+			$styleSheets .= '<link rel="'.$alternate.'stylesheet" type="text/css" href="' . $this->ajaxChat->htmlEncode($this->ajaxChat->getChatURL()) . 'css/'.rawurlencode($style).'.css" title="'.$this->ajaxChat->htmlEncode($style).'"/>';
 		}
 		return $styleSheets;
 	}
@@ -302,7 +304,7 @@ class Template {
 		}
 		return $yearOptions;
 	}
-	
+
 	function getLogsMonthOptionTags() {
 		$monthOptions = '';
 		$monthOptions .= '<option value="-1">--</option>';
@@ -311,7 +313,7 @@ class Template {
 		}
 		return $monthOptions;
 	}
-	
+
 	function getLogsDayOptionTags() {
 		$dayOptions = '';
 		$dayOptions .= '<option value="-1">--</option>';
@@ -320,7 +322,7 @@ class Template {
 		}
 		return $dayOptions;
 	}
-	
+
 	function getLogsHourOptionTags() {
 		$hourOptions = '';
 		$hourOptions .= '<option value="-1">-----</option>';

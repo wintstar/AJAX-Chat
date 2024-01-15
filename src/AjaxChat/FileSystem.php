@@ -17,5 +17,4 @@ class FileSystem {
 		}
 		return(implode('', file($file)));
 	}
-
 }

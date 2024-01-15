@@ -166,10 +166,6 @@ To report bugs use github issues: https://github.com/Frug/AJAX-Chat
 Planned changes in this repository
 ----------------------------------
 
-- New: Cookie [Samesite](http://www.sjoerdlangkemper.nl/2016/04/14/preventing-csrf-with-samesite-cookie-attribute/)
-    - new setting in src/config.php "$config['sessioncookieSamesite']". Default set "Lax"
-    - new setting in public/js/config.js "cookieSamesite". Default set "Lax"
-- New: Set Cookies after login and delete Cookies after logout
 
 Changes in this repository
 --------------------------
@@ -180,8 +176,14 @@ Changes in this repository
 - Fixed: Deprecated elements in Javascript
 - Fixed: Chat Logs (www.your.domain.self/?view=logs), new Layout, fixed Logout, added Button return to chat
 - New: Language strings:
-    - public/js/lang/*.js  "userMenuLogsview: 'Switch to the chat protocol',"
-    - src/lang/*.php       "$lang['returnToChat'] = 'Return to chat';"
-    - Translators of your language **have yet to add this**. In english and german it is inserted
+	- public/js/lang/*.js  "userMenuLogsview: 'Switch to the chat protocol',"
+	- src/lang/*.php       "$lang['returnToChat'] = 'Return to chat';"
+	- Translators of your language **have yet to add this**. In english and german it is inserted
+
+15.01.2024
+- New: Cookie [Samesite](http://www.sjoerdlangkemper.nl/2016/04/14/preventing-csrf-with-samesite-cookie-attribute/)
+	- new setting in src/config.php "$config['sessioncookieSamesite']". Default set "Lax"
+	- new setting in public/js/config.js "cookieSamesite". Default set "Lax"
+- New: Set Cookies after login and delete Cookies after logout
 
 <sub>(* your language)</sup>

@@ -6,9 +6,9 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat {
 	// Returns an associative array containing userName, userID and userRole
 	// Returns null if login is invalid
 	function getValidLoginUserData() {
-		
+
 		$customUsers = $this->getCustomUsers();
-		
+
 		if($this->getRequestVar('password')) {
 			// Check if we have a valid registered user:
 
@@ -27,7 +27,7 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat {
 					return $userData;
 				}
 			}
-			
+
 			return null;
 		} else {
 			// Guest users:
@@ -43,9 +43,9 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat {
 		}
 
 		$this->_channels = [];
-			
+
 		$customUsers = $this->getCustomUsers();
-		
+
 		// Get the channels, the user has access to:
 		if($this->getUserRole() == AJAX_CHAT_GUEST) {
 			$validChannels = $customUsers[0]['channels'];
@@ -67,7 +67,7 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat {
 				$this->_channels[$key] = $value;
 			}
 		}
-		
+
 		return $this->_channels;
 	}
 
@@ -77,16 +77,16 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat {
 		if($this->_allChannels === null) {
 			// Get all existing channels:
 			$customChannels = $this->getCustomChannels();
-			
+
 			$defaultChannelFound = false;
-			
+
 			foreach($customChannels as $name=>$id) {
 				$this->_allChannels[$this->trimChannelName($name)] = $id;
 				if($id == $this->getConfig('defaultChannelID')) {
 					$defaultChannelFound = true;
 				}
 			}
-			
+
 			if(!$defaultChannelFound) {
 				// Add the default channel as first array element to the channel list
 				// First remove it in case it appeard under a different ID
@@ -108,11 +108,11 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat {
 		require(AJAX_CHAT_PATH.'src/data/users.php');
 		return $users;
 	}
-	
+
 	public function getCustomChannels() {
 		// List containing the custom channels:
 		$channel_data = file_get_contents(AJAX_CHAT_PATH.'src/data/channels.json');
-		$channels = (array)json_decode($channel_data);	
+		$channels = (array)json_decode($channel_data);
 		// Channel array structure should be:
 		// ChannelName => ChannelID
 		return array_flip($channels);

@@ -15,8 +15,6 @@ var ajaxChatConfig = {
 
 	// The URL to retrieve the XML chat messages (must at least contain one parameter):
 	ajaxURL: './?ajax=true',
-	// The base URL of the chat directory, used to retrieve media files (images, sound files, etc.):
-	baseURL: './',
 
 	// A regular expression for allowed source URL's for media content (e.g. images displayed inline);
 	regExpMediaUrl: '^((http)|(https)):\\/\\/',
@@ -44,8 +42,8 @@ var ajaxChatConfig = {
 		colorCodesContainer: 'colorCodesContainer',
 		// The ID of the flash interface container:
 		flashInterfaceContainer: 'flashInterfaceContainer',
-        // The ID of the status icon:
-        statusIcon: 'statusIconContainer'
+		// The ID of the status icon:
+		statusIcon: 'statusIconContainer'
 	},
 
 	// Defines the settings which can be modified by users:
@@ -227,7 +225,11 @@ var ajaxChatConfig = {
 	// The domain of the cookies, defaults to the hostname of the server if set to null:
 	cookieDomain: null,
 	// If enabled, cookies must be sent over secure (SSL/TLS encrypted) connections:
-	cookieSecure: null,
+	cookieSecure: false,
+	// SameSite prevents the browser from sending this cookie along with cross-site requests.
+	// The main goal is to mitigate the risk of cross-origin information leakage. It also provides
+	// some protection against cross- site request forgery attacks.Possible values for the flag are none, lax, or strict:
+	cookieSamesite: 'Lax',
 	// The name of the chat bot:
 	chatBotName: 'ChatBot',
 	// The userID of the chat bot:

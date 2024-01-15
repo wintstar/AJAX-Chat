@@ -11,7 +11,7 @@ namespace AjaxChat;
 // Class to provide static encoding methods
 class Encoding {
 
-	public static $specialChars = ['&'=>'&amp;', '<'=>'&lt;', '>'=>'&gt;', "'"=>'&#39;', '"'=>'&quot;'];	 
+	public static $specialChars = ['&'=>'&amp;', '<'=>'&lt;', '>'=>'&gt;', "'"=>'&#39;', '"'=>'&quot;'];
 
 	// Helper function to store Regular expression for NO-WS-CTL as we cannot use static class members in PHP4:
 	public static function getRegExp_NO_WS_CTL() {
@@ -69,11 +69,21 @@ class Encoding {
 	}
 
 	public static function encodeSpecialChars($str) {
-		return strtr($str, self::$specialChars);
+		if (!empty($str))
+			$return = strtr($str, self::$specialChars);
+		else
+			$return = '';
+
+		return $return;
 	}
 
 	public static function decodeSpecialChars($str) {
-		return strtr($str, array_flip(self::$specialChars));
+		if (!empty($str))
+			$return = strtr($str, array_flip(self::$specialChars));
+		else
+			$return = '';
+
+		return $return;
 	}
 
 	public static function encodeEntities($str, $encoding='UTF-8', $convmap=null) {
@@ -124,5 +134,4 @@ class Encoding {
 		// Remove NO-WS-CTL, non-whitespace control characters (RFC 2822), decimal 1–8, 11–12, 14–31, and 127:
 		return preg_replace(Encoding::getRegExp_NO_WS_CTL(), '', $str);
 	}
-
 }

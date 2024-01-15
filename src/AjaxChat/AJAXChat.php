@@ -2478,12 +2478,13 @@ class AJAXChat {
 			session_name($this->getConfig('sessionName'));
 
 			// Set session cookie parameters:
-			session_set_cookie_params(
-				0, // The session is destroyed on logout anyway, so no use to set this
-				$this->getConfig('sessionCookiePath'),
-				$this->getConfig('sessionCookieDomain'),
-				$this->getConfig('sessionCookieSecure')
-			);
+			session_set_cookie_params(array(
+				'lifetime' 	=> 0, // The session is destroyed on logout anyway, so no use to set this
+				'path' 		=> $this->getConfig('sessionCookiePath'),
+				'domain' 	=> $this->getConfig('sessionCookieDomain'),
+				'secure' 	=> $this->getConfig('sessionCookieSecure'),
+				'samesite' 	=> $this->getConfig('sessioncookieSamesite')
+			));
 
 			// Start the session:
 			session_start();
@@ -2494,23 +2495,27 @@ class AJAXChat {
 	}
 
 	function destroySession() {
+		$cookie_name = $this->getConfig('sessionName');
+
 		if($this->_sessionNew) {
 			// Delete all session variables:
 			$_SESSION = array();
 
-			// Delete the session cookie:
-			if (isset($_COOKIE[session_name()])) {
-				setcookie(
-					session_name(),
-					'',
-					time()-42000,
-					$this->getConfig('sessionCookiePath'),
-					$this->getConfig('sessionCookieDomain'),
-					$this->getConfig('sessionCookieSecure')
-				);
-			}
+			// Delete all existing cookies after logging out
+			if (isset($_COOKIE[$cookie_name]))
+				setcookie($cookie_name, '', time() - 7000000);
+
+			if (isset($_COOKIE[$cookie_name . '_lang']))
+				setcookie($cookie_name . '_lang', '', time() - 7000000);
+
+			if (isset($_COOKIE[$cookie_name . '_settings']))
+				setcookie($cookie_name . '_settings', '', time() - 7000000);
+
+			if (isset($_COOKIE[$cookie_name . '_style']))
+				setcookie($cookie_name . '_style', '', time() - 7000000);
 
 			// Destroy the session:
+			session_unset();
 			session_destroy();
 		} else {
 			// Unset all session variables starting with the sessionKeyPrefix:
@@ -2787,14 +2792,22 @@ class AJAXChat {
 	}
 
 	function setLangCodeCookie() {
-		setcookie(
-			$this->getConfig('sessionName').'_lang',
-			$this->getLangCode(),
-			time()+60*60*24*$this->getConfig('sessionCookieLifeTime'),
-			$this->getConfig('sessionCookiePath'),
-			$this->getConfig('sessionCookieDomain'),
-			$this->getConfig('sessionCookieSecure')
+		$path			= $this->getConfig('sessionCookiePath');
+		$domain			= $this->getConfig('sessionCookieDomain');
+		$secure_secure	= $this->getConfig('sessionCookieSecure');
+		$samesite		= $this->getConfig('sessioncookieSamesite');
+		$name 			= $this->getConfig('sessionName').'_lang';
+		$value 			= $this->getLangCode();
+
+		$options = array(
+			'expires'	=> time()+60*60*24*$this->getConfig('sessionCookieLifeTime'),
+			'path'		=> $path,
+			'domain'	=> $domain,
+			'secure'	=> $secure_secure,
+			'samesite'	=> $samesite
 		);
+
+		setcookie($name, $value, $options);
 	}
 
 	function removeUnsafeCharacters($str) {
@@ -3331,5 +3344,4 @@ class AJAXChat {
 		}
 		return $this->_allChannels;
 	}
-
 }

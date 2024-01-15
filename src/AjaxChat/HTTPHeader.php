@@ -38,10 +38,10 @@ class HTTPHeader {
 			header('Cache-Control: no-cache, must-revalidate');
 			header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 		}
-		
+
 		// Send the content-type-header:
 		header('Content-Type: '.$this->_contentType);
-		
+
 		// Send vary header if content-type varies (important for proxy-caches):
 		if(!$this->_constant) {
 			header('Vary: Accept');
@@ -53,5 +53,4 @@ class HTTPHeader {
 		// Return the content-type string:
 		return $this->_contentType;
 	}
-
 }

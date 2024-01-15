@@ -26,7 +26,7 @@ class Language {
 		}
 		$this->_strictMode = $strictMode;
 	}
-	
+
 	// Method to detect the language code from the HTTP_ACCEPT_LANGUAGE header:
 	function detectLangCode() {
 		// If HTTP_ACCEPT_LANGUAGE is empty use defaultLangCode:
@@ -37,10 +37,10 @@ class Language {
 
 		// Split up the HTTP_ACCEPT_LANGUAGE header:
 		$acceptedLanguages = preg_split('/,\s*/', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-		
+
 		$currentLangCode = $this->_defaultLangCode;
 		$currentLangQuality = 0.0;
-		
+
 		foreach($acceptedLanguages as $acceptedLanguage) {
 			// Parse the language string:
 			$match = preg_match($this->_regExpAcceptLangCode, $acceptedLanguage, $matches);
@@ -48,10 +48,10 @@ class Language {
 			if(!$match) {
 				continue;
 			}
-			
-			// Get and split the language code:	
+
+			// Get and split the language code:
 			$langCodeParts = explode ('-', $matches[1]);
-			
+
 			// Get the language quality given as float value:
 			if(isset($matches[2])) {
 				$langQuality = (float)$matches[2];
@@ -81,7 +81,7 @@ class Language {
 				array_pop($langCodeParts);
 			}
 		}
-		
+
 		$this->_langCode = $currentLangCode;
 	}
 
@@ -91,7 +91,7 @@ class Language {
 		}
 		return $this->_langCode;
 	}
-	
+
 	function setLangCode($langCode) {
 		$this->_langCode = $langCode;
 	}
@@ -99,5 +99,4 @@ class Language {
 	function getLangCodes() {
 		return $this->_availableLangCodes;
 	}
-	
 }

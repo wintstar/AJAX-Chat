@@ -14,7 +14,6 @@
 
 // AJAX Chat client side logic:
 var ajaxChat = {
-
 	settingsInitiated: null,
 	styleInitiated: null,
 	initializeFunction: null,
@@ -24,7 +23,6 @@ var ajaxChat = {
 	timerRate: null,
 	timer: null,
 	ajaxURL: null,
-	baseURL: null,
 	regExpMediaUrl: null,
 	dirs: null,
 	startChatOnLoad: null,
@@ -46,6 +44,7 @@ var ajaxChat = {
 	cookiePath: null,
 	cookieDomain: null,
 	cookieSecure: null,
+	cookieSamesite: null,
 	chatBotName: null,
 	chatBotID: null,
 	allowUserMessageDelete: null,
@@ -125,35 +124,35 @@ var ajaxChat = {
 		this.loginChannelName		= config['loginChannelName'];
 		this.timerRate				= config['timerRate'];
 		this.ajaxURL				= config['ajaxURL'];
-		this.baseURL				= config['baseURL'];
 		this.regExpMediaUrl			= config['regExpMediaUrl'];
 		this.startChatOnLoad		= config['startChatOnLoad'];
-		this.domIDs				= config['domIDs'];
+		this.domIDs					= config['domIDs'];
 		this.settings				= config['settings'];
 		this.nonPersistentSettings	= config['nonPersistentSettings'];
-		this.bbCodeTags			= config['bbCodeTags'];
-		this.colorCodes			= config['colorCodes'];
+		this.bbCodeTags				= config['bbCodeTags'];
+		this.colorCodes				= config['colorCodes'];
 		this.emoticonCodes			= config['emoticonCodes'];
 		this.emoticonFiles			= config['emoticonFiles'];
-		this.soundFiles			= config['soundFiles'];
+		this.soundFiles				= config['soundFiles'];
 		this.sessionName			= config['sessionName'];
 		this.cookieExpiration		= config['cookieExpiration'];
-		this.cookiePath			= config['cookiePath'];
+		this.cookiePath				= config['cookiePath'];
 		this.cookieDomain			= config['cookieDomain'];
-		this.cookieSecure			= config['cookieSecure'];
+		this.cookieSecure 			= config['cookieSecure'];
+		this.cookieSamesite			= config['cookieSamesite'];
 		this.chatBotName			= config['chatBotName'];
 		this.chatBotID				= config['chatBotID'];
 		this.allowUserMessageDelete	= config['allowUserMessageDelete'];
 		this.inactiveTimeout		= Math.max(config['inactiveTimeout'],2);
 		this.privateChannelDiff		= config['privateChannelDiff'];
 		this.privateMessageDiff		= config['privateMessageDiff'];
-		this.showChannelMessages		= config['showChannelMessages'];
+		this.showChannelMessages	= config['showChannelMessages'];
 		this.messageTextMaxLength	= config['messageTextMaxLength'];
-		this.socketServerEnabled		= config['socketServerEnabled'];
+		this.socketServerEnabled	= config['socketServerEnabled'];
 		this.socketServerHost		= config['socketServerHost'];
 		this.socketServerPort		= config['socketServerPort'];
 		this.socketServerChatID		= config['socketServerChatID'];
-		this.debug				= config['debug'];
+		this.debug					= config['debug'];
 		this.DOMbuffering			= false;
 		this.DOMbuffer				= "";
 		this.retryTimerDelay 		= (this.inactiveTimeout*6000 - this.timerRate)/4 + this.timerRate;
@@ -161,9 +160,9 @@ var ajaxChat = {
 
 	initDirectories: function() {
 		this.dirs = {};
-		this.dirs['emoticons'] 	= this.baseURL+'img/emoticons/';
-		this.dirs['sounds']		= this.baseURL+'sounds/';
-		this.dirs['flash']		= this.baseURL+'flash/';
+		this.dirs['emoticons'] 	= ajax_chat_url +'img/emoticons/';
+		this.dirs['sounds']		= ajax_chat_url +'sounds/';
+		this.dirs['flash']		= ajax_chat_url +'flash/';
 	},
 
 	initSettings: function() {
@@ -2981,7 +2980,8 @@ var ajaxChat = {
 		var path = '; path='+this.cookiePath;
 		var domain = this.cookieDomain ? '; domain='+this.cookieDomain : '';
 		var secure = this.cookieSecure ? '; secure' : '';
-		document.cookie = name+'='+encodeURIComponent(value)+expires+path+domain+secure;
+		var samesite = this.cookieSamesite ? '; sameSite='+this.cookieSamesite : '';
+		document.cookie = name+'='+encodeURIComponent(value)+expires+path+domain+secure + samesite;
 	},
 
 	readCookie: function(name) {
@@ -2999,6 +2999,18 @@ var ajaxChat = {
 			}
 		}
 		return null;
+	},
+
+	deleteCookies: function() {
+		if(!document.cookie)
+			return null;
+
+		var allCookies = document.cookie.split(';');
+
+		// The "expire" attribute of every cookie is
+		// Set to "Thu, 01 Jan 1970 00:00:00 GMT"
+		for (var i = 0; i < allCookies.length; i++)
+			document.cookie = allCookies[i] + "=;expires=" + new Date(0).toUTCString();
 	},
 
 	isCookieEnabled: function() {
