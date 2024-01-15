@@ -165,7 +165,7 @@ To report bugs use github issues: https://github.com/Frug/AJAX-Chat
 
 Planned changes in this repository
 ----------------------------------
-
+- update readme.html to new Version
 
 Changes in this repository
 --------------------------
