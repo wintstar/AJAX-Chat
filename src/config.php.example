@@ -41,6 +41,10 @@ $config['dbTableNames']['messages']		= 'ajax_chat_messages';
 $config['dbTableNames']['bans']			= 'ajax_chat_bans';
 $config['dbTableNames']['invitations']	= 'ajax_chat_invitations';
 
+// The Integrations Directory src/AjaxChat/Integrations/*
+// Standard = 'Standalone' (* e.g. 'Phpbb3', will be integrate with phpBB):
+$config['integration'] = 'Standalone';
+
 // Available languages:
 $config['langAvailable'] = array(
 	'ar','bg','ca','cy','cz','da','de','el','en','es','et','fa','fi','fr','gl','he','hr','hu','in','it','ja','ka','kr','mk','nl','nl-be','no','pl','pt-br','pt-pt','ro','ru','sk','sl','sr','sv','th','tr','uk','zh','zh-tw'

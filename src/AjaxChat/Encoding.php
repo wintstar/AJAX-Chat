@@ -24,6 +24,8 @@ class Encoding {
 	}
 
 	public static function convertEncoding($str, $charsetFrom, $charsetTo) {
+		$str = $str ?? '';
+
 		if(function_exists('mb_convert_encoding')) {
 			return mb_convert_encoding($str, $charsetTo, $charsetFrom);
 		}

@@ -904,3 +904,15 @@ New Features:
 - New: Cookie Samesite
 - New: Set Cookies after login and delete Cookies after logout
 - Code cleaned up
+
+Version 0.9.0-standalone-w1 (18.01.2024) Author wintstar
+--------------------------------------------
+New Features:
+- New readme-en.html, essential documentation in english
+- New readme-de.html, essential documentation in german
+
+Bugfixes:
+- Shoutbox. The old function was still included here.
+- Fixed Moderator can see the link to Chat Logs
+- Fixed Missing config for Custom Integration in src/config.php. With the new functions,
+  Frug has also added the activation of Custom integration. This "$config['integration']" was missing in the src/config.php.

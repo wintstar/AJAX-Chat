@@ -2,14 +2,24 @@
 namespace AjaxChat\Integrations\Standalone;
 
 use \AjaxChat\Template;
+use \AjaxChat\Loader;
 
 class CustomAJAXChatShoutBox extends CustomAJAXChat
 {
+	protected $_config;
 
-	function initialize()
-	{
+	function __construct() {
+		$config = Loader::readConfigFile(AJAX_CHAT_PATH.'src/config.php');
+
+		$this->initialize($config);
+	}
+
+	public function initialize(array $config) {
 		// Initialize configuration settings:
-		$this->initConfig();
+		$this->_config = &$config;
+
+		// Initialize custom configuration settings:
+		$this->initCustomConfig();
 	}
 
 	function getShoutBoxContent()

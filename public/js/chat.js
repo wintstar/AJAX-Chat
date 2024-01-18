@@ -1204,20 +1204,20 @@ var ajaxChat = {
 					+ '</a></li>';
 			if (isInline) {
 				menu	+= '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/invite '
-					+ encodedUserName
-					+ '\');">'
-					+ this.lang['userMenuInvite']
-					+ '</a></li>'
-					+ '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/uninvite '
-					+ encodedUserName
-					+ '\');">'
-					+ this.lang['userMenuUninvite']
-					+ '</a></li>'
-					+ '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/whereis '
-					+ encodedUserName
-					+ '\');">'
-					+ this.lang['userMenuWhereis']
-					+ '</a></li>';
+						+ encodedUserName
+						+ '\');">'
+						+ this.lang['userMenuInvite']
+						+ '</a></li>'
+						+ '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/uninvite '
+						+ encodedUserName
+						+ '\');">'
+						+ this.lang['userMenuUninvite']
+						+ '</a></li>'
+						+ '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/whereis '
+						+ encodedUserName
+						+ '\');">'
+						+ this.lang['userMenuWhereis']
+						+ '</a></li>';
 			}
 			if(this.userRole === '2' || this.userRole === '3') {
 				menu	+= '<li><a href="javascript:ajaxChat.insertMessageWrapper(\'/kick '
@@ -1254,20 +1254,23 @@ var ajaxChat = {
 					+ this.lang['userMenuNick']
 					+ '</a></li>';
 			if(this.userRole === '1' || this.userRole === '2' || this.userRole === '3') {
-				menu	+= '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/join\');">'
+				menu 	+= '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/join\');">'
 						+ this.lang['userMenuEnterPrivateRoom']
 						+ '</a></li>';
 				if(this.userRole === '2' || this.userRole === '3') {
 					menu	+= '<li><a href="javascript:ajaxChat.sendMessageWrapper(\'/bans\');">'
 							+ this.lang['userMenuBans']
-							+ '</a></li>'
-							+ '<li><a href="' + ajax_chat_url + '?view=logs">'
+							+ '</a></li>';
+				}
+				if (this.userRole === '3') {
+					menu	+= '<li><a href="' + ajax_chat_url + '?view=logs">'
 							+ this.lang['userMenuLogsview']
 							+ '</a></li>';
 				}
 			}
 		}
 		menu += this.getCustomUserMenuItems(encodedUserName, userID);
+
 		return menu;
 	},
 

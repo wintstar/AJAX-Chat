@@ -7,13 +7,15 @@
 	<script src="./js/FABridge.js" type="text/javascript" charset="UTF-8"></script>
 	<div id="ajaxChatChatList"></div>
 	<div id="ajaxChatInputFieldContainer" class="[CLASS_WRITEABLE/]">
-		<input id="ajaxChatInputField" type="text" maxlength="[MESSAGE_TEXT_MAX_LENGTH/]" onkeypress="ajaxChat.handleInputFieldKeyDown(event);"/>
+		<input id="ajaxChatInputField" type="text" maxlength="[MESSAGE_TEXT_MAX_LENGTH/]" onkeydown="ajaxChat.handleInputFieldKeyDown(event);" onkeyup="ajaxChat.handleInputFieldKeyUp(event);"/>
 	</div>
 	<script type="text/javascript">
 		// <![CDATA[
-			var ajax_chat_url = "./"
+			var ajax_chat_url = "./";
 
-			ajaxChatConfig.ajaxURL = + ajax_chat_url + '/?ajax=true&shoutbox=true';
+			ajaxChatConfig.ajaxURL = './?ajax=true&shoutbox=true';
+
+			ajaxChatConfig.token = '[TOKEN/]';
 			ajaxChatConfig.sessionName = '[SESSION_NAME/]';
 			ajaxChatConfig.cookieExpiration = parseInt('[COOKIE_EXPIRATION/]');
 			ajaxChatConfig.cookiePath = '[COOKIE_PATH/]';
@@ -32,10 +34,13 @@
 			ajaxChatConfig.socketServerHost = decodeURIComponent('[SOCKET_SERVER_HOST/]');
 			ajaxChatConfig.socketServerPort = parseInt('[SOCKET_SERVER_PORT/]');
 			ajaxChatConfig.socketServerChatID = parseInt('[SOCKET_SERVER_CHAT_ID/]');
+
 			ajaxChatConfig.domIDs['chatList'] = 'ajaxChatChatList';
 			ajaxChatConfig.domIDs['inputField'] = 'ajaxChatInputField';
 			ajaxChatConfig.domIDs['flashInterfaceContainer'] = 'ajaxChatFlashInterfaceContainer';
+
 			ajaxChatConfig.startChatOnLoad = false;
+
 			ajaxChatConfig.settings.autoFocus = false;
 			ajaxChatConfig.settings.wordWrap = true;
 			ajaxChatConfig.settings.maxWordLength = 11;

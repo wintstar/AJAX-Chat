@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex,nofollow">
+
+		<title>AJAX Chat readme</title>
+
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+	<body class="w3-white">
+		<header class="w3-container w3-blue w3-center">
+			<h1>
+				wintstar AJAX Chat
+				<span class="w3-medium" style="display:block">
+					v 0.9.0-standalone-w ( <a href="https://www.stephan-frank.de/kategorie/ajaxchat" target="_blank" rel="noopener noreferrer nofollow">AJAX-Chat</a> )
+				</span>
+			</h1>
+		</header>
+
+		<div class="w3-content w3-section">
+			<div id="#top" class="w3-row">
+				<div class="w3-col m5 l4">
+					<div class="w3-container w3-margin-bottom">
+						<div class="w3-card">
+							<header class="w3-container w3-light-blue">
+								<h3>Inhaltsverzeichnis</h3>
+							</header>
+
+							<div class="w3-bar-block">
+								<ol>
+									<li><a href="#requirements" class="w3-bar-item w3-button w3-hover-light-blue">Requirements</a></li>
+									<li><a href="#installation" class="w3-bar-item w3-button w3-hover-light-blue">Installation</a></li>
+									<li><a href="#configuring" class="w3-bar-item w3-button w3-hover-light-blue">Configure and customize</a></li>
+									<li><a href="#logs" class="w3-bar-item w3-button w3-hover-light-blue">Logs</a></li>
+									<li><a href="#shoutbox" class="w3-bar-item w3-button w3-hover-light-blue">Shoutbox</a></li>
+									<li><a href="#custom" class="w3-bar-item w3-button w3-hover-light-blue">Custom integration information</a></li>
+									<li><a href="#socket" class="w3-bar-item w3-button w3-hover-light-blue">Socket Server</a></li>
+									<li><a href="#support" class="w3-bar-item w3-button w3-hover-light-blue">Support</a></li>
+									<li><a href="#donate" class="w3-bar-item w3-button w3-hover-light-blue">Donate</a></li>
+									<li><a href="#license" class="w3-bar-item w3-button w3-hover-light-blue">License</a></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col m7 l8">
+					<div class="w3-container w3-margin-bottom">
+						<div class="w3-card">
+							<header class="w3-container w3-blue">
+								<h3>Version Information</h3>
+							</header>
+							<div class="w3-container">
+								<p>Dies ist die <b>Eigenständige Version</b> vom AJAX Chat (blueimp), die für sich alleine läuft, ohne eine weitere Webanwendung.
+								Diese Version eignet sich gut für die Anpassung Ihrer eigenen Integration oder für die Verwendung als eigenständige Version.</p>
+								<p><b>Es wird in diesem Paket <u>nur die Eigenständige Version</u> unterstützt.</b></p><br>
+								<div class="w3-panel w3-border w3-light-grey w3-leftbar w3-rightbar w3-border-grey w3-round-large">
+									<p>AJAX steht für "Asynchrones JavaScript und XML".<br>
+									Der AJAX-Chat-Client (Ihr Browser) verwendet JavaScript, um den Webserver nach Aktualisierungen zu fragen.
+									Anstatt eine komplette HTML-Seite zu liefern, werden nur aktualisierte Daten im XML-Format gesendet.
+									Durch die Verwendung von JavaScript kann die Chatseite aktualisiert werden, ohne dass die gesamte Seite neu geladen werden muss.
+									PHP wird für die Kommunikation mit der Datenbank und die Authentifizierung der Benutzer verwendet.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="requirements" class="w3-container w3-blue">
+						<h3>01. Requirements</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<div class="w3-responsive">
+							<table class="w3-table-all" summary="Anforderungen für das Ausführen von AJAX -Chat.">
+								<tr>
+									<th>Server-Seite</th>
+									<th>Client-Seite</th>
+								</tr>
+								<tr>
+									<td>PHP >= 7*<br>
+									MySQL >= 4<br>
+									Ruby >= 1.8 (optional)</td>
+									<td>JavaScript aktiviert<br>
+									Cookies aktiviert<br>
+									Flash Plugin >= 9 (optional)</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="installation" class="w3-container w3-blue">
+						<h3>02. Installation</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<p>Laden Sie Ihre bevorzugte Version von AJAX Chat herunter und entpacken Sie die Datei auf Ihrem Computer.</p>
+						<div class="w3-panel w3-pale-blue w3-border">
+							<h3>Verwenden Sie einen geeigneten Texteditor!</h3>
+							<p>Um PHP-Dateien zu bearbeiten, benötigen Sie einen guten Texteditor. <b>Sie sollten zum Bearbeiten von PHP-Dateien nicht den Windows-Editor,
+							Wordpad oder Microsoft Word</b> verwenden. Diese Programme fügen den Dateien eine sogenannte Byte-Order-Mark (BOM) hinzu, was dazu führen kann,
+							dass der Chat nicht richtig funktioniert. Wir empfehlen die Verwendung von Notepad ++ (<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener noreferrer nofollow">https://notepad-plus-plus.org/</a>) zum Bearbeiten aller Dateien.
+							Es bietet außerdem den Vorteil, dass Ihre Dateien farblich gekennzeichnet werden, sodass Sie sie einfacher bearbeiten können.
+							Wenn Sie eine Fehlermeldung wie <b>„Header-Informationen können nicht geändert werden – Header bereits gesendet“</b> erhalten,
+							liegt dies wahrscheinlich daran, dass Sie eines der oben genannten Programme zum Bearbeiten von Dateien verwendet haben.</p>
+						</div>
+						<p>Erstellen Sie je eine Datei für das Verzeichnis&nbsp;<span class="notranslate w3-text-teal"><b>"chat"&nbsp;(root)</b></span>&nbsp;und&nbsp;<span class="notranslate w3-text-deep-purple"><b>"public"</b></span> und speichern Sie diese je als .htaccess und fügen Sie sie dann dem jeweiligen Verzeichnis hinzu.</p>
+						<div class="w3-row-padding">
+							<div class="w3-col m6 l6">
+								<p>für das Verzeichnis&nbsp;<span class="notranslate w3-text-teal"><b>"chat" (root)</b></span> (Sie müssen möglicherweise Rewritebase abhängig von der Serverkonfiguration hinzufügen)</p>
+								<div class="w3-panel w3-light-grey">
+									<code class="notranslate w3-codespan w3-small" style="word-break:break-word">
+										<IfModule mod_rewrite.c><br>
+											RewriteEngine On<br>
+											#<br>
+											# Uncomment the statement below if URL rewriting doesn't<br>
+											# work properly. If you installed AjaxChat in a subdirectory<br>
+											# of your site, properly set the argument for the statement.<br>
+											# e.g.: if your domain is test.com and you installed AjaxChat<br>
+											# in https://www.test.com/chat/index.php you have to set<br>
+											# the statement RewriteBase /chat/<br>
+											#<br>
+											#RewriteBase /<br>
+											RewriteCond %{REQUEST_URI} !^public<br>
+											RewriteRule ^(.*)$ public/$1 [L]<br>
+										</IfModule>
+									</code>
+								</div>
+							</div>
+							<div class="w3-col m6 l6">
+								<p>für das Verzeichnis&nbsp;<span class="notranslate w3-text-deep-purple"><b>public/</b></span></p>
+								<div class="w3-panel w3-light-grey">
+									<code class="notranslate w3-codespan w3-small" style="word-break:break-word">
+										<IfModule mod_rewrite.c><br>
+											<IfModule mod_negotiation.c><br>
+												Options -MultiViews -Indexes<br>
+											</IfModule><br>
+											<br>
+											RewriteEngine On<br>
+											<br>
+											# Handle Authorization Header<br>
+											RewriteCond %{HTTP:Authorization}.<br>
+											RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]<br>
+											<br>
+											# Redirect Trailing Slashes If Not A Folder...<br>
+											RewriteCond %{REQUEST_FILENAME} !-d<br>
+											RewriteCond %{REQUEST_URI} (.+)/$<br>
+											RewriteRule ^ %1 [L,R=301]<br>
+											<br>
+											# Send Requests To Front Controller...<br>
+											RewriteCond %{REQUEST_FILENAME} !-d<br>
+											RewriteCond %{REQUEST_FILENAME} !-f<br>
+											RewriteRule ^ index.php [L]<br>
+										</IfModule>
+									</code>
+								</div>
+							</div>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<div class="w3-row">
+							<div class="w3-col m6 l6">
+								<div class="w3-panel">
+									<p>Das enpackte Archiv enthält folgende Verzeichnisse und Dateien:</p>
+									<span class="w3-small"><b>AJAX-Chat-0.9.0-standalone-w*</b></span>
+									<ul class="notranslate w3-ul w3-small">
+										<li class="w3-text-brown w3-border-0"><b>| - bootstrap</b></li>
+										<li class="w3-text-green w3-border-0"><b>| - public</b></li>
+										<li class="w3-text-green w3-border-0"><b>| - src</b></li>
+										<li class="w3-text-orange w3-border-0"><b>| - vendor</b></li>
+										<li class="w3-text-orange w3-border-0"><b> - composer.json</b></li>
+										<li class="w3-text-orange w3-border-0"><b> - changelog.txt</b></li>
+										<li class="w3-text-orange w3-border-0"><b> - composer.lock</b></li>
+										<li class="w3-border-0"> - docker-compose.yml</li>
+										<li class="w3-border-0"> - LICENSE</li>
+										<li class="w3-border-0"> - readme.html</li>
+										<li class="w3-border-0"> - README.md</li>
+										<li class="w3-border-0"> - .gitignore</li>
+									</ul>
+								</div>
+							</div>
+							<div class="w3-col m6 l6">
+								<div class="w3-panel">
+									<p>Erstellen Sie ein Verzeichnis "chat" ("chat" ist optional) und fügen sie die grün markierten Verzeichnisse
+									in dieses Verzeichnis. Je nach Auswahl ob Composer verwendet werden soll oder nicht fügen Sie noch die dafür benötigten
+									Verzeichnisse und Dateien ein.</p>
+									<span class="notranslate w3-small"><b>chat</b></span>
+									<ul class="notranslate w3-ul w3-small">
+										<li class="w3-text-green w3-border-0"><b>| - public</b>
+											<ul class="w3-ul w3-small">
+												<li> - <span class="w3-text-deep-purple w3-border-0"><b> .htaccess ("public")</b></span></li>
+											</ul>
+										</li>
+										<li class="w3-text-green w3-border-0"><b>| - src</b></li>
+									</ul>
+									<span class="w3-small"><b>für Composer</b></span>
+									<ul class="notranslate w3-ul w3-small">
+										<li class="w3-text-orange w3-border-0"><b>| - vendor</b></li>
+										<li class="w3-text-orange w3-border-0"><b> - composer.json</b></li>
+										<li class="w3-text-orange w3-border-0"><b> - changelog.txt</b></li>
+										<li class="w3-text-orange w3-border-0"><b> - composer.lock</b></li>
+									</ul>
+									<span class="w3-small"><b>KEIN Composer</b></span>
+									<ul class="notranslate w3-ul w3-small">
+										<li class="w3-text-brown w3-border-0"><b>| - bootstrap</b></li>
+									</ul>
+									<ul class="notranslate w3-ul w3-small">
+										<li class="w3-border-0"> - <span class="w3-text-teal w3-border-0"><b> .htaccess ("chat" (root))</b></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Option Composer</h3>
+						<p>Bearbeiten Sie die Datei <span class="w3-text-green"><b>public/index.php</b></span>
+						<div class="w3-row-padding">
+							<div class="w3-col m6 l6">
+								<p>mit Composer</p>
+								<div class="w3-panel w3-light-grey">
+									<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+										require(AJAX_CHAT_PATH.'vendor/autoload.php');<br>
+										// require(AJAX_CHAT_PATH.'bootstrap/autoload.php');<br>
+									</code>
+								</div>
+							</div>
+							<div class="w3-col m6 l6">
+								<p>OHNE Composer</p>
+								<div class="w3-panel w3-light-grey">
+								<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+										// require(AJAX_CHAT_PATH.'vendor/autoload.php');<br>
+										require(AJAX_CHAT_PATH.'bootstrap/autoload.php');<br>
+									</code>
+								</div>
+							</div>
+						</div>
+						<p><b>Es muss entweder Composer oder bootstrap Autoloader inkludiert werden!</b></p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Datenbankeinstellungen konfigurieren</h3>
+						<p>Als erstes und wichtigstes müssen Sie AJAX Chat mitteilen, wie eine Verbindung zu Ihrer Datenbank hergestellt werden soll.
+						Diese und alle Kerneinstellungen müssen sich in der Datei <span class="w3-text-green"><b>src/config.php</b></span> befinden.
+						Sie müssen diese Datei erstellen.<br>
+						Eine Beispieldatei für die Datei config.php finden Sie in <span class="w3-text-green"><b>src/config.php.example</b></span>, die im Lieferumfang des Chats enthalten ist.<br>
+						Duplizieren Sie diese Datei und speichern Sie sie als config.php (oder löschen Sie einfach .example am Ende des Dateinamens) und füllen Sie dann mindestens die folgenden vier Felder in der Datei aus:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="w3-codespan w3-small" style="word-break:break-word"><br>
+								$config['dbConnection']['host'] = 'ihr_datenbank_hostname';<br>
+								$config['dbConnection']['user'] = 'ihr_datenbank_benutzername';<br>
+								$config['dbConnection']['pass'] = 'ihr_datenbank_passwort';<br>
+								$config['dbConnection']['name'] = 'ihr_datenbank_name';<br>
+							</code>
+						</div>
+						<p>Es genügt zu sagen, dass Sie diese Informationen benötigen. Sprechen Sie mit Ihrem Hosting-Anbieter, wenn Sie es nicht wissen.<br>
+						In den meisten Fällen funktioniert der Chat nur, wenn diese Felder ausgefüllt sind, und Sie können mit dem nächsten Schritt fortfahren.</p>
+						<div class="w3-panel w3-pale-blue w3-border">
+							<p>Wenn Ihr Host MySQL nicht verwendet, müssen Sie das Feld „Verbindungstyp“ ändern:
+							<br><code class="notranslate w3-codespan w3-small" style="word-break:break-word">$config['dbConnection']['type'] = null;</code><br>
+							Wenn dies auf „null“ gesetzt ist, wird standardmäßig „mysqli“ verwendet.
+							In den meisten Fällen kann dieses Feld auf „null“ belassen werden.</p>
+							<p>Sie können auf einen vorhandenen Datenbankverbindungslink oder ein vorhandenes Objekt verweisen, indem Sie Folgendes ändern:
+							<br><code class="notranslate w3-codespan w3-small" style="word-break:break-word">$config['dbConnection']['link'] = null;</code><br>
+							Wenn dieser Wert auf „null“ gesetzt ist, wird eine neue Datenbankverbindung erstellt.</p>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3 id="setcookie">Cookies konfigurieren</h3>
+						<p>Als nächstes und wichtigstes müssen Sie die Cookie-Einstellungen tätigen. Sprechen Sie mit Ihrem Hosting-Anbieter,
+						wenn Sie es nicht wissen. Ohne diese Angaben kann der Chat nicht starten.</p>
+						<p>Beide Konfigurationsdateien müssen bearbeitet werden:</p>
+						<div class="w3-row-padding">
+							<div class="w3-col m6 l6">
+								<p><span class="w3-text-green"><b>src/config.php</b></span></p>
+								<div class="w3-panel w3-light-grey">
+									<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+										$config['sessionCookiePath'] = '/';<br>
+										$config['sessionCookieDomain'] = null;<br>
+										$config['sessionCookieSecure'] = null;<br>
+										$config['sessioncookieSamesite'] = 'Lax';<br>
+									</code>
+								</div>
+							</div>
+							<div class="w3-col m6 l6">
+								<p><span class="w3-text-green"><b>public/js/config.js</b></span></p>
+								<div class="w3-panel w3-light-grey">
+									<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+										cookiePath: '/',<br>
+										cookieDomain: null,<br>
+										cookieSecure: false,<br>
+										cookieSamesite: 'Lax',<br>
+									</code>
+								</div>
+							</div>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Wählen Sie Ihre Kanaleinstellungen</h3>
+						<p>Bearbeiten Sie die Datei <span class="w3-text-green"><b>src/data/channels.json</b></span>.
+						Wir haben Ihnen zwei Beispielkanäle zur Verfügung gestellt, mit den Namen „Public“ und „Private“.
+						Sie können Ihre eigenen hinzufügen oder sie unverändert lassen.
+						Kanäle folgen dem folgenden Format:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								"0": "Public",<br>
+							</code>
+						</div>
+						<p>Jeder Kanal muss eine eindeutige Kanal-ID-Nummer und einen eindeutigen Namen haben.
+						Leerzeichen in den Kanalnamen werden in den Unterstrich „_“ umgewandelt.</p>
+						<div class="w3-panel w3-pale-blue w3-border">
+							<h3>Hinweise zum bearbeiten von .json Dateien</h3>
+							<p><a href="https://wiki.selfhtml.org/wiki/JSON" target="_blank" rel="noopener noreferrer nofollow">SELFHTML JSON</a></p>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Fügen Sie Ihre Benutzer hinzu</h3>
+						<div class="w3-panel w3-pale-red w3-border">
+							<h3>Datenschutz!</h3>
+							<p><b>Wenn Sie keine Benutzerdefinierte Benutzerverwaltung verwenden, lesen Sie unbedingt nachfolgende Hinweise!</b></p>
+							<p>Um ihre Daten zu schützen müssen Sie die Standard-Passwörter der Standard-User ändern.<br>
+							Ändern Sie die Passwörter <span class="w3-small">($users[*]['password'])</span> in sichere Passwörter!!!</p>
+						</div>
+						<div class="w3-panel w3-pale-blue w3-border">
+							<p>Die Standalone-Version von Chat verwendet eine PHP-Datei zum Speichern von Benutzern und Räumen, während die Datenbank für Chat-Nachrichten, Einladungen und Sperren verwendet wird.
+							Die Integrationsversionen nutzen typischerweise eine Datenbank für Benutzer und Räume. Wenn Sie Benutzer verwalten möchten, ohne eine PHP-Datei bearbeiten zu müssen,
+							sollten Sie die Verwendung einer Integrationsversion in Betracht ziehen.</p>
+						</div>
+						<p>Bearbeiten Sie Benutzer in Datei "users.php" im<br>Verzeichnis <span class="w3-text-green"><b>src/data/</b></span><br>
+						Benutzer folgen dem folgenden Format:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								$users[user id] = array();<br>
+								$users[user id]['userRole'] = AJAX_CHAT_ROLE;<br>
+								$users[user id]['userName'] = 'user name';<br>
+								$users[user id]['password'] = 'user password';<br>
+								$users[user id]['channels'] = array(allowed channel ids);<br>
+							</code>
+						</div>
+						<p>Jeder Benutzer muss eine eindeutige Benutzer-ID-Nummer und einen eindeutigen Namen haben.
+						Der erste Benutzer in der Liste (Benutzer-ID 0) wird für die Gastbenutzereinstellungen verwendet. Alle Gastbenutzer haben Zugriff auf die für
+						diesen Benutzer festgelegten Kanäle und die Benutzerrolle „AJAX_CHAT_GUEST“. Registrierte Benutzer können die Benutzerrollen „AJAX_CHAT_USER“,
+						„AJAX_CHAT_MODERATOR“ oder „AJAX_CHAT_ADMIN“ haben. (Groß-/Kleinschreibung beachten, bitte genau eingeben).<br>
+						Die Liste der Kanäle, auf die ein Benutzer Zugriff hat, kann für jeden Benutzer individuell festgelegt werden.
+						Kanal-IDs werden durch Kommas getrennt. zB: „array(0,1,23);“ ermöglicht die Kanäle 0, 1 und 23. Leerzeichen in den Benutzernamen werden in den Unterstrich „_“ umgewandelt.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Auf Ihren Server hochladen</h3>
+						<p>Laden Sie das chat-Verzeichnis irgendwo unter Ihrem root-Verzeichnis auf Ihren Server hoch:<br>
+						z.B. https://example.org/pfad/zum/chat/</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Erstellen Sie die Datenbanktabellen</h3>
+						<p>Für die Erstellung der Datenbank stehen Ihnen zwei Möglichkeiten zur Verfügung. Die erste und normalerweise einfachste Möglichkeit besteht darin, das in AJAX Chat enthaltene Installationsskript auszuführen. Alternativ können Sie ein Datenbanktool wie PHPMyAdmin verwenden, um die Tabellen manuell zu erstellen.</p>
+						<div class="w3-bar-block">
+							<ol>
+								<li>Um das Installationsskript zu verwenden, rufen Sie die folgende URL in Ihrem Browser auf:<br>
+									https://example.org/pfad/zum/chat/install.php<br>
+									Dabei ist „http://example.org/pfad/zum/chat/“ die tatsächliche URL zu Ihrem chat-Verzeichnis.<br>
+									<b>Vergessen Sie nicht, die Datei install.php zu löschen, nachdem Sie diesen Schritt abgeschlossen haben!</b>
+								</li>
+								<li>Um es manuell mit PHPMyAdmin oder einem ähnlichen Tool zu installieren, kopieren Sie den Inhalt der<br>
+									<span class="w3-text-green"><b>src/migrations/chat.sql</b></span> Datei<br>und führen Sie sie als Abfrage aus.
+								</li>
+							</ol>
+						</div>
+						<p>Mit beiden Methoden werden die Tabellen erstellt, die Ihre Datenbank zum Speichern von Chatnachrichten und anderen Informationen benötigt.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Löschen Sie das Installationsskript</h3>
+						<p>Löschen Sie die Datei <span class="w3-text-green"><b>public/index.php</b></span> aus dem Chat-Verzeichnis auf Ihrem Server. Sie können auch die Datei <span class="w3-text-green"><b>src/migrations/chat.sql</b></span> löschen.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Herzlichen Glückwunsch! Es ist geschafft</h3>
+						<p>Sie sind fertig! Um Ihren Chat zu testen, navigieren Sie in einem Browser zu Ihrer Chat-URL: <br>http://example.org/pfad/zum/chat/index.php<br>
+						Sie können den Chat jetzt individuell an Ihre Bedürfnisse anpassen.</p>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="configuring" class="w3-container w3-blue">
+						<h3>03. Configure and customize</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<h3>Konfigurationsdateien</h3>
+						<p>AJAX Chat ist vollständig anpassbar und enthält zwei Konfigurationsdateien:</p>
+						<div class="w3-bar-block">
+							<ol>
+								<li><span class="w3-text-green"><b>src/config.php</b></span>: Diese Datei enthält die wichtigsten Konfigurationsoptionen für den Chat.
+									Hier finden Sie wesentliche Optionen zur Konfiguration der Datenbank, Sicherheit, verfügbaren Sprachen usw.
+								</li>
+								<li><span class="w3-text-green"><b>public/js/config.js</b></span>: Diese Datei enthält clientseitige Einstellungen, die die Standardoptionen Ihrer Benutzer im Chat ändern.
+									Viele dieser Einstellungen können vom Benutzer in seinen Optionen geändert werden, einige (wie die Aktualisierungsrate) jedoch nicht.
+								</li>
+							</ol>
+						</div>
+						<p>Beide Dateien sind gut kommentiert und enthalten Informationen zur Bedeutung der Einstellungen.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Anpassen des Layouts</h3>
+						<p>Das Layout von AJAX Chat ist mithilfe von CSS (Cascaded Style Sheets) vollständig anpassbar.<br>
+						AJAX Chat verfügt über einen vordefinierten Satz von Styles. Gehen Sie wie folgt vor, um Ihren eigenen Style hinzuzufügen:</p>
+						<div class="w3-bar-block">
+							<ol>
+								<li>Fügen Sie eine neue CSS-Datei in <span class="w3-text-green"><b>public/css</b></span> (z.B. meinstyle.css) hinzu, indem Sie einen der vorhandenen Style aus dem CSS-Verzeichnis kopieren.</li>
+								<li>Bearbeiten Sie Ihre Datei (<span class="w3-text-green"><b>public/css/meinstyle.css</b></span>) und passen Sie die CSS-Einstellungen nach Ihren Wünschen an.</li>
+								<li>Fügen Sie den Namen Ihres Style ohne Dateierweiterung zu den verfügbaren Styles in <span class="w3-text-green"><b>src/config.php</b></span> hinzu:
+									<div class="w3-panel w3-light-grey">
+										<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+											// Available styles:<br>
+											$config['styleAvailable'] = array('meinstyle','beige','black','grey');<br>
+											// Default style:<br>
+											$config['styleDefault'] = 'meinstyle';<br>
+										</code>
+									</div>
+								</li>
+							</ol>
+						</div>
+						<p>Um das Layout weiter anzupassen, können Sie die Template-Dateien in <span class="w3-text-green"><b>src/template/</b></span> anpassen.</p>
+						<p>Stellen Sie sicher, dass Sie gültiges XHTML erstellen, da sonst in modernen Browsern Fehler auftreten. Dies liegt daran,
+						dass der Seiteninhaltstyp „application/xhtml+xml“ lautet. Die Verwendung dieses Inhaltstyps verbessert die Leistung beim Bearbeiten des Document Object Model (DOM).</p>
+						<p>Wenn Sie aus irgendeinem Grund kein gültiges XHTML erstellen können, können Sie einen HTML-Inhaltstyp erzwingen. Bearbeiten Sie einfach <span class="w3-text-green"><b>src/config.php</b></span>
+						und legen Sie die folgende Option fest:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								$config['contentType'] = 'text/html';<br>
+							</code>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Anpassen der Spracheinstellungen</h3>
+						<p>AJAX Chat wird mit zwei Sprachdateiverzeichnissen geliefert:</p>
+						<div class="w3-bar-block">
+							<ol>
+								<li><span class="w3-text-green"><b>src/lang/</b></span>: Dieses Verzeichnis enthält die Sprachdateien,
+									die für die Template-Dateien verwendet werden. Dabei handelt es sich um PHP-Dateien mit der Endung „.php“.
+								</li>
+								<li><span class="w3-text-green"><b>public/js/lang/</b></span>: Diese Datei enthält clientseitige Einstellungen, die die Standardoptionen Ihrer Benutzer im Chat ändern.
+									Viele dieser Einstellungen können vom Benutzer in seinen Optionen geändert werden, einige (wie die Aktualisierungsrate) jedoch nicht.
+								</li>
+							</ol>
+						</div>
+						<p>Viele Sprachen sind bereits im Download enthalten und können durch Bearbeiten dieser Dateien angepasst werden.
+						Für jede Sprache benötigen Sie in beiden Verzeichnissen eine Datei mit dem Sprachcode als Dateinamen (z.B. de.js und de.php).
+						Der Sprachcode wird gemäß den ISO 639-Standards verwendet.</p>
+						<p>Die Dateien für die deutsche Lokalisierung (Sprachcode „de“) sind <span class="w3-text-green"><b>public/js/lang/de.js</b></span> und <span class="w3-text-green"><b>src/lang/de.php</b></span>.</p>
+						<p>Wenn Sie Ihre eigene Lokalisierung erstellen, müssen Sie die Dateien in die richtigen Ordner ablegen und dann zwei Änderungen an <span class="w3-text-green"><b>src/config.php</b></span> vornehmen:</p>
+						<div class="w3-bar-block">
+							<ol>
+								<li>Fügen Sie den Sprachcode hinzu (dieser muss mit dem Dateinamen übereinstimmen, den Sie für die Sprache ausgewählt haben.
+									Denken Sie daran, Kommas korrekt zu verwenden, um mehrere Sprachcodes zu trennen):
+									<div class="w3-panel w3-light-grey">
+										<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+											$config['langAvailable'] = array('de'); <br>
+										</code>
+									</div>
+								</li>
+								<li>Fügen Sie den Namen der Sprache hinzu (das sehen Benutzer im Dropdown-Menü zur Auswahl der Sprache):
+									<div class="w3-panel w3-light-grey">
+										<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+										$config['langNames'] = array('de'=>'Deutsch');<br>
+										</code>
+									</div>
+								</li>
+							</ol>
+						</div>
+						<p>Um Fehler zu vermeiden, sollten Sie diese Regeln beachten:</p>
+						<div class="w3-bar-block">
+							<ol>
+								<li>Stellen Sie sicher, dass Sie Ihre Lokalisierungsdateien in UTF-8 kodieren (ohne Byte-Order-Markierung).</li>
+								<li>Verwenden Sie in Ihren Lokalisierungsdateien keine HTML-Entitäten.</li>
+								<li>Entfernen Sie kein „%s“ in den JavaScript-Sprachdateien – diese sind mit dynamischen Daten gefüllt.</li>
+							</ol>
+						</div>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="logs" class="w3-container w3-blue">
+						<h3>04. Logs</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<h3>Zugriff auf die Protokolle</h3>
+						<p>Standardmäßig ist im Chat „Online Benutzer“ Menü für die Benutzerrolle „AJAX_CHAT_ADMIN“ ein Link zu den Chat-Protokollen.</p>
+						<p>Um direkt auf die Protokolle zu zuzugreifen, müssen Sie den GET-Parameter view=logs zu Ihrer Chat-URL hinzufügen (fügen Sie ?view=logs am Ende der URL hinzu):</p>
+						<div class="w3-panel w3-pale-blue w3-border">
+							<p>z.B. http://example.org/pfad/zum/chat/?view=logs</p>
+						</div>
+						<p>Wenn Sie noch nicht angemeldet sind, müssen Sie sich als Administrator anmelden, um auf die Protokolle zuzugreifen.</p>
+						<p>Die Protokollansicht ermöglicht es Ihnen, die neuesten Chatnachrichten auf allen Kanälen zu überwachen. Es ist auch möglich,
+						die Protokolle privater Räume und privater Nachrichten einzusehen. Sie haben die Möglichkeit, die Protokolle nach Datum, Uhrzeit und Suchbegriffen zu filtern.</p>
+						<div class="w3-panel w3-pale-blue w3-border">
+							<p>Der Suchfilter akzeptiert reguläre Ausdrücke im MySQL-Stil, wie hier beschrieben:
+							<br><a href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html" target="_blank" rel="noopener noreferrer nofollow">https://dev.mysql.com/doc/refman/8.0/en/regexp.html</a><br>
+							Sie können mit der folgenden Syntax nach IPs suchen: ip=127.0.0.1</p>
+						</div>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="shoutbox" class="w3-container w3-blue">
+						<h3>05. Shoutbox</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<p>AJAX Chat kann auch als Shoutbox verwendet werden – hier ist eine kurze Anleitung zur Einrichtung:</p>
+						<h3>Shoutbox Stylesheet</h3>
+						<p>Fügen Sie dem Stylesheet (CSS) aller Seiten, auf denen die Shoutbox angezeigt wird, die folgende Zeile hinzu:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								@import url("http://example.org/pfad/zum/chat/css/shoutbox.css");
+							</code>
+						</div>
+						<p>Ersetzen Sie http://example.org/pfad/zum/chat/ durch die URL zum Chat. Ändern Sie css/shoutbox.css nach Ihren Wünschen.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Shoutbox Funktion</h3>
+						<p>Fügen Sie Ihrem PHP-Code die folgende Funktion hinzu:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								&lt;?php<br>
+								function getShoutBoxContent()<br>
+								{<br>
+									&emsp;&emsp;// Path to the chat directory:<br>
+									&emsp;&emsp;define('AJAX_CHAT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/../');<br><br>
+
+									&emsp;&emsp;// Include Class libraries:<br>
+									&emsp;&emsp;// if you don't want to use Composer then commented without // the autoloader to vendor and use the bootstrap to bootstrap<br><br>
+
+									&emsp;&emsp;// with Composer<br>
+									&emsp;&emsp;require(AJAX_CHAT_PATH.'vendor/autoload.php');<br><br>
+
+									&emsp;&emsp;// without Composer. Autoloader is equivalent to PSR-4<br>
+									&emsp;&emsp;#require(AJAX_CHAT_PATH.'bootstrap/autoload.php');<br><br>
+
+									&emsp;&emsp;$shoutbox = new AjaxChat\Integrations\Standalone\CustomAJAXChatShoutBox();<br><br>
+
+									&emsp;&emsp;return $shoutbox->getShoutBoxContent();<br>
+								}<br>
+								?&gt;<br>
+							</code>
+						</div>
+						<p>Stellen Sie sicher, dass AJAX_CHAT_URL und AJAX_CHAT_PATH auf das Chat-Verzeichnis verweisen.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<h3>Shoutbox-Ausgabe</h3>
+						<p>Zeigen Sie den Shoutbox-Inhalt mit der Shoutbox-Funktion an:</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								&lt;div style="width:200px&quot;&gt;&lt;?= getShoutBoxContent(); ?&gt;&lt;/div&gt;<br>
+							</code>
+						</div>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="custom" class="w3-container w3-blue">
+						<h3>06. Benutzerdefinierte Integrationsinformationen</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<p>Als Beispiel wird eine Integration von phpBB angenommen. Die genauen Informationen von benötigten
+						externen Funktionen erörtern Sie in dem Support Bereich der Software worin Sie den Chat integrieren wollen.<br>
+						<b>Auf die extern benötigten Funktionen gibt es keine Unterstützung.</b></p>
+						<div class="w3-bar-block">
+							<ol>
+								<li>Erstellen sie in <span class="w3-text-green"><b>src/AjaxChat/Integrations/</b></span> ein Verzeichnis „Phpbb3“.</li>
+								<li>Erstellen Sie eine Datei „CustomAJAXChat.php“.</li>
+								<li>Erstellen Sie eine Datei „CustomAJAXChatShoutBox.php“.</li>
+							</ol>
+						</div>
+						<p>CustomAJAXChat.php ist die Hauptdatei für eine benutzerdefinierte Integration von AJAX Chat.
+						Es enthält die Klasse CustomAJAXChat, die die Klasse AJAXChat erweitert und einige wichtige Methoden überschreibt.
+						Die Klasse AJAXChat enthält die Haupt-Chat-Logik. Eine Instanz der Klasse CustomAJAXChat (die die Haupt-Chat-Logik von AJAXChat erbt)
+						wird verwendet, um den Chat in index.php zu initialisieren:</p>
+						<span class="w3-small"><b>Verzeichnis src/AjaxChat/Integrations/</b></span>
+						<ul class="notranslate w3-ul w3-small">
+							<li class="w3-text-green w3-border-0"><b>| - Phpbb3</b></li>
+							<li class="w3-text-green w3-border-0"><b> - CustomAJAXChat.php</b></li>
+							<li class="w3-text-green w3-border-0"><b> - CustomAJAXChatShoutBox.php</b></li>
+						</ul>
+						<p>CustomAJAXChat.php ist die Hauptdatei für eine benutzerdefinierte Integration von AJAX Chat.
+						Es enthält die Klasse CustomAJAXChat, die die Klasse AJAXChat erweitert und einige wichtige Methoden überschreibt.
+						Die Klasse AJAXChat enthält die Haupt-Chat-Logik. Eine Instanz der Klasse CustomAJAXChat (die die Haupt-Chat-Logik von AJAXChat erbt)
+						wird verwendet, um den Chat in <span class="w3-text-green"><b>public/index.php</b></span> zu initialisieren.</p>
+						<p>CustomAJAXChatShoutBox.php ist die Hauptdatei für eine benutzerdefinierte Integration als Shoutbox in das bestehenes Template der Webseite.</p>
+						<hr style="border-top: 1px solid #2196F3">
+						<p>Um dem Chat mitzuteilen das phpBB integriert ist muss in der Datei <span class="w3-text-green"><b>src/config.php</b></span>
+						die Konfiguration von „standalone“ zu „phpbb3“ geändert werden</p>
+						<div class="w3-panel w3-light-grey">
+							<code class="notranslate w3-codespan w3-small" style="word-break:break-word"><br>
+								// The Integrations Directory src/AjaxChat/Integrations/*<br>
+								// Standard = 'standalone' (* e.g. 'phpbb3', will be integrate with phpBB):<br>
+								$config['integration'] = 'phpbb3';<br>
+							</code>
+						</div>
+						<hr style="border-top: 1px solid #2196F3">
+						<p>Dieses Beispiel ist im Paket enthalten. <b>Es ist nicht überprüft auf Funktion und für die enthaltenen externen Funktionen von phpBB gibt es keine Unterstützung.</b></p>
+						<p><b>Tipp für phpBB:</b> Der Download ist nicht mehr verfügbar, aber es gibt nützliche Hinweise. <a href="http://phpbb3-support.square7.ch/viewtopic.php?p=4635#p4635" target="_blank" rel="noopener noreferrer nofollow">Mahony's phpBB3.x Support</a></p>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="socket" class="w3-container w3-blue">
+						<h3>07. Socket Server</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<div class="w3-panel w3-pale-blue w3-border">
+							<p>Dieser Teil des Setups ist OPTIONAL und nur für erfahrene Benutzer gedacht.
+							Der Socket-Server wird nicht mehr aktiv unterstützt und funktioniert möglicherweise nicht sofort ordnungsgemäß.
+							In späteren Versionen von AJAX Chat wird diese Socket-Server-Implementierung möglicherweise durch etwas anderes
+							ersetzt. Bitte melden Sie keine Fehler bezüglich des Socket-Servers – mit diesem Fehler sind Sie auf sich allein
+							gestellt!</p>
+						</div>
+						<p>Der Flash-Player wird seit 2021 nicht mehr weiterentwickelt und verteilt. Als Alternativen gibt Adobe HTML5, WebGL und WebAssembly an.</p>
+						<p>Daher wird darauf nicht mehr eingegangen.</p>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="support" class="w3-container w3-blue">
+						<h3>08. Support</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<p><b>Bitte senden Sie den Entwicklern keine E-Mails mit Supportfragen.</b></p>
+						<ul class="w3-ul w3-normal">
+							<li class="w3-border-0">Weitere Dokumentation und einige Beispiele finden Sie in der
+								<a href="https://github.com/Frug/AJAX-Chat/wiki" target="_blank" rel="noopener noreferrer nofollow">Frug Github Wiki</a>.<br>
+								Beachten Sie dort die geänderte Pfade / Verzeichnisse zu diesem Paket.
+							</li>
+							<li class="w3-border-0">Für allgemeine Supportfragen nutzen Sie die
+								<a href="https://groups.google.com/forum/?#!forum/ajax-chat" target="_blank" rel="noopener noreferrer nofollow">AJAX-chat Google-Gruppe</a>.
+							</li>
+							<li class="w3-border-0">Spezifische Fehlerberichte und eine Liste ausstehender Probleme finden Sie in unserem
+								<a href="https://github.com/wintstar/AJAX-Chat" target="_blank" rel="noopener noreferrer nofollow">Github-Projekt</a>.</li>
+						</ul>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="donate" class="w3-container w3-blue">
+						<h3>09. Spenden</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<p>Ihre Spenden tragen zum Wachstum und zur Entwicklung dieses Projekts bei und sind jederzeit willkommen.</p>
+						<a href="https://www.paypal.com/donate/?hosted_button_id=GC32B44DGCSC8" target="_blank" rel="noopener noreferrer nofollow" class="w3-btn w3-round-xxlarge" style="background-color:#FFC439;text-decoration:none"><b> <span style="color:#191919">Spende mit</span> <span style="color:#002E85">Pay</span><span style="color:#019CDB">Pal</span></b></a>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+
+			<div class="w3-container w3-margin-bottom">
+				<div class="w3-card">
+					<header id="license" class="w3-container w3-blue">
+						<h3>10. Lizenz</h3>
+					</header>
+					<div class="w3-container w3-padding">
+						<p>Der AJAX-Chat von Bluimp wird unter einer modifizierten MIT-Lizenz veröffentlicht.</p>
+						<p>Sie sollten diese Lizenz auch in Ihrem Download dieses Projekts finden.</p>
+					</div>
+					<footer class="w3-container w3-border-top">
+						<p><a href="#top">Zurück nach oben</a></p>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<footer class="w3-container" style="height:60px"> </footer>
+	</body>
+</html>
