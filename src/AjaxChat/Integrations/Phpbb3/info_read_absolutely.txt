@@ -1,0 +1,23 @@
+
+Mahony's phpBB3.x Support
+http://phpbb3-support.square7.ch/viewtopic.php?p=4635#p4635
+
+!!Important!!!
+ phpBB/config/default/container/parameters.yml
+set to core.disable_super_globals: false
+
+
+Insert the following into src/custom.php (not forget set path to phpbb !$phpbb_root_path =!)
+
+// Include custom libraries and initialization code here
+// phpBB initialization:
+define('IN_PHPBB', true);
+$phpbb_root_path = '/path/to/phpbb/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+require($phpbb_root_path.'common.'.$phpEx);
+
+// phpBB session management:
+$user->session_begin();
+$auth->acl($user->data);
+
+

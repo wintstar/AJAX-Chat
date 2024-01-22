@@ -165,6 +165,11 @@ To report bugs use github issues: https://github.com/Frug/AJAX-Chat
 
 Planned changes in this repository
 ----------------------------------
+- Remove old burdens. Old things are easy to attack. Flashplayer is no longer available. And therefore Flashplayer and Socket Server should be removed.
+- PDO DatabaseConnect
+    - https://github.com/Frug/AJAX-Chat/pull/104
+    - https://github.com/Frug/AJAX-Chat/pull/105
+- Slovak language - updated and translated strings => https://github.com/Frug/AJAX-Chat/pull/275
 
 Changes in this repository
 --------------------------
