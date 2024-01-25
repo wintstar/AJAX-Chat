@@ -276,6 +276,13 @@ body.ajax-chat {
 	background-position: -46px -22px;
 }
 
+/* Cursor */
+#content .guest , #content .user, #content .customUser, #content .moderator,  #content .admin {
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+}
+
 /* Borders */
 #content img {
 	border:none;
