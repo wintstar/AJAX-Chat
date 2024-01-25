@@ -1367,7 +1367,7 @@ var ajaxChat = {
 				+ this.getChatListUserNameTitle(userID, userName, userRole, ip)
 				+ ' dir="'
 				+ this.baseDirection
-				+ '" onclick="ajaxChat.insertText(this.firstChild.nodeValue);">'
+				+ '" onclick="ajaxChat.insertText(\'[b]&#64;[i]\'+this.firstChild.nodeValue+\'[/i] &#187; [/b]\');">'
 				+ userName
 				+ '</span>'
 				+ colon
