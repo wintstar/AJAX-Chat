@@ -125,3 +125,7 @@ $lang['logsTime'] = 'Uhrzeit';
 $lang['logsSearch'] = 'Suche';
 $lang['logsPrivateChannels'] = 'Private Räume';
 $lang['logsPrivateMessages'] = 'Private Nachrichten';
+$lang['helpItemDescClear'] = 'Alle Nachrichten lÃ¶schen (hilft auch wenns mal haken sollte)';
+$lang['helpItemCodeClear'] = '/clear';
+$lang['helpItemDescMe'] = 'Benutzername ohne ":" und Schrift kursiv';
+$lang['helpItemCodeMe'] = '/me'
