@@ -125,3 +125,7 @@ $lang['logsTime'] = 'Time';
 $lang['logsSearch'] = 'Search';
 $lang['logsPrivateChannels'] = 'Private Channels';
 $lang['logsPrivateMessages'] = 'Private Messages';
+$lang['helpItemDescClear'] = 'Clear all messages (also helps if it gets stuck)';
+$lang['helpItemCodeClear'] = '/clear';
+$lang['helpItemDescMe'] = 'Username without ":" and font in italics';
+$lang['helpItemCodeMe'] = '/me';
