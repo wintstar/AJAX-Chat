@@ -1344,7 +1344,7 @@ var ajaxChat = {
 		var rowClass = this.DOMbufferRowClass,
 			userClass = this.getRoleClass(userRole),
 			colon = ': ';
-		if(messageText.indexOf('/action') === 0 || messageText.indexOf('/me') === 0 || messageText.indexOf('/privaction') === 0) {
+		if(messageText.indexOf('/action') === 0 || messageText.indexOf('/privaction') === 0) {
 			userClass += ' action';
 			colon = ' ';
 		}
@@ -1844,7 +1844,6 @@ var ajaxChat = {
 							+ '[/color]';
 				}
 				break;
-			case '/me':
 			case '/action':
 				if(textParts.length > 1) {
 					return	textParts[0]+' '
@@ -2233,7 +2232,6 @@ var ajaxChat = {
 					return this.replaceCommandPrivAction(textParts);
 				case '/privactionto':
 					return this.replaceCommandPrivActionTo(textParts);
-				case '/me':
 				case '/action':
 					return this.replaceCommandAction(textParts);
 				case '/invite':

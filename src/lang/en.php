@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Username';
 $lang['password'] = 'Password';
@@ -63,6 +63,8 @@ $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Describe action:';
 $lang['helpItemCodeAction'] = '/action Text';
 $lang['helpItemDescDescribe'] = 'Describe action in private message:';
+$lang['helpItemDescClear'] = 'Clear message window (restore with F5):';
+$lang['helpItemCodeClear'] = '/clear';
 $lang['helpItemCodeDescribe'] = '/describe Username Text';
 $lang['helpItemDescIgnore'] = 'Ignore/accept messages from user:';
 $lang['helpItemCodeIgnore'] = '/ignore Username';

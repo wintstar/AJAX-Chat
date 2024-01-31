@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Benutzername';
 $lang['password'] = 'Passwort';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Privaten Kanal schließen:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Aktion beschreiben:';
 $lang['helpItemCodeAction'] = '/action Text';
+$lang['helpItemDescClear'] = 'Nachrichtenfenster leeren (wiederherstellen mit F5):';
+$lang['helpItemCodeClear'] = '/clear';
 $lang['helpItemDescDescribe'] = 'Aktion in privater Nachricht beschreiben:';
 $lang['helpItemCodeDescribe'] = '/describe Benutzername Text';
 $lang['helpItemDescIgnore'] = 'Nachrichten von Benutzer ignorieren/akzeptieren:';
@@ -119,7 +121,7 @@ $lang['errorUserInUse'] = 'Benutzername in Verwendung.';
 $lang['errorBanned'] = 'Benutzer oder IP ist ausgeschlossen.';
 $lang['errorMaxUsersLoggedIn'] = 'Der Chat hat die maximale Anzahl eingeloggter Benutzer erreicht.';
 $lang['errorChatClosed'] = 'Der Chat ist zur Zeit geschlossen.';
-$lang['logsTitle'] = 'AJAX Chat - Logs';
+$lang['logsTitle'] = 'AJAX Chat Logs';
 $lang['logsDate'] = 'Datum';
 $lang['logsTime'] = 'Uhrzeit';
 $lang['logsSearch'] = 'Suche';
