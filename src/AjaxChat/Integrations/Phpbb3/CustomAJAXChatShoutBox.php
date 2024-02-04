@@ -7,22 +7,23 @@ namespace AjaxChat\Integrations\PhpBB3;
  * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
-use AjaxChat\CustomAJAXChat;
+
 use AjaxChat\Template;
+use AjaxChat\Loader;
 
 class CustomAJAXChatShoutBox extends CustomAJAXChat
 {
-	protected $_config;
+	public $_config;
 
-	function __construct() {
-		$config = Loader::readConfigFile(AJAX_CHAT_PATH.'src/config.php');
-
+	public function __construct(array $config)
+	{
 		$this->initialize($config);
 	}
 
-	public function initialize(array $config) {
+	public function initialize(array $config)
+	{
 		// Initialize configuration settings:
-		$this->_config = &$config;
+		$this->_config = $config;
 
 		// Initialize custom configuration settings:
 		$this->initCustomConfig();
