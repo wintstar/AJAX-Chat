@@ -1,5 +1,7 @@
 <?php
+
 namespace AjaxChat;
+
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
@@ -9,22 +11,22 @@ namespace AjaxChat;
  */
 
 // Class to manage HTTP headers
-class HTTPHeader {
+class HTTPHeader
+{
+	protected $_contentType;
+	protected $_constant;
+	protected $_noCache;
 
-	protected
-		$_contentType,
-		$_constant,
-		$_noCache;
-
-	public function __construct($encoding='UTF-8', $contentType=null, $noCache=true) {
-		if($contentType) {
+	public function __construct($encoding = 'UTF-8', $contentType = null, $noCache = true)
+	{
+		if ($contentType) {
 			$this->_contentType = $contentType.'; charset='.$encoding;
 			$this->_constant = true;
 		} else {
-			if(isset($_SERVER['HTTP_ACCEPT']) && (strpos($_SERVER['HTTP_ACCEPT'],'application/xhtml+xml') !== false)) {
+			if (isset($_SERVER['HTTP_ACCEPT']) && (strpos($_SERVER['HTTP_ACCEPT'], 'application/xhtml+xml') !== false)) {
 				$this->_contentType = 'application/xhtml+xml; charset='.$encoding;
 			} else {
-	 			$this->_contentType = 'text/html; charset='.$encoding;
+				$this->_contentType = 'text/html; charset='.$encoding;
 			}
 			$this->_constant = false;
 		}
@@ -32,9 +34,10 @@ class HTTPHeader {
 	}
 
 	// Method to send the HTTP header:
-	public function send() {
+	public function send()
+	{
 		// Prevent caching:
-		if($this->_noCache) {
+		if ($this->_noCache) {
 			header('Cache-Control: no-cache, must-revalidate');
 			header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 		}
@@ -43,13 +46,14 @@ class HTTPHeader {
 		header('Content-Type: '.$this->_contentType);
 
 		// Send vary header if content-type varies (important for proxy-caches):
-		if(!$this->_constant) {
+		if (!$this->_constant) {
 			header('Vary: Accept');
 		}
 	}
 
 	// Method to return the content-type string:
-	public function getContentType() {
+	public function getContentType()
+	{
 		// Return the content-type string:
 		return $this->_contentType;
 	}

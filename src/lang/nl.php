@@ -1,9 +1,9 @@
 <?php
 /*
  * @package AJAX_Chat
- * @author Sebastian Tschan 
+ * @author Sebastian Tschan
  * @author Dutch localisation: Patrick Donker
- * @copyright (c) Sebastian Tschan 
+ * @copyright (c) Sebastian Tschan
  * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */

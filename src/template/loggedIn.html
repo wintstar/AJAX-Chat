@@ -78,7 +78,7 @@
 						self.bindPopups();
 
 						// Fire the auto-scroll event on a window resize for mobiles (e.g. show/hide onscreen keyboard)
-						if(self.isMobile()) {
+						if (self.isMobile()) {
 							ajaxChat.updateChatlistView();
 						}
 
@@ -116,8 +116,8 @@
 				},
 
 				toggleContainer: function(containerID, hideContainerIDs) {
-					if(hideContainerIDs) {
-						for(var i=0; i<hideContainerIDs.length; i++) {
+					if (hideContainerIDs) {
+						for (var i=0; i<hideContainerIDs.length; i++) {
 							ajaxChat.showHide(hideContainerIDs[i], 'none');
 						}
 					}
@@ -127,7 +127,7 @@
 			};
 
 			function initialize() {
-				if(ajaxChat.view.isMobile()) {
+				if (ajaxChat.view.isMobile()) {
 					ajaxChat.setSetting('blink', false);
 					ajaxChat.view.toggleContainer('onlineListContainer', ['settingsContainer','helpContainer']);
 				}
@@ -150,14 +150,14 @@
 				document.getElementById('maxWordLengthSetting').value = ajaxChat.getSetting('maxWordLength');
 				document.getElementById('dateFormatSetting').value = ajaxChat.getSetting('dateFormat');
 				document.getElementById('persistFontColorSetting').checked = ajaxChat.getSetting('persistFontColor');
-				for(var i=0; i<document.getElementById('audioBackendSetting').options.length; i++) {
-					if(document.getElementById('audioBackendSetting').options[i].value == ajaxChat.getSetting('audioBackend')) {
+				for (var i=0; i<document.getElementById('audioBackendSetting').options.length; i++) {
+					if (document.getElementById('audioBackendSetting').options[i].value == ajaxChat.getSetting('audioBackend')) {
 						document.getElementById('audioBackendSetting').options[i].selected = true;
 						break;
 					}
 				}
-				for(var i=0; i<document.getElementById('audioVolumeSetting').options.length; i++) {
-					if(document.getElementById('audioVolumeSetting').options[i].value == ajaxChat.getSetting('audioVolume')) {
+				for (var i=0; i<document.getElementById('audioVolumeSetting').options.length; i++) {
+					if (document.getElementById('audioVolumeSetting').options[i].value == ajaxChat.getSetting('audioVolume')) {
 						document.getElementById('audioVolumeSetting').options[i].selected = true;
 						break;
 					}

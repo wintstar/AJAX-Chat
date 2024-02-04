@@ -19,35 +19,27 @@ class Encoding
 	public static function getRegExp_NO_WS_CTL()
 	{
 		static $regExp_NO_WS_CTL;
-
 		if (!$regExp_NO_WS_CTL) {
 			// Regular expression for NO-WS-CTL, non-whitespace control characters (RFC 2822), decimal 1–8, 11–12, 14–31, and 127:
 			$regExp_NO_WS_CTL = '/[\x0\x1\x2\x3\x4\x5\x6\x7\x8\xB\xC\xE\xF\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A\x1B\x1C\x1D\x1E\x1F\x7F]/';
 		}
-
 		return $regExp_NO_WS_CTL;
 	}
 
 	public static function convertEncoding($str, $charsetFrom, $charsetTo)
 	{
-		$str = $str ?? '';
-
 		if (function_exists('mb_convert_encoding')) {
 			return mb_convert_encoding($str, $charsetTo, $charsetFrom);
 		}
-
 		if (function_exists('iconv')) {
 			return iconv($charsetFrom, $charsetTo, $str);
 		}
-
 		if (($charsetFrom == 'UTF-8') && ($charsetTo == 'ISO-8859-1')) {
 			return utf8_decode($str);
 		}
-
 		if (($charsetFrom == 'ISO-8859-1') && ($charsetTo == 'UTF-8')) {
 			return utf8_encode($str);
 		}
-
 		return $str;
 	}
 
@@ -57,29 +49,27 @@ class Encoding
 			case 'UTF-8':
 				// Encode only special chars (&, <, >, ', ") as entities:
 				return Encoding::encodeSpecialChars($str);
-
 			case 'ISO-8859-1':
 			case 'ISO-8859-15':
 				// Encode special chars and all extended characters above ISO-8859-1 charset as entities, then convert to content charset:
-				return Encoding::convertEncoding(Encoding::encodeEntities($str, 'UTF-8', [
+				return Encoding::convertEncoding(Encoding::encodeEntities($str, 'UTF-8', array(
 					0x26, 0x26, 0, 0xFFFF,	// &
 					0x3C, 0x3C, 0, 0xFFFF,	// <
 					0x3E, 0x3E, 0, 0xFFFF,	// >
 					0x27, 0x27, 0, 0xFFFF,	// '
 					0x22, 0x22, 0, 0xFFFF,	// "
-					0x100, 0x2FFFF, 0, 0xFFFF,	// above ISO-8859-1
-				]), 'UTF-8', $contentCharset);
-
+					0x100, 0x2FFFF, 0, 0xFFFF	// above ISO-8859-1
+				)), 'UTF-8', $contentCharset);
 			default:
 				// Encode special chars and all characters above ASCII charset as entities, then convert to content charset:
-				return Encoding::convertEncoding(Encoding::encodeEntities($str, 'UTF-8', [
+				return Encoding::convertEncoding(Encoding::encodeEntities($str, 'UTF-8', array(
 					0x26, 0x26, 0, 0xFFFF,	// &
 					0x3C, 0x3C, 0, 0xFFFF,	// <
 					0x3E, 0x3E, 0, 0xFFFF,	// >
 					0x27, 0x27, 0, 0xFFFF,	// '
 					0x22, 0x22, 0, 0xFFFF,	// "
-					0x80, 0x2FFFF, 0, 0xFFFF,	// above ASCII
-				]), 'UTF-8', $contentCharset);
+					0x80, 0x2FFFF, 0, 0xFFFF	// above ASCII
+				)), 'UTF-8', $contentCharset);
 		}
 	}
 
@@ -110,7 +100,6 @@ class Encoding
 		if ($convmap && function_exists('mb_encode_numericentity')) {
 			return mb_encode_numericentity($str, $convmap, $encoding);
 		}
-
 		return htmlentities($str, ENT_QUOTES, $encoding);
 	}
 
@@ -123,7 +112,6 @@ class Encoding
 		if ($htmlEntitiesMap) {
 			$str = strtr($str, $htmlEntitiesMap);
 		}
-
 		return $str;
 	}
 

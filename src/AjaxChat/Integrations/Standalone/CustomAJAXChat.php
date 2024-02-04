@@ -110,7 +110,7 @@ class CustomAJAXChat extends \AjaxChat\AJAXChat
 	{
 		// List containing the registered chat users:
 		$users = [];
-		require(AJAX_CHAT_PATH.'src/data/users.php');
+		require AJAX_CHAT_PATH.'src/data/users.php';
 		return $users;
 	}
 

@@ -14,10 +14,8 @@ Insert the following into src/custom.php (not forget set path to phpbb !$phpbb_r
 define('IN_PHPBB', true);
 $phpbb_root_path = '/path/to/phpbb/';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
-require($phpbb_root_path.'common.'.$phpEx);
+require $phpbb_root_path.'common.'.$phpEx;
 
 // phpBB session management:
 $user->session_begin();
 $auth->acl($user->data);
-
-

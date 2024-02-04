@@ -18,9 +18,8 @@
  * Autoloader is equivalent to PSR-4
  *
  * @param string $className
- * @return void
  */
-function AutoLoader($className):void
+function AutoLoader($className): void
 {
 	// Project specific namespace prefix.
 	$prefix = '';
@@ -31,8 +30,7 @@ function AutoLoader($className):void
 	// Check whether the class uses the namespace prefix.
 	$len = strlen($prefix);
 
-	if (strncmp($prefix, $className, $len) !== 0)
-	{
+	if (strncmp($prefix, $className, $len) !== 0) {
 		// If the namespace prefix is not used, the process is aborted.
 		return;
 	}
@@ -45,8 +43,7 @@ function AutoLoader($className):void
 	$file = $baseDir . str_replace('\\', '/', $relativeClassName) . '.php';
 
 	// Return the path to the class file.
-	if (file_exists($file))
-	{
+	if (file_exists($file)) {
 		require $file;
 	}
 }

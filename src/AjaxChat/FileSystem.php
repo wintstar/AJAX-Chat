@@ -1,5 +1,7 @@
 <?php
+
 namespace AjaxChat;
+
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
@@ -9,10 +11,11 @@ namespace AjaxChat;
  */
 
 // Class to provide methods for file system access:
-class FileSystem {
-
-	public static function getFileContents($file) {
-		if(function_exists('file_get_contents')) {
+class FileSystem
+{
+	public static function getFileContents($file)
+	{
+		if (function_exists('file_get_contents')) {
 			return file_get_contents($file);
 		}
 		return(implode('', file($file)));

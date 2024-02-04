@@ -3122,7 +3122,7 @@ class AJAXChat
 		if (!$this->_lang) {
 			// Include the language file:
 			$lang = null;
-			require(AJAX_CHAT_PATH.'src/lang/'.$this->getLangCode().'.php');
+			require AJAX_CHAT_PATH.'src/lang/'.$this->getLangCode().'.php';
 			$this->_lang = &$lang;
 		}
 		if ($key === null) {

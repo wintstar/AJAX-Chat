@@ -16,7 +16,7 @@
 
 			function initializeLoginPage() {
 				document.getElementById('userNameField').focus();
-				if(!ajaxChat.isCookieEnabled()) {
+				if (!ajaxChat.isCookieEnabled()) {
 					var node = document.createElement('div'),
 						text = document.createTextNode(ajaxChatLang['errorCookiesRequired']);
 					node.appendChild(text);

@@ -1,11 +1,14 @@
 <?php
+
 namespace AjaxChat;
 
-class Loader {
+class Loader
+{
 	/**
 	 * Loads the right integration version of CustomAJAXChat based on config.
 	 */
-	public static function NewFromConfig(string $configPath) {
+	public static function NewFromConfig(string $configPath)
+	{
 		$config = self::readConfigFile($configPath);
 
 		if (!array_key_exists('integration', $config)) {
@@ -21,9 +24,10 @@ class Loader {
 	/**
 	 * Note that loading the standard config file has the side effect of setting several global variables.
 	 */
-	public static function readConfigFile(string $configPath) {
+	public static function readConfigFile(string $configPath)
+	{
 		$config = [];
-		if (!include_once($configPath)) {
+		if (!include_once $configPath) {
 			echo('<strong>Error:</strong> Could not find configuration file at "'.$configPath.'". Check to make sure the file exists.');
 			die();
 		}

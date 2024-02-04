@@ -1,4 +1,5 @@
 <?php
+
 // List containing the registered chat users.
 // This is used by the Standalone version of chat. Integrations may use a database for
 // user details.
