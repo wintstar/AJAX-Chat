@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s et convida a unir-te a %s.',
 	inviteto: 'El teu convit a %s per a unir-se a %s ha estat enviat.',
 	uninvite: '%s no et convida a %s.',
-	uninviteto: 'El teu no convit a  %s per al canal %s ha estat enviat',	
+	uninviteto: 'El teu no convit a  %s per al canal %s ha estat enviat',
 	queryOpen: 'Canal privat obert %s.',
 	queryClose: 'Canal privat tancat %s tancat',
 	ignoreAdded: 'Agregat %s a la llista de usuaris ignorats.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Error: Temps d\'espera de la connexió expirat. Reintenta-ho de nou.',
 	errorConnectionStatus: 'Error: Estat de la connexió: %s',
 	errorSoundIO: 'Error: No ha estat possible carregar el so (Flash IO Error).',
-	errorSocketIO: 'Error: La connexió al servidor ha fallat (Flash IO Error).',
-	errorSocketSecurity: 'Error: La connexió al servidor ha fallat (Flash Security Error).',
 	errorDOMSyntax: 'Error: Sintaxi DOM invàlida (DOM ID: %s).'
-	
+
 }

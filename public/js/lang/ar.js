@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s دخول.',
 	logout: '%s خروج.',
 	logoutTimeout: '%s تم تسجيل الخروج (Timeout).',
@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s يدعوك الى %s.',
 	inviteto: 'دعوتك لـ %s للإنضمام الى %s تم ارسالها.',
 	uninvite: '%s الغاء دعوتك من %s.',
-	uninviteto: 'الغاء الدعوة من %s للـ %s تم ارسالها.',	
+	uninviteto: 'الغاء الدعوة من %s للـ %s تم ارسالها.',
 	queryOpen: 'تم فتح نافذة خاصة مع %s.',
 	queryClose: 'النافذة الخاصة مع %s تم غلقها.',
 	ignoreAdded: 'اضيف %s الى قائمة التجاهل.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'خطأ: وقت الأتصال استنفذ. من فضلك حاول مرة اخرى.',
 	errorConnectionStatus: 'خطأ: حالة الأتصال: %s',
 	errorSoundIO: 'Error: Failed to load sound file (Flash IO Error).',
-	errorSocketIO: 'Error: Connection to socket server failed (Flash IO Error).',
-	errorSocketSecurity: 'Error: Connection to socket server failed (Flash Security Error).',
 	errorDOMSyntax: 'Error: Invalid DOM Syntax (DOM ID: %s).'
-	
+
 }

@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s ჩატში შემოვიდა.',
 	logout: '%s ჩატიდან გავიდა.',
 	logoutTimeout: '%s ჩატი დატოვა (დრო ამოიწურა).',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s გეპაიჟებათ შეუერთდეთ %s-ს.',
 	inviteto: '%s-თვის შექმნილი მოსაწვევი, რათა შეუერთდეს არხ %s-ს, გაგზავნილია.',
 	uninvite: '%s თავის დაპატიჟებას არხ %s-თვის აუქმებს.',
-	uninviteto: '%s-თვის დაწერილი, %s არხის  მოსაწვევის გაუქმება გაგხავნილია.',	
+	uninviteto: '%s-თვის დაწერილი, %s არხის  მოსაწვევის გაუქმება გაგხავნილია.',
 	queryOpen: 'პირადი არხი %s-სთან გასხნილია.',
 	queryClose: 'პირადი არხი %s-სთან დახურულია.',
 	ignoreAdded: '%s იგნორირების სიას დაემატა.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'შეცდომა: კავშირს ვადა გაუვიდა. გთხოვთ, კიდევ სცადეთ.',
 	errorConnectionStatus: 'შეცდომა: კავშირის სტატუსი: %s',
 	errorSoundIO: 'შეცდომა: ხმის ფაილი ვერ ჩაიტვირთა (Flash IO Error).',
-	errorSocketIO: 'შეცდომა: სერვერის სოკეტთან დაკავშირება ჩაიშალა (Flash IO Error).',
-	errorSocketSecurity: 'შეცდომა: სერვერის სოკეტთან დაკავშირება ჩაიშალა (Flash Security Error).',
 	errorDOMSyntax: 'შეცდომა: არასწორი DOM სინტაქსი (DOM ID: %s).'
-	
+
 }

@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s已登入',
 	logout: '%s已登出',
 	logoutTimeout: '%s已登出（連線逾時）',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s 邀請您進入 %s .',
 	inviteto: '請 %s 進入 %s 的邀請函已發送',
 	uninvite: '%s 於 %s 收回了邀請函',
-	uninviteto: '請 %s 進入 %s 的邀請函已收回',	
+	uninviteto: '請 %s 進入 %s 的邀請函已收回',
 	queryOpen: '允許 %s 進入私人房',
 	queryClose: '已不允許 %s 進入私人房',
 	ignoreAdded: '增加 %s 至忽略清單',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: '錯誤：連線逾時，請再連一次……',
 	errorConnectionStatus: '錯誤：連線狀態： %s ',
 	errorSoundIO: '錯誤：無法讀取音效檔 (Flash IO Error).',
-	errorSocketIO: '錯誤：無法連線到伺服器的socket (Flash IO Error).',
-	errorSocketSecurity: '錯誤：無法連線到伺服器的socket (Flash Security Error).',
 	errorDOMSyntax: '錯誤：無效的 DOM 語法 (DOM ID: %s).'
-	
+
 }

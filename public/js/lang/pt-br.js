@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s convida você para participar %s.',
 	inviteto: 'O seu convite para se juntar ao %s do canal %s foi enviado.',
 	uninvite: '%s desconvidou você do canal %s.',
-	uninviteto: 'Seu desconvidamento %s do canal %s foi enviada.',	
+	uninviteto: 'Seu desconvidamento %s do canal %s foi enviada.',
 	queryOpen: 'Canal privado aberto para %s.',
 	queryClose: 'Canal privado para %s fechado.',
 	ignoreAdded: 'Adicionar %s para a lista do igrnorado.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Erro: Intervalo de parada da conexão. Por favor, tente novamente..',
 	errorConnectionStatus: 'Erro: Status da conexão: %s',
 	errorSoundIO: 'Erro: Falha ao carregar som arquivo (Flash IO Error).',
-	errorSocketIO: 'Erro: Conexão para socket servidor falhou (Flash IO Error).',
-	errorSocketSecurity: 'Erro: Conexão para socket servidor falhou (Flash Security Error).',
 	errorDOMSyntax: 'Erro: Inválido DOM Syntax (DOM ID: %s).'
 
 }

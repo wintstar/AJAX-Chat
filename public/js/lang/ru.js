@@ -10,7 +10,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s входит в чат.',
 	logout: '%s выходит из чата.',
 	logoutTimeout: '%s вышел из чата по таймоуту.',
@@ -86,8 +86,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Ошибка: Соединение не установлено. Пожалуйста, попробуйте еще раз.',
 	errorConnectionStatus: 'Ошибка: Статус соединения: %s',
 	errorSoundIO: 'Ошибка: Не получается загрузить звуковой файл (Flash IO Error).',
-	errorSocketIO: 'Ошибка: Не удалось открыть сокет (Flash IO Error).',
-	errorSocketSecurity: 'Ошибка: Не удалость открыть сокет (Flash Security Error).',
 	errorDOMSyntax: 'Ошибка: Некорректный синтаксис DOM (DOM ID: %s).'
-	
+
 }

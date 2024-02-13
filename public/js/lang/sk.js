@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s sa prihlásil do chatu.',
 	logout: '%s sa odhlásil z chatu.',
 	logoutTimeout: '%s bol odhlásený pre neaktivitu.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Chyba: Vypršal časový limit pripojenia. Skúste prosím znovu.',
 	errorConnectionStatus: 'Chyba: Stav pripojenia: %s',
 	errorSoundIO: 'Error: Failed to load sound file (Flash IO Error).',
-	errorSocketIO: 'Error: Connection to socket server failed (Flash IO Error).',
-	errorSocketSecurity: 'Error: Connection to socket server failed (Flash Security Error).',
 	errorDOMSyntax: 'Error: Invalid DOM Syntax (DOM ID: %s).'
-	
+
 }

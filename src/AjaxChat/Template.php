@@ -135,29 +135,6 @@ class Template
 					return 0;
 				}
 
-				// no break
-			case 'SOCKET_SERVER_ENABLED':
-				if ($this->ajaxChat->getConfig('socketServerEnabled')) {
-					return 1;
-				} else {
-					return 0;
-				}
-
-				// no break
-			case 'SOCKET_SERVER_HOST':
-				if ($this->ajaxChat->getConfig('socketServerHost')) {
-					$socketServerHost = $this->ajaxChat->getConfig('socketServerHost');
-				} else {
-					$socketServerHost = (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME']);
-				}
-				return rawurlencode($socketServerHost);
-
-			case 'SOCKET_SERVER_PORT':
-				return $this->ajaxChat->getConfig('socketServerPort');
-
-			case 'SOCKET_SERVER_CHAT_ID':
-				return $this->ajaxChat->getConfig('socketServerChatID');
-
 			case 'STYLE_SHEETS':
 				return $this->getStyleSheetLinkTags();
 

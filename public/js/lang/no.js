@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s inviterer deg til å delta %s.',
 	inviteto: 'Din invitasjon til %s å delta på kanal %s er sendt.',
 	uninvite: '%s trekker din invitasjon fra kanal %s.',
-	uninviteto: 'Din tilbaketrekkning av invitasjon til %s for kanal %s er sendt.', 
+	uninviteto: 'Din tilbaketrekkning av invitasjon til %s for kanal %s er sendt.',
 	queryOpen: 'Privat kanal åpnet til %s.',
 	queryClose: 'Privat kanal til %s er stengt.',
 	ignoreAdded: 'Lagt %s til listen over ignorerte brukere.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Feil: Oppkoblingstid utgått. Forsøk forsøk igjen.',
 	errorConnectionStatus: 'Feil: Oppkoblingsstatus: %s',
 	errorSoundIO: 'Feil: Kunne ikke laste lydfil (Flash IO Error).',
-	errorSocketIO: 'Feil: Tilkobling til stikkontakt server mislyktes (Flash IO Error).',
-	errorSocketSecurity: 'Feil: Tilkobling til stikkontakt server mislyktes (Flash Security Error).',
 	errorDOMSyntax: 'Feil: Ugyldig DOM Syntaks (DOM ID: %s).'
 
 }

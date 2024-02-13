@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s さんがログインしました',
 	logout: '%s さんがログアウトしました',
 	logoutTimeout: '%s さんが強制的にログアウトされました (タイムアウト)',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s さんから チャンネル %s への招待 が届いています',
 	inviteto: '%s さんへ チャンネル %s への招待 を送りました',
 	uninvite: '%s さんから チャンネル %s への招待 を取り消されました',
-	uninviteto: '%s さんの チャンネル %s への招待 を取り消しました',	
+	uninviteto: '%s さんの チャンネル %s への招待 を取り消しました',
 	queryOpen: '二人きりモードを %s さんと開始しました',
 	queryClose: '%s さんとの二人きりモードを終了しました',
 	ignoreAdded: '%s さんを無視ユーザーリストに追加しました',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'エラー : 接続がタイムアウトしました。再度試してください。',
 	errorConnectionStatus: 'エラー : 接続ステータス : %s',
 	errorSoundIO: 'エラー : サウンドファイルの読み込みに失敗しました (Flash IO Error)',
-	errorSocketIO: 'エラー : ソケットサーバへの接続に失敗しました (Flash IO Error)',
-	errorSocketSecurity: 'エラー : ソケットサーバへの接続に失敗しました (Flash Security Error)',
 	errorDOMSyntax: 'エラー : DOM の文法が不正です (DOM ID: %s)'
-	
+
 }

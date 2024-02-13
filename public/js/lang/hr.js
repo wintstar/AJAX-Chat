@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: 'Korisnik %s prijavio se u brbljanje.',
 	logout: 'Korisnik %s odjavio se iz brbljanja.',
 	logoutTimeout: 'Korisnik %s je odjavljen (neaktivnost).',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: 'Korisnik %s poziva vas da se pridružite kanalu %s.',
 	inviteto: 'Vaš poziv korisniku %s da se pridruži kanalu %s je poslan.',
 	uninvite: 'Korisnik %s povukao je svoj poziv za kanal %s.',
-	uninviteto: 'Vaš opoziv korisniku %s za pridruživanje kanalu %s je poslan.',	
+	uninviteto: 'Vaš opoziv korisniku %s za pridruživanje kanalu %s je poslan.',
 	queryOpen: 'Otvoren je privatni kanal za %s.',
 	queryClose: 'Privatni kanal za %s je zatvoren.',
 	ignoreAdded: 'Korisnik %s je dodan na popis ignoriranih.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Pogreška: Neaktivna veza. Pokušajte ponovo.',
 	errorConnectionStatus: 'Pogreška: Stanje veze: %s',
 	errorSoundIO: 'Pogreška: Učitavanje datoteke zvuka nije uspjelo (Flash IO pogreška).',
-	errorSocketIO: 'Pogreška: Povezivanje s priključkom poslužitelja nije uspjelo (Flash IO pogreška).',
-	errorSocketSecurity: 'Pogreška: Povezivanje s priključkom poslužitelja nije uspjelo (Flash sigurnosna pogreška).',
 	errorDOMSyntax: 'Pogreška: Nepravilna DOM sintaksa (DOM ID: %s).'
-	
+
 }

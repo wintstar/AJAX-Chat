@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s betreedt het chatkanaal.',
 	logout: '%s  verlaat het chatkanaal.',
 	logoutTimeout: '%s verlaat het chatkanaal (Timeout).',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Fout: Connection timeout. Probeer opnieuw.',
 	errorConnectionStatus: 'Fout: Verbindingsstatus: %s',
 	errorSoundIO: 'Error: Geluidsbestand kan worden geladen (Flash IO Error).',
-	errorSocketIO: 'Error: Verbinding met Socket server is verbroken (Flash IO Error).',
-	errorSocketSecurity: 'Error: Verbinding met Socket server is verbroken (Flash Security Error).',
 	errorDOMSyntax: 'Error: Ongeldige DOM Syntax (DOM ID: %s).'
-	
+
 }

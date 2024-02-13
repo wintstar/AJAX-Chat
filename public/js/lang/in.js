@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s masuk ke chat.',
 	logout: '%s keluar dari chat.',
 	logoutTimeout: '%s telah keluar dari saluran (Timeout).',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s mengundang anda untuk gabung ke %s.',
 	inviteto: 'Undangan anda ke %s untuk gabung saluran %s telah dikirim.',
 	uninvite: '%s membatalkan untuk mengundang anda dari saluran %s.',
-	uninviteto: 'Pembatalan undangan anda ke %s untuk salura %s telah dikirim.',	
+	uninviteto: 'Pembatalan undangan anda ke %s untuk salura %s telah dikirim.',
 	queryOpen: 'Saluran Privasi telah dibuka untuk %s.',
 	queryClose: 'Saluran Privasi untuk %s telah ditutup.',
 	ignoreAdded: 'Menambah %s ke daftar yang diacuhkan.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Error: Koneksi putus. Mohon dicoba kembali.',
 	errorConnectionStatus: 'Error: Status koneksi: %s',
 	errorSoundIO: 'Error: Gagal mengeluarkan suara (Flash IO Error).',
-	errorSocketIO: 'Error: Gagal mengadakan koneksi ke server (Flash IO Error).',
-	errorSocketSecurity: 'Error: Gagal mengadakan koneksi ke server (Flash Security Error).',
 	errorDOMSyntax: 'Error: Sintaks DOM yang tidak dikenal(DOM ID: %s).'
-	
+
 }

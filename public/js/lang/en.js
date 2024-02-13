@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Error: Connection timeout. Please try again.',
 	errorConnectionStatus: 'Error: Connection status: %s',
 	errorSoundIO: 'Error: Failed to load sound file (Flash IO Error).',
-	errorSocketIO: 'Error: Connection to socket server failed (Flash IO Error).',
-	errorSocketSecurity: 'Error: Connection to socket server failed (Flash Security Error).',
 	errorDOMSyntax: 'Error: Invalid DOM Syntax (DOM ID: %s).'
 
 }

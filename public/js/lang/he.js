@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s נכנס לתוך הצאט.',
 	logout: '%s יוצא מהצאט.',
 	logoutTimeout: '%s הוצא מהצאט (היה לא זמין).',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'שגיאה: זמן חיבור פג. אנא נסה שנית.',
 	errorConnectionStatus: 'שגיאת חיבור: %s',
 	errorSoundIO: 'Error: Failed to load sound file (Flash IO Error).',
-	errorSocketIO: 'Error: Connection to socket server failed (Flash IO Error).',
-	errorSocketSecurity: 'Error: Connection to socket server failed (Flash Security Error).',
 	errorDOMSyntax: 'Error: Invalid DOM Syntax (DOM ID: %s).'
-	
+
 }

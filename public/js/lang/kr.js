@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s께서 접속하였습니다.',
 	logout: '%s님께서 접속을 종료하였습니다.',
 	logoutTimeout: '%s님께서 시간초과로 나가셨습니다.',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s님께서 %s채널에서 초대하셨습니다.',
 	inviteto: '%s을 %s채널로 초대하는 메시지를 보냈습니다..',
 	uninvite: '%s님께서 %s채널로의 초대를 취소하였습니다.',
-	uninviteto: '%s님께 %s채널로의 초대를 취소하는 메시지를 보냈습니다',	
+	uninviteto: '%s님께 %s채널로의 초대를 취소하는 메시지를 보냈습니다',
 	queryOpen: '%s님의 개인채널이 열렸습니다.',
 	queryClose: '%s님의 개인채널이 닫혔습니다.',
 	ignoreAdded: '%s님을 대화차단 목록에 추가하였습니다.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: '오류: 접속시간을 초과하였습니다.',
 	errorConnectionStatus: '오류: 접속 상태: %s',
 	errorSoundIO: '오류: 입출력 실패로 소리파일을 불러오는데 실패하였습니다.',
-	errorSocketIO: '오류: 입출력 실패로 서버에 접속하는데 실패하였습니다.',
-	errorSocketSecurity: '오류: 보안문제로 서버에 접속하는데 실패하였습니다.',
 	errorDOMSyntax: '오류: DOM 문법이 잘못되었습니다. (DOM ID: %s).'
-	
+
 }

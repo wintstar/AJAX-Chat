@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s belépett a chatre.',
 	logout: '%s kilépett a chatről.',
 	logoutTimeout: '%s kilépett a chatről (Időtúllépés).',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s meghívott a következő szobába: %s.',
 	inviteto: 'A meghívása %s részére a(z) %s szobába elküldve.',
 	uninvite: '%s hívatlan vendégnek tart a(z) %s szobában.',
-	uninviteto: 'Hívatlan vendég jelzője %s számára elküldve a(z) %s szobában.',	
+	uninviteto: 'Hívatlan vendég jelzője %s számára elküldve a(z) %s szobában.',
 	queryOpen: 'Privát szoba megnyitva %s felhasználónak.',
 	queryClose: 'Privát szoba bezárva %s felhasználóval.',
 	ignoreAdded: '%s hozzáadva a figyelmen kívül hagyottakhoz.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Hiba: időtúllépés! Próbáld újra!.',
 	errorConnectionStatus: 'Hiba: a kapcsolat állapota: %s',
 	errorSoundIO: 'Hiba: a hangfájl betöltése sikertelen. (I/O)',
-	errorSocketIO: 'Hiba: kapcsolódás a socket szerverhez sikertelen. (I/O)',
-	errorSocketSecurity: 'Hiba: kapcsolódás a socket szerverhez sikertelen. (Biztonsági hiba!)',
 	errorDOMSyntax: 'Hiba: Hibás DOM szintaxis (DOM ID: %s).'
-	
+
 }

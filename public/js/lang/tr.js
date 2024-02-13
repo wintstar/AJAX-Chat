@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s sohbet odasına girdi.',
 	logout: '%s sohbet odasından çıktı.',
 	logoutTimeout: '%s sohbetten çıkarıldı (Bağlantı Gecikmesi).',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Hata: Bağlantı süresi aşımı. Lütfen tekrar deneyin.',
 	errorConnectionStatus: 'Hata: Bağlantı durumu: %s',
 	errorSoundIO: 'Hata: Ses dosyası yüklenemedi (Flash IO Hatası).',
-	errorSocketIO: 'Hata: Socket server bağlantısı yapılamadı (Flash IO Hatası).',
-	errorSocketSecurity: 'Hata: Socket server bağlantısı yapılamadı(Flash Güvenlik Hatası).',
 	errorDOMSyntax: 'Hata: Geçersiz DOM Sözdizimi (DOM ID: %s).'
-	
+
 }

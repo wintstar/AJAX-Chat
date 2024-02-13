@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s zaprasza Cię do pokoju %s.',
 	inviteto: 'Twoje zaprosznie dla %s do wejścia do pokoju %s zostało wysłane.',
 	uninvite: '%s cofa zaproszenie do pokoju %s.',
-	uninviteto: 'Twoje zaproszenie dla %s do wejścia do pokoju %s zostało wycofane.',	
+	uninviteto: 'Twoje zaproszenie dla %s do wejścia do pokoju %s zostało wycofane.',
 	queryOpen: 'Prywatna rozmowa z %s rozpoczęta.',
 	queryClose: 'Prywatna rozmowa z %s zakończona.',
 	ignoreAdded: '%s dodany do listy ignorowanych.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Błąd: Czas połączenia przekroczony. Spróbuj ponownie.',
 	errorConnectionStatus: 'Błąd: Stan połączenia: %s',
 	errorSoundIO: 'Błąd: nie można pobrać pliku dźwiękowego (Flash IO Error).',
-	errorSocketIO: 'Bład: nie można połączyć się z serwerem (Flash IO Error).',
-	errorSocketSecurity: 'Błąd: Połączenie z serwerem nie powiodło się (Flash Security Error).',
 	errorDOMSyntax: 'Błąd: Nieprawidłowa składnia DOM (DOM ID: %s).'
 
 }

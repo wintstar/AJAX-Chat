@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s convidou-te para entrar na sala %s.',
 	inviteto: 'O teu convite para %s se juntar à sala %s foi enviado.',
 	uninvite: '%s cancelou o convite para entrares na sala %s.',
-	uninviteto: 'O cancelamento do convite para %s entrar na sala %s foi enviado.',	
+	uninviteto: 'O cancelamento do convite para %s entrar na sala %s foi enviado.',
 	queryOpen: 'Sala privada aberta para %s.',
 	queryClose: 'A sala privada para %s está fechada.',
 	ignoreAdded: 'Adicionaste %s à a lista do ignorados.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Erro: O tempo de limite para a conexão esgotou. Por favor, tenta novamente..',
 	errorConnectionStatus: 'Erro: Estado da conexão: %s',
 	errorSoundIO: 'Erro: Falha ao carregar o ficheiro de som (Erro Flash IO).',
-	errorSocketIO: 'Erro: A conexão socket para o servidor falhou (Erro Flash IO).',
-	errorSocketSecurity: 'Erro: A conexão socket para o servidor falhou (Erro de segurança Flash).',
 	errorDOMSyntax: 'Erro: Síntese DOM inválida (DOM ID: %s).'
 
 }

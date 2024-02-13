@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s inviterede dig til at joine %s.',
 	inviteto: 'Din invitation til %s om at joine %s er blevet sendt.',
 	uninvite: '%s Du er nu ikke længere inviteret til %s.',
-	uninviteto: 'Anullere invitation for %s på kanal %s.',	
+	uninviteto: 'Anullere invitation for %s på kanal %s.',
 	queryOpen: 'Privat kanal åben for %s.',
 	queryClose: 'Privat kanal for %s lukket.',
 	ignoreAdded: 'Tilføjede %s til ignorerings listen.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'FEJL: Forbindelses timeout. Prøv venligst igen.',
 	errorConnectionStatus: 'FEJL: Status for forbindelse. %s',
 	errorSoundIO: 'FEJL: Kunne ikke indlæse lydfil (Flash IO Fejl).',
-	errorSocketIO: 'FEJL: Connection to socket server failed (Flash IO fejl).',
-	errorSocketSecurity: 'FEJL: forbindelse til til socket server fejlede (Flash sikkerheds fejl).',
 	errorDOMSyntax: 'FEJL: Ugyldig DOM Syntaks(DOM ID: %s).'
-	
+
 }

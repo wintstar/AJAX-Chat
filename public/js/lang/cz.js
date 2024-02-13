@@ -8,7 +8,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s se přihlásil.',
 	logout: '%s se odhlásil.',
 	logoutTimeout: '%s byl odhlášen (překročen timeout).',
@@ -21,7 +21,7 @@ var ajaxChatLang = {
 	invite: '%s tě zve do místnosti %s.',
 	inviteto: 'Tvoje pozvání %s do místnosti %s bylo odesláno.',
 	uninvite: '%s odmítl pozvání do pokoje %s.',
-	uninviteto: 'Tvoje pozvání %s do pokoje %s bylo odmítnuto.',	
+	uninviteto: 'Tvoje pozvání %s do pokoje %s bylo odmítnuto.',
 	queryOpen: 'Soukromý rozhovor s %s byl započat.',
 	queryClose: 'Soukromý rozhovor s %s byl ukončen.',
 	ignoreAdded: '%s byl přidán do seznamu ignorovaných.',
@@ -84,8 +84,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Chyba: Čas připojení vypršel. Připoj se znovu.',
 	errorConnectionStatus: 'Chyba: Stav připojení: %s',
 	errorSoundIO: 'Chyba: Nepodařilo se přehrát zvukový soubor (Flash IO Error).',
-	errorSocketIO: 'Chyba: Nepodařilo se připojení k serveru (Flash IO Error).',
-	errorSocketSecurity: 'Chyba: Připojení k serveru selhalo (Flash Security Error).',
 	errorDOMSyntax: 'Chyba: Neplatná syntaxe DOM (DOM ID: %s).'
-	
+
 }

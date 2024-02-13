@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s 进入聊天室。',
 	logout: '%s 退出聊天室。',
 	logoutTimeout: '%s 因超时，退出聊天室。',
@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s 邀请你加入 %s。',
 	inviteto: '对 %s 在频道 %s 的邀请已经发送。',
 	uninvite: '%s 撤销了你在频道 %s 的邀请。',
-	uninviteto: '对 %s 在频道 %s 的撤销邀请已经发送。',	
+	uninviteto: '对 %s 在频道 %s 的撤销邀请已经发送。',
 	queryOpen: '私人频道对 %s 打开。',
 	queryClose: '私人频道对 %s 关闭。',
 	ignoreAdded: '将 %s 加入忽略列表。',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: '错误：连接超时，请重试。',
 	errorConnectionStatus: '错误：连接状态：%s',
 	errorSoundIO: '错误：加载声音文件失败（Flash IO 错误）。',
-	errorSocketIO: '错误：连接 Socket 服务器失败（Flash IO 错误）。',
-	errorSocketSecurity: '错误：连接 Socket 服务器失败（Flash 安全错误）。',
 	errorDOMSyntax: '错误：错误的 DOM 语法（DOM ID：%s）。'
-	
+
 }

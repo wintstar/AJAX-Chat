@@ -9,7 +9,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s entra al Chat.',
 	logout: '%s sale del Chat.',
 	logoutTimeout: '%s se ha desconectado (Tiempo de espera agotado).',
@@ -22,7 +22,7 @@ var ajaxChatLang = {
 	invite: '%s te invita a unirte a %s.',
 	inviteto: 'Su invitación a %s para unirse al canal %s se ha enviado.',
 	uninvite: '%s le retira la invitación del canal %s.',
-	uninviteto: 'Su retirada de invitación a %s para el canal %s se ha enviado.',	
+	uninviteto: 'Su retirada de invitación a %s para el canal %s se ha enviado.',
 	queryOpen: 'Privado abierto a %s.',
 	queryClose: 'Privado cerrado a %s.',
 	ignoreAdded: 'Agregado %s a la lista de usuarios ignorados.',
@@ -85,8 +85,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Error: Connection timeout. Please try again.',
 	errorConnectionStatus: 'Error: Estado de la conexión: %s',
 	errorSoundIO: 'Error: No se ha podido cargar el fichero de sonido (Error IO Flash).',
-	errorSocketIO: 'Error: No se ha podido conectar al servidor socket (Error IO Flash).',
-	errorSocketSecurity: 'Error: No se ha podido conectar al servidor socket (Error Seguridad Flash).',
 	errorDOMSyntax: 'Error: Sintaxis DOM No Válida (DOM ID: %s).'
-	
+
 }

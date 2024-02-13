@@ -10,7 +10,7 @@
 
 // Ajax Chat language Object:
 var ajaxChatLang = {
-	
+
 	login: '%s kirjautui sisään.',
 	logout: '%s kirjautui ulos.',
 	logoutTimeout: '%s kirjautui ulos (Aikakatkaisu).',
@@ -23,7 +23,7 @@ var ajaxChatLang = {
 	invite: '%s kutsuu sinut liittymään kanavalle %s.',
 	inviteto: 'Sinun kutsusi käyttäjälle %s, liittymisestä kanavalle %s, on lähetetty.',
 	uninvite: '%s peruu kutsun kanavalle %s.',
-	uninviteto: 'Kutsusi peruminen käyttäjälle %s kanavaa %s varten, on lähetetty.',	
+	uninviteto: 'Kutsusi peruminen käyttäjälle %s kanavaa %s varten, on lähetetty.',
 	queryOpen: 'Yksityinen kanava käyttäjälle %s on avattu.',
 	queryClose: 'Yksityinen kanava käyttäjälle %s on suljettu.',
 	ignoreAdded: 'Käyttäjä %s on lisätty huomiotta jätettäviin.',
@@ -86,8 +86,6 @@ var ajaxChatLang = {
 	errorConnectionTimeout: 'Virhe: Yhteyden aikakatkaisu, olkaa hyvä ja yrittäkää uudelleen.',
 	errorConnectionStatus: 'Virhe: Yhteyden tila: %s',
 	errorSoundIO: 'Virhe: Äänitiedoston lataus epäonnistui (Flash IO-virhe).',
-	errorSocketIO: 'Virhe: Yhteys socket palvelimeen epäonnistui (Flash IO-virhe).',
-	errorSocketSecurity: 'Virhe: Yhteys socket palvelimeen epäonnistui  (Flash-turvallisuus virhe).',
 	errorDOMSyntax: 'Virhe: Virheellinen DOM-syntaksi (DOM-tunniste: %s).'
 
 }
