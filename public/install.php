@@ -15,7 +15,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Path to the chat directory:
-define('AJAX_CHAT_PATH', dirname($_SERVER['SCRIPT_FILENAME']) . '/../');
+define('AJAX_CHAT_PATH', dirname(__DIR__) . '/');
+define('AJAX_CHAT_CONFIG_PATH', AJAX_CHAT_PATH . 'src/config.php');
+
+// Defined constants:
+require AJAX_CHAT_PATH . '/src/constants.php';
 
 // Include Class libraries:
 // if you don't want to use Composer then commented without // the autoloader to vendor and use the bootstrap to bootstrap
@@ -36,10 +40,8 @@ class CustomAJAXChatInstaller extends \AjaxChat\Integrations\Standalone\CustomAJ
 {
 	// Override the default initialize method to skip user session handling. We only want
 	// a valid DB connection.
-	public function initialize(array $config)
+	public function initialize()
 	{
-		$this->_config = $config;
-
 		$this->initDataBaseConnection();
 	}
 
@@ -59,6 +61,7 @@ class CustomAJAXChatInstaller extends \AjaxChat\Integrations\Standalone\CustomAJ
 			if (empty($line)) {
 				continue;
 			}
+
 			$line = trim($line);
 
 			if (count($queries) <= $index) {
@@ -97,12 +100,10 @@ class CustomAJAXChatInstaller extends \AjaxChat\Integrations\Standalone\CustomAJ
 			echo 'Database tables created successfully - please delete this file (install.php).';
 		}
 	}
-
 }
 
 // Initialize the chat installer:
-$config = Loader::readConfigFile(AJAX_CHAT_PATH . 'src/config.php');
-$ajaxChatInstaller = new CustomAJAXChatInstaller($config);
+$ajaxChatInstaller = new CustomAJAXChatInstaller();
 
 // Create the database tables:
 $ajaxChatInstaller->createDataBaseTables();

@@ -6,24 +6,26 @@ use AjaxChat\Template;
 
 class CustomAJAXChatShoutBox extends CustomAJAXChat
 {
-	public $_config;
-
-	public function __construct(array $config)
-	{
-		$this->initialize($config);
-	}
-
-	public function initialize(array $config)
+	public function initialize()
 	{
 		// Initialize configuration settings:
-		$this->_config = $config;
-
-		// Initialize custom configuration settings:
-		$this->initCustomConfig();
+		$this->initConfig();
 	}
 
 	public function getShoutBoxContent()
 	{
+		if ($this->getConfig('allowGuestAccessShoutbox') === false) {
+			header('Location: ' . AJAX_CHAT_URL);
+
+			exit;
+		}
+
+		if ($this->getConfig('allowGuestLogins') === false) {
+			header('Location: ' . AJAX_CHAT_URL);
+
+			exit;
+		}
+
 		$template = new Template($this, AJAX_CHAT_PATH . 'src/template/shoutbox.html');
 
 		// Return parsed template content:

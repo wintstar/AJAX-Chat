@@ -2,206 +2,209 @@
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
+ * @author Philip Nicolcev
+ * @author Stephan Frank
  * @copyright (c) Sebastian Tschan
  * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
-// Define AJAX Chat user roles:
-define('AJAX_CHAT_BANNED',		6);
-define('AJAX_CHAT_CUSTOM',		5);
-define('AJAX_CHAT_CHATBOT',		4);
-define('AJAX_CHAT_ADMIN',		3);
-define('AJAX_CHAT_MODERATOR',	2);
-define('AJAX_CHAT_USER',		1);
-define('AJAX_CHAT_GUEST',		0);
+#==============================================================================
+#	AJAX Chat config parameters:
+#==============================================================================
 
-// AJAX Chat config parameters:
-$config = array();
-
-// Database connection values:
-$config['dbConnection'] = [];
+/*
+ * Database connection values:
+ */
 // Database hostname:
-$config['dbConnection']['host'] = 'db-hostname';
+$dbConnection['host'] = 'localhost';
 // Database username:
-$config['dbConnection']['user'] = 'root';
+$dbConnection['user'] = 'root';
 // Database password:
-$config['dbConnection']['pass'] = 'root';
+$dbConnection['pass'] = 'password';
 // Database name:
-$config['dbConnection']['name'] = 'chat';
+$dbConnection['name'] = 'chat';
 // Database type:
-$config['dbConnection']['type'] = null;
-// Database link:
-$config['dbConnection']['link'] = null;
+$dbConnection['type'] = null;
+// Database charset:
+$dbConnection['link'] = null;
 
 // Database table names:
-$config['dbTableNames'] = [];
-$config['dbTableNames']['online']		= 'ajax_chat_online';
-$config['dbTableNames']['messages']		= 'ajax_chat_messages';
-$config['dbTableNames']['bans']			= 'ajax_chat_bans';
-$config['dbTableNames']['invitations']	= 'ajax_chat_invitations';
+$dbTableNames['online']			= 'ajax_chat_online';
+$dbTableNames['messages']		= 'ajax_chat_messages';
+$dbTableNames['bans']			= 'ajax_chat_bans';
+$dbTableNames['invitations']	= 'ajax_chat_invitations';
 
+/*
+ * Configurations:
+ */
 // The Integrations Directory src/AjaxChat/Integrations/*
 // Standard = 'standalone' (* e.g. 'phpbb3', will be integrate with phpBB):
-$config['integration'] = 'standalone';
-
+$integration = 'standalone';
 // Available languages:
-$config['langAvailable'] = array(
-	'ar','bg','ca','cy','cz','da','de','el','en','es','et','fa','fi','fr','gl','he','hr','hu','in','it','ja','ka','kr','mk','nl','nl-be','no','pl','pt-br','pt-pt','ro','ru','sk','sl','sr','sv','th','tr','uk','zh','zh-tw'
-);
+$langAvailable = [
+	'ar', 'bg', 'ca', 'cy', 'cz', 'da', 'de', 'el', 'en', 'es', 'et', 'fa', 'fi', 'fr', 'gl', 'he', 'hr', 'hu', 'in', 'it', 'ja', 'ka', 'kr', 'mk', 'nl', 'nl-be', 'no', 'pl', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tr', 'uk', 'zh', 'zh-tw',
+];
 // Default language:
-$config['langDefault'] = 'en';
+$langDefault = 'en';
 // Language names (each languge code in available languages must have a display name assigned here):
-$config['langNames'] = array(
-	'ar'=>'عربي', 'bg'=>'Български', 'ca'=>'Català', 'cy'=>'Cymraeg', 'cz'=>'Česky', 'da'=>'Dansk', 'de'=>'Deutsch', 'el'=>'Ελληνικα', 'en'=>'English',
-	'es'=>'Español', 'et'=>'Eesti', 'fa'=>'فارسی', 'fi'=>'Suomi', 'fr'=>'Français', 'gl'=>'Galego', 'he'=>'עברית', 'hr' => 'Hrvatski', 'hu' => 'Magyar', 'in'=>'Bahasa Indonesia', 'it'=>'Italiano',
-	'ja'=>'日本語','ka'=>'ქართული','kr'=>'한 글','mk'=>'Македонски', 'nl'=>'Nederlands', 'nl-be'=>'Nederlands (België)', 'no'=>'Norsk', 'pl'=> 'Polski', 'pt-br'=>'Português (Brasil)', 'pt-pt'=>'Português (Portugal)',
-	'ro'=>'România', 'ru'=>'Русский', 'sk'=> 'Slovenčina', 'sl'=>'Slovensko', 'sr'=>'Srpski', 'sv'=> 'Svenska', 'th'=>'&#x0e20;&#x0e32;&#x0e29;&#x0e32;&#x0e44;&#x0e17;&#x0e22;',
-	'tr'=>'Türkçe', 'uk'=>'Українська', 'zh'=>'中文 (简体)', 'zh-tw'=>'中文 (繁體)'
-);
+$langNames = [
+	'ar' => 'عربي', 'bg' => 'Български', 'ca' => 'Català', 'cy' => 'Cymraeg', 'cz' => 'Česky', 'da' => 'Dansk', 'de' => 'Deutsch', 'el' => 'Ελληνικα', 'en' => 'English',
+	'es' => 'Español', 'et' => 'Eesti', 'fa' => 'فارسی', 'fi' => 'Suomi', 'fr' => 'Français', 'gl' => 'Galego', 'he' => 'עברית', 'hr' => 'Hrvatski', 'hu' => 'Magyar', 'in' => 'Bahasa Indonesia', 'it' => 'Italiano',
+	'ja' => '日本語', 'ka' => 'ქართული', 'kr' => '한 글', 'mk' => 'Македонски', 'nl' => 'Nederlands', 'nl-be' => 'Nederlands (België)', 'no' => 'Norsk', 'pl' => 'Polski', 'pt-br' => 'Português (Brasil)', 'pt-pt' => 'Português (Portugal)',
+	'ro' => 'România', 'ru' => 'Русский', 'sk' => 'Slovenčina', 'sl' => 'Slovensko', 'sr' => 'Srpski', 'sv' => 'Svenska', 'th' => '&#x0e20;&#x0e32;&#x0e29;&#x0e32;&#x0e44;&#x0e17;&#x0e22;',
+	'tr' => 'Türkçe', 'uk' => 'Українська', 'zh' => '中文 (简体)', 'zh-tw' => '中文 (繁體)',
+];
 
 // Available styles:
-$config['styleAvailable'] = array('beige','black','grey','Oxygen','Lithium','Sulfur','Cobalt','Mercury','Uranium','Pine','Plum','prosilver','Core','Curve','MyBB','vBulletin','XenForo');
+$styleAvailable = ['beige', 'black', 'grey', 'Oxygen', 'Lithium', 'Sulfur', 'Cobalt', 'Mercury', 'Uranium', 'Pine', 'Plum', 'prosilver', 'Core', 'Curve', 'MyBB', 'vBulletin', 'XenForo'];
 // Default style:
-$config['styleDefault'] = 'prosilver';
+$styleDefault = 'prosilver';
 
 // The encoding used for the XHTML content:
-$config['contentEncoding'] = 'UTF-8';
+$contentEncoding = 'UTF-8';
 // The encoding of the data source, like userNames and channelNames:
-$config['sourceEncoding'] = 'UTF-8';
-// The content-type of the XHTML page (e.g. "text/html", will be set dependent on browser capabilities if set to null):
-$config['contentType'] = null;
+$sourceEncoding = 'UTF-8';
+// The content-type of the XHTML page (e.g. 'text/html', will be set dependent on browser capabilities if set to null):
+$contentType = null;
 
 // Session name used to identify the session cookie:
-$config['sessionName'] = 'ajax_chat';
+$sessionName = 'ajax_chat';
 // Prefix added to every session key:
-$config['sessionKeyPrefix'] = 'ajaxChat';
+$sessionKeyPrefix = 'ajaxChat';
 // The lifetime of the language, style and setting cookies in days:
-$config['sessionCookieLifeTime'] = 365;
+$sessionCookieLifeTime = 365;
 // The path of the cookies, '/' allows to read the cookies from all directories:
-$config['sessionCookiePath'] = '/';
+$sessionCookiePath = '/';
 // The domain of the cookies, defaults to the hostname of the server if set to null:
-$config['sessionCookieDomain'] = null;
+$sessionCookieDomain = null;
 // If enabled, cookies must be sent over secure (SSL/TLS encrypted) connections:
-$config['sessionCookieSecure'] = null;
+$sessionCookieSecure = null;
 // SameSite prevents the browser from sending this cookie along with cross-site requests.
 // The main goal is to mitigate the risk of cross-origin information leakage. It also provides
 // some protection against cross- site request forgery attacks.Possible values for the flag are none, lax, or strict:
-$config['sessioncookieSamesite'] = 'Lax';
+$sessioncookieSamesite = 'Lax';
 
 // Default channelName used together with the defaultChannelID if no channel with this ID exists:
-$config['defaultChannelName'] = 'Public';
+$defaultChannelName = 'Public';
 // ChannelID used when no channel is given:
-$config['defaultChannelID'] = 0;
-// Defines an array of channelIDs (e.g. array(0, 1)) to limit the number of available channels, will be ignored if set to null:
-$config['limitChannelList'] = null;
+$defaultChannelID = 0;
+// Defines an array of channelIDs (e.g. [0, 1]) to limit the number of available channels, will be ignored if set to null:
+$limitChannelList = null;
 
 // UserID plus this value are private channels (this is also the max userID and max channelID):
-$config['privateChannelDiff'] = 500000000;
+$privateChannelDiff = 500000000;
 // UserID plus this value are used for private messages:
-$config['privateMessageDiff'] = 1000000000;
+$privateMessageDiff = 1000000000;
 
 // Enable/Disable private Channels:
-$config['allowPrivateChannels'] = true;
+$allowPrivateChannels = true;
 // Enable/Disable private Messages:
-$config['allowPrivateMessages'] = true;
+$allowPrivateMessages = true;
 
 // Private channels should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['privateChannelPrefix'] = '[';
+$privateChannelPrefix = '[';
 // Private channels should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['privateChannelSuffix'] = ']';
+$privateChannelSuffix = ']';
 
-// If enabled, users will be logged in automatically as guest users (if allowed), if not authenticated:
-$config['forceAutoLogin'] = false;
+// If enabled, users will be logged in automatically as guest users (if allowed); if not authenticated:
+$forceAutoLogin = false;
 
 // Defines if login/logout and channel enter/leave are displayed:
-$config['showChannelMessages'] = true;
+$showChannelMessages = true;
 
 // If enabled, the chat will only be accessible for the admin:
-$config['chatClosed'] = false;
+$chatClosed = false;
+
 // Defines the timezone offset in seconds (-12*60*60 to 12*60*60) - if null, the server timezone is used:
-$config['timeZoneOffset'] = null;
+$timeZoneOffset = null;
 // Defines the hour of the day the chat is opened (0 - closingHour):
-$config['openingHour'] = 0;
+$openingHour = null;
 // Defines the hour of the day the chat is closed (openingHour - 24):
-$config['closingHour'] = 24;
+$closingHour = null;
 // Defines the weekdays the chat is opened (0=Sunday to 6=Saturday):
-$config['openingWeekDays'] = array(0,1,2,3,4,5,6);
+$openingWeekDays = [0, 1, 2, 3, 4, 5, 6];
 
 // Enable/Disable guest logins:
-$config['allowGuestLogins'] = true;
+$allowGuestLogins = true;
 // Enable/Disable write access for guest users - if disabled, guest users may not write messages:
-$config['allowGuestWrite'] = true;
+$allowGuestWrite = true;
 // Allow/Disallow guest users to choose their own userName:
-$config['allowGuestUserName'] = true;
+$allowGuestUserName = true;
+
+// Shoutbox Enable/Disable guest:
+// Enable/Disable write access for guest users in the Shoutbox - if disabled, guest redirect to Chat login:
+$allowGuestAccessShoutbox = false;
+
 // Guest users should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['guestUserPrefix'] = '(';
+$guestUserPrefix = '(';
 // Guest users should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['guestUserSuffix'] = ')';
+$guestUserSuffix = ')';
 // Guest userIDs may not be lower than this value (and not higher than privateChannelDiff):
-$config['minGuestUserID'] = 400000000;
+$minGuestUserID = 400000000;
 
 // Allow/Disallow users to change their userName (Nickname):
-$config['allowNickChange'] = true;
+$allowNickChange = true;
 // Changed userNames should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['changedNickPrefix'] = '(';
+$changedNickPrefix = '(';
 // Changed userNames should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['changedNickSuffix'] = ')';
+$changedNickSuffix = ')';
 
 // Allow/Disallow registered users to delete their own messages:
-$config['allowUserMessageDelete'] = true;
+$allowUserMessageDelete = true;
 
 // The userID used for ChatBot messages:
-$config['chatBotID'] = 2147483647;
+$chatBotID = 2147483647;
 // The userName used for ChatBot messages
-$config['chatBotName'] = 'ChatBot';
+$chatBotName = 'ChatBot';
 
 // Minutes until a user is declared inactive (last status update) - the minimum is 2 minutes:
-$config['inactiveTimeout'] = 2;
+$inactiveTimeout = 2;
 // Interval in minutes to check for inactive users:
-$config['inactiveCheckInterval'] = 5;
+$inactiveCheckInterval = 5;
 
 // Defines if messages are shown which have been sent before the user entered the channel:
-$config['requestMessagesPriorChannelEnter'] = true;
-// Defines an array of channelIDs (e.g. array(0, 1)) for which the previous setting is always true (will be ignored if set to null):
-$config['requestMessagesPriorChannelEnterList'] = null;
+$requestMessagesPriorChannelEnter = true;
+// Defines an array of channelIDs (e.g. [0, 1]) for which the previous setting is always true (will be ignored if set to null):
+$requestMessagesPriorChannelEnterList = null;
 // Max time difference in hours for messages to display on each request:
-$config['requestMessagesTimeDiff'] = 24;
+$requestMessagesTimeDiff = 24;
 // Max number of messages to display on each request:
-$config['requestMessagesLimit'] = 10;
+$requestMessagesLimit = 10;
 
 // Max users in chat (does not affect moderators or admins):
-$config['maxUsersLoggedIn'] = 100;
+$maxUsersLoggedIn = 100;
 // Max userName length:
-$config['userNameMaxLength'] = 16;
+$userNameMaxLength = 16;
 // Max messageText length:
-$config['messageTextMaxLength'] = 1040;
+$messageTextMaxLength = 1040;
 // Defines the max number of messages a user may send per minute:
-$config['maxMessageRate'] = 20;
+$maxMessageRate = 20;
 
 // Defines the default time in minutes a user gets banned if kicked from a moderator without ban minutes parameter:
-$config['defaultBanTime'] = 5;
+$defaultBanTime = 5;
 
 // Argument that is given to the handleLogout JavaScript method:
-$config['logoutData'] = './?logout=true';
+$logoutData = './?logout=true';
+#'logoutData' = 'http://localhost/mypm/';
 
 // If true, checks if the user IP is the same when logged in:
-$config['ipCheck'] = true;
+$ipCheck = true;
 
 // Defines the max time difference in hours for logs when no period or search condition is given:
-$config['logsRequestMessagesTimeDiff'] = 1;
+$logsRequestMessagesTimeDiff = 1;
 // Defines how many logs are returned on each logs request:
-$config['logsRequestMessagesLimit'] = 10;
+$logsRequestMessagesLimit = 10;
 
 // Defines the earliest year used for the logs selection:
-$config['logsFirstYear'] = 2007;
+$logsFirstYear = 2024;
 
 // Defines if old messages are purged from the database:
-$config['logsPurgeLogs'] = false;
+$logsPurgeLogs = true;
 // Max time difference in days for old messages before they are purged from the database:
-$config['logsPurgeTimeDiff'] = 365;
+$logsPurgeTimeDiff = 1;
 
 // Defines if registered users (including moderators) have access to the logs (admins are always granted access):
-$config['logsUserAccess'] = false;
-// Defines a list of channels (e.g. array(0, 1)) to limit the logs access for registered users, includes all channels the user has access to if set to null:
-$config['logsUserAccessChannelList'] = null;
+$logsUserAccess = false;
+// Defines a list of channels (e.g. [0, 1]) to limit the logs access for registered users, includes all channels the user has access to if set to null:
+$logsUserAccessChannelList = null;

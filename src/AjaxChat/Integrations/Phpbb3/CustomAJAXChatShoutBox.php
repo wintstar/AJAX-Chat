@@ -1,36 +1,40 @@
 <?php
-namespace AjaxChat\Integrations\PhpBB3;
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
+ * @author Philip Nicolcev
+ * @author Stephan Frank
  * @copyright (c) Sebastian Tschan
  * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
+namespace AjaxChat\Integrations\PhpBB3;
+
 use AjaxChat\Template;
-use AjaxChat\Loader;
 
 class CustomAJAXChatShoutBox extends CustomAJAXChat
 {
-	public $_config;
 
-	public function __construct(array $config)
-	{
-		$this->initialize($config);
-	}
-
-	public function initialize(array $config)
-	{
+	public function initialize() {
 		// Initialize configuration settings:
-		$this->_config = $config;
-
-		// Initialize custom configuration settings:
-		$this->initCustomConfig();
+		$this->initConfig();
 	}
 
-	function getShoutBoxContent()
+	public function getShoutBoxContent()
 	{
+		if ($this->getConfig('allowGuestAccessShoutbox') === false) {
+			header('Location: ' . AJAX_CHAT_URL);
+
+			exit;
+		}
+
+		if ($this->getConfig('allowGuestLogins') === false) {
+			header('Location: ' . AJAX_CHAT_URL);
+
+			exit;
+		}
+
 		$template = new Template($this, AJAX_CHAT_PATH . 'src/template/shoutbox.html');
 
 		// Return parsed template content:
