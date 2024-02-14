@@ -6,7 +6,6 @@
  * @link https://blueimp.net/ajax/
  */
 
-
 /*
  * Positioning
  */
@@ -49,7 +48,6 @@
 	display:none;
 }
 
-
 /*
  * Borders
  */
@@ -63,7 +61,7 @@
 }
 
 /* Cursor */
-#ajaxChatContent #ajaxChatChatList span.guest, #ajaxChatContent #ajaxChatChatList span.user, #ajaxChatContent #ajaxChatChatList span.customUser, #ajaxChatContent #ajaxChatChatList span.moderator,  #ajaxChatContent #ajaxChatChatList span.admin {
+#ajaxChatContent #ajaxChatChatList span.guest, #ajaxChatContent #ajaxChatChatList span.user, #ajaxChatContent #ajaxChatChatList span.customUser, #ajaxChatContent #ajaxChatChatList span.chatBot, #ajaxChatContent #ajaxChatChatList span.moderator,  #ajaxChatContent #ajaxChatChatList span.admin {
 	cursor: grab;
 	cursor: -moz-grab;
 	cursor: -webkit-grab;
