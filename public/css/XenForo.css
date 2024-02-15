@@ -36,8 +36,6 @@
 	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 	-khtml-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-}
-#content #logoutButton:hover, #content #submitButton:hover, #content a#returnchatButton:hover, #loginForm #loginButton:hover {
 	position: relative;
 	top: 2px;
 }

@@ -100,7 +100,6 @@
 						}
 						ajaxChat.showHide(containerID);
 					}
-
 				};
 
 				function initialize() {
@@ -177,13 +176,9 @@
 				<textarea id="inputField" rows="1" cols="50" title="[LANG]inputLineBreak[/LANG]" onkeydown="ajaxChat.handleInputFieldKeyDown(event);"></textarea>
 			</div>
 			<div id="submitButtonContainer">
-				<ul>
-					<li class="submitList-left"><a href="./" id="returnchatButton">[LANG]returnToChat[/LANG]</a></li>
-					<li class="submitList-right">
-						<span id="messageLengthCounter">0/[MESSAGE_TEXT_MAX_LENGTH/]</span>
-						<input type="button" id="submitButton" value="[LANG]logsSearch[/LANG]" onclick="ajaxChat.sendMessage();"/>
-					</li>
-				</ul>
+				<span id="messageLengthCounter">0/[MESSAGE_TEXT_MAX_LENGTH/]</span>
+				<input type="button" id="submitButton" value="[LANG]logsSearch[/LANG]" onclick="ajaxChat.sendMessage();"/>
+				<a href="./" id="returnchatButton">[LANG]returnToChat[/LANG]</a>
 			</div>
 			<div id="optionsContainer">
 				<input type="image" src="./img/pixel.gif" class="button" id="autoScrollButton" alt="[LANG]toggleAutoScroll[/LANG]" title="[LANG]toggleAutoScroll[/LANG]" onclick="ajaxChat.toggleSetting('autoScroll', 'autoScrollButton');"/>

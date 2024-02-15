@@ -12,7 +12,7 @@
 @import url('custom.css');
 
 /* Firefox button padding fix */
-#content #bbCodeContainer input::-moz-focus-inner, #content #logoutButton::-moz-focus-inner, #content #submitButton::-moz-focus-inner {
+#content #bbCodeContainer input::-moz-focus-inner, #content #logoutButton::-moz-focus-inner, #content a#returnchatButton::-moz-focus-inner, #content #submitButton::-moz-focus-inner {
 	border:0;
 	padding:0;
 }

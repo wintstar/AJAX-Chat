@@ -63,8 +63,11 @@
 	color:#fff;
 	border:  1px solid #FD9604;
 	border-radius: 6px;
+	padding: 5px 10px;
+}
+
+#content #logoutButton,  #loginForm #loginButton {
 	display: block;
-	padding: 2px 4px;
 }
 
 #content select, #loginForm select, #loginForm input, #content textarea {
