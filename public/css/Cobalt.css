@@ -17,7 +17,7 @@
 	color:#ababab;
 	border: 0;
 }
-#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
+#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
 	background-color:#1D68E0;
 	color:#000;
 }

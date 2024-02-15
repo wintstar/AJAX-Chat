@@ -8,7 +8,7 @@
 @import url('custom.css');
 
 /* Main Buttons */
-#content #logoutButton, #content a#returnchatButton, #content #submitButton,#loginForm #loginButton {
+#content #logoutButton, #content a#returnchatButton, #content #submitButton, #loginForm #loginButton {
 	font: 12pt Calibri, 'Trebuchet MS', Verdana, Geneva, Arial, Helvetica, sans-serif;
 	color: white;
 	font-weight: bold;
@@ -25,15 +25,19 @@
 	-khtml-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 	display: inline-block;
 	cursor: pointer;
-	height: 33px;
 	background-color: #e68c17;
+}
+#content #logoutButton, #content #submitButton, #loginForm #loginButton {
+	height: 33px;
 	padding: 0 10px 0 10px;
 }
-#content #logoutButton:hover,#content #submitButton:hover,#loginForm #loginButton:hover {
+#content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 	-khtml-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+#content #logoutButton:hover, #content #submitButton:hover, #content a#returnchatButton:hover, #loginForm #loginButton:hover {
 	position: relative;
 	top: 2px;
 }

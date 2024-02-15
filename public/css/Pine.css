@@ -85,7 +85,7 @@ input, select {
 	color:#fff;
 	padding:6px 12px
 }
-#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content #submitButton:hover, #loginButton:hover {
+#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover, #loginButton:hover {
 	background-color:#57B324;
 }
 #content #optionsContainer input.button {
