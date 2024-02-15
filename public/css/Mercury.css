@@ -49,7 +49,7 @@
 	border-color:#565656;
 	color:#D4D4D4;
 }
-#loginContent #loginButton, #content a#returnchatButton {
+#loginContent #loginButton {
 	background-color:#424242;
 	color:#D4D4D4;
 	border-radius: 3px;
@@ -94,7 +94,7 @@
 	background-color:#383838;
 	color:#D4D4D4;
 }
-#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover {
+#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content #submitButton:hover {
 	background-color:#565656;
 }
 #content #optionsContainer input.button {

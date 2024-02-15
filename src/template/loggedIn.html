@@ -12,6 +12,7 @@
 	<script src="./js/custom.js" type="text/javascript" charset="UTF-8"></script>
 	<script src="./js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
 	<script src="./js/config.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/FABridge.js" type="text/javascript" charset="UTF-8"></script>
 	<script type="text/javascript">
 		// <![CDATA[
 			var ajax_chat_url = "./";
@@ -77,7 +78,7 @@
 						self.bindPopups();
 
 						// Fire the auto-scroll event on a window resize for mobiles (e.g. show/hide onscreen keyboard)
-						if (self.isMobile()) {
+						if(self.isMobile()) {
 							ajaxChat.updateChatlistView();
 						}
 
@@ -115,8 +116,8 @@
 				},
 
 				toggleContainer: function(containerID, hideContainerIDs) {
-					if (hideContainerIDs) {
-						for (var i=0; i<hideContainerIDs.length; i++) {
+					if(hideContainerIDs) {
+						for(var i=0; i<hideContainerIDs.length; i++) {
 							ajaxChat.showHide(hideContainerIDs[i], 'none');
 						}
 					}
@@ -126,7 +127,7 @@
 			};
 
 			function initialize() {
-				if (ajaxChat.view.isMobile()) {
+				if(ajaxChat.view.isMobile()) {
 					ajaxChat.setSetting('blink', false);
 					ajaxChat.view.toggleContainer('onlineListContainer', ['settingsContainer','helpContainer']);
 				}
@@ -149,8 +150,14 @@
 				document.getElementById('maxWordLengthSetting').value = ajaxChat.getSetting('maxWordLength');
 				document.getElementById('dateFormatSetting').value = ajaxChat.getSetting('dateFormat');
 				document.getElementById('persistFontColorSetting').checked = ajaxChat.getSetting('persistFontColor');
-				for (var i=0; i<document.getElementById('audioVolumeSetting').options.length; i++) {
-					if (document.getElementById('audioVolumeSetting').options[i].value == ajaxChat.getSetting('audioVolume')) {
+				for(var i=0; i<document.getElementById('audioBackendSetting').options.length; i++) {
+					if(document.getElementById('audioBackendSetting').options[i].value == ajaxChat.getSetting('audioBackend')) {
+						document.getElementById('audioBackendSetting').options[i].selected = true;
+						break;
+					}
+				}
+				for(var i=0; i<document.getElementById('audioVolumeSetting').options.length; i++) {
+					if(document.getElementById('audioVolumeSetting').options[i].value == ajaxChat.getSetting('audioVolume')) {
 						document.getElementById('audioVolumeSetting').options[i].selected = true;
 						break;
 					}
@@ -183,6 +190,10 @@
 			ajaxChatConfig.privateMessageDiff = parseInt('[PRIVATE_MESSAGE_DIFF/]');
 			ajaxChatConfig.showChannelMessages = parseInt('[SHOW_CHANNEL_MESSAGES/]');
 			ajaxChatConfig.messageTextMaxLength = parseInt('[MESSAGE_TEXT_MAX_LENGTH/]');
+			ajaxChatConfig.socketServerEnabled = parseInt('[SOCKET_SERVER_ENABLED/]');
+			ajaxChatConfig.socketServerHost = decodeURIComponent('[SOCKET_SERVER_HOST/]');
+			ajaxChatConfig.socketServerPort = parseInt('[SOCKET_SERVER_PORT/]');
+			ajaxChatConfig.socketServerChatID = parseInt('[SOCKET_SERVER_CHAT_ID/]');
 
 			ajaxChat.init(ajaxChatConfig, ajaxChatLang, true, true, true, initialize);
 		// ]]>
@@ -250,10 +261,6 @@
 					<dl>
 						<dt>[LANG]helpItemDescAction[/LANG]</dt>
 						<dd>[LANG]helpItemCodeAction[/LANG]</dd>
-					</dl>
-					<dl>
-						<dt>[LANG]helpItemDescClear[/LANG]</dt>
-						<dd>[LANG]helpItemCodeClear[/LANG]</dd>
 					</dl>
 					<dl>
 						<dt>[LANG]helpItemDescDescribe[/LANG]</dt>
@@ -355,6 +362,16 @@
 					<dl>
 						<dt><label for="persistFontColorSetting">[LANG]settingsPersistFontColor[/LANG]</label></dt>
 						<dd><input type="checkbox" id="persistFontColorSetting" onclick="ajaxChat.setPersistFontColor(this.checked);"/></dd>
+					</dl>
+					<dl>
+						<dt><label for="audioBackendSetting">[LANG]settingsAudioSupport[/LANG]</label></dt>
+						<dd>
+							<select id="audioBackendSetting" onchange="ajaxChat.setAudioBackend(this.options[this.selectedIndex].value);">
+								<option value="-1">Auto</option>
+								<option value="1">Flash</option>
+								<option value="0">HTML5</option>
+							</select>
+						</dd>
 					</dl>
 					<dl>
 						<dt><label for="audioVolumeSetting">[LANG]settingsAudioVolume[/LANG]</label></dt>

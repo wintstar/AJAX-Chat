@@ -17,16 +17,16 @@
 .ajax-chat h1 {
 	color:#CDA6D2;
 }
-#content input, select, #content textarea, #loginButton, #content a#returnchatButton {
+#content input, select, #content textarea, #loginButton {
 	border: 0; box-shadow:1px 1px 4px 0px rgba(0,0,0,0.5);
 }
 #content textarea {
 	border-color:#383838;
 }
-#content input, #loginButton, #content a#returnchatButton {
+#content input, #loginButton {
 	border-radius:8px;
 }
-#content input, #loginContent input, #content select, #loginContent select, #content a#returnchatButton {
+#content input, #loginContent input, #content select, #loginContent select {
 	background:#17081a;
 	border:1px solid rgba(0,0,0,1);
 	color:#9765A0;
@@ -77,7 +77,7 @@
 	background-color:#461124;
 	color:#DAABBC;
 }
-#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover, #loginButton:hover {
+#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content #submitButton:hover, #loginButton:hover {
 	background-color:#591E33;
 }
 #content #optionsContainer input.button {

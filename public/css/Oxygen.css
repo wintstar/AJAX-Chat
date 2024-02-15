@@ -18,7 +18,7 @@
 	color: #fff;
 	border: 1px solid #0066B9;
 }
-#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
+#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
 	background-image:linear-gradient(to top, #4795CC 0px, #2A6AB8 100%);
 }
 #content select, #loginForm select, #loginForm input, #content textarea {

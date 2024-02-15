@@ -18,7 +18,7 @@
 	border: 1px solid #808080;
 	background-image: linear-gradient(to bottom, #222, #000);
 }
-#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content a#returnchatButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
+#content #bbCodeContainer input:hover, #content #logoutButton:hover, #content #submitButton:hover, #loginForm #loginButton:hover {
 	background-color:#222;
 	background-image: linear-gradient(to top, #222, #000);
 }

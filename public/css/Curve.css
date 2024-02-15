@@ -64,7 +64,7 @@
 	border:  1px solid #FD9604;
 	border-radius: 6px;
 	display: block;
-	padding: 2px 4px;
+	padding: 2px;
 }
 
 #content select, #loginForm select, #loginForm input, #content textarea {
