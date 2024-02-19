@@ -313,13 +313,13 @@ var ajaxChat = {
 
 	setUnloadHandler: function() {
 		// Make sure finalize() is called on page unload:
-  		var onunload = window.onunload;
+  		var onunload = window.onbeforeunload;
 		if(typeof onunload !== 'function') {
-			window.onunload = function() {
+			window.onbeforeunload = function() {
 				ajaxChat.finalize();
 			};
 		} else {
-			window.onunload = function() {
+			window.onbeforeunload = function() {
 				ajaxChat.finalize();
 				onunload();
 			};
