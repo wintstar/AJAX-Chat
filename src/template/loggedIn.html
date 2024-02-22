@@ -162,6 +162,7 @@
 				ajaxChat.fillSoundSelection('soundChatBotSetting', ajaxChat.getSetting('soundChatBot'));
 				ajaxChat.fillSoundSelection('soundErrorSetting', ajaxChat.getSetting('soundError'));
 				ajaxChat.fillSoundSelection('soundPrivateSetting', ajaxChat.getSetting('soundPrivate'));
+				ajaxChat.fillSoundSelection('soundBroadcastSetting', ajaxChat.getSetting('soundBroadcast'));
 				document.getElementById('blinkSetting').checked = ajaxChat.getSetting('blink');
 				document.getElementById('blinkIntervalSetting').value = ajaxChat.getSetting('blinkInterval');
 				document.getElementById('blinkIntervalNumberSetting').value = ajaxChat.getSetting('blinkIntervalNumber');
@@ -250,6 +251,10 @@
 					<dl>
 						<dt>[LANG]helpItemDescAction[/LANG]</dt>
 						<dd>[LANG]helpItemCodeAction[/LANG]</dd>
+					</dl>
+					<dl>
+						<dt>[LANG]helpItemDescBroadcast[/LANG]</dt>
+						<dd>[LANG]helpItemCodeBroadcast[/LANG]</dd>
 					</dl>
 					<dl>
 						<dt>[LANG]helpItemDescClear[/LANG]</dt>
@@ -391,6 +396,7 @@
 					</dl>
 					<dl>
 						<dt><label for="soundChatBotSetting">[LANG]settingsSoundChatBot[/LANG]</label></dt>
+
 						<dd><select id="soundChatBotSetting" onchange="ajaxChat.setSetting('soundChatBot', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
@@ -400,6 +406,10 @@
 					<dl>
 						<dt><label for="soundPrivateSetting">[LANG]settingsSoundPrivate[/LANG]</label></dt>
 						<dd><select id="soundPrivateSetting" onchange="ajaxChat.setSetting('soundPrivate', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
+					</dl>
+					<dl>
+						<dt><label for="soundABroadcastSetting">[LANG]settingsSoundBroadcast[/LANG]</label></dt>
+						<dd><select id="soundBroadcastSetting" onchange="ajaxChat.setSetting('soundAlert', this.options[this.selectedIndex].value);"><option value="">-</option></select><input type="image" src="./img/pixel.gif" class="button playback" alt="[LANG]playSelectedSound[/LANG]" title="[LANG]playSelectedSound[/LANG]" onclick="ajaxChat.playSound(this.previousSibling.options[this.previousSibling.selectedIndex].value);"/></dd>
 					</dl>
 					<dl>
 						<dt><label for="blinkSetting">[LANG]settingsBlink[/LANG]</label></dt>
