@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'Klepetalnica';
 $lang['userName'] = 'Uporabniško ime';
 $lang['password'] = 'Geslo';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Zapri privatno sobo:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Opiši akcijo:';
 $lang['helpItemCodeAction'] = '/action Besedilo';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Opiši akcijo v privatnem sporočilu:';
 $lang['helpItemCodeDescribe'] = '/describe Uporabnik Besedilo';
 $lang['helpItemDescIgnore'] = 'Ignoriraj sporočila uporabnika:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Vrzi kocko:';
 $lang['helpItemCodeRoll'] = '/roll [število]d[strani]';
 $lang['helpItemDescNick'] = 'Zamenjaj Uporabniško ime:';
 $lang['helpItemCodeNick'] = '/nick Uporabnik';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Nastavitve';
 $lang['settingsBBCode'] = 'Omogoči BB kodo:';
 $lang['settingsBBCodeImages'] = 'Omogoči slikovno BBCode:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Zvok za odjavo in izhod iz sobe:';
 $lang['settingsSoundChatBot'] = 'Zvok za chatbot sporočila:';
 $lang['settingsSoundError'] = 'Zvuk za sporočila o napakah:';
 $lang['settingsSoundPrivate'] = 'Zvok za zasebna sporočila:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Trepetanje imena okna za nova sporočila:';
 $lang['settingsBlinkInterval'] = 'Interval trepetanja v milisekundah:';
 $lang['settingsBlinkIntervalNumber'] = 'Število intervalov trepetanja:';

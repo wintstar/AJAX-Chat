@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'ユーザー名';
 $lang['password'] = 'パスワード';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = '二人きりモードの終了 :';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = '感情を表現する :';
 $lang['helpItemCodeAction'] = '/action スマイリーなど';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = '感情を表現する (プライベートメッセージ) :';
 $lang['helpItemCodeDescribe'] = '/describe ユーザー名 スマイリーなど';
 $lang['helpItemDescIgnore'] = 'ユーザーを 無視する/無視しない :';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'サイコロを振る :';
 $lang['helpItemCodeRoll'] = '/roll [サイコロを振る回数]d[サイコロの面の数]';
 $lang['helpItemDescNick'] = 'ユーザー名の変更 :';
 $lang['helpItemCodeNick'] = '/nick ユーザー名';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = '環境設定';
 $lang['settingsBBCode'] = 'BBCode を有効にする:';
 $lang['settingsBBCodeImages'] = 'BBCode [image] を有効にする :';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'サウンド - ログアウト、チャンネル�
 $lang['settingsSoundChatBot'] = 'サウンド - チャットボットメッセージ :';
 $lang['settingsSoundError'] = 'サウンド - エラーメッセージ :';
 $lang['settingsSoundPrivate'] = 'Sound for private messages:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = '新着メッセージの到着時にウィンドウタイトルを点滅させる :';
 $lang['settingsBlinkInterval'] = '点滅の間隔（ミリ秒） :';
 $lang['settingsBlinkIntervalNumber'] = '点滅の回数 :';

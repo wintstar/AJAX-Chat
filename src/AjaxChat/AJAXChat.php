@@ -786,6 +786,11 @@ class AJAXChat
 					$this->insertParsedMessageNick($textParts);
 					break;
 
+				// Describing actions:
+				case '/broadcast':
+					$this->insertParsedMessageAction($textParts);
+					break;
+
 					// Custom or unknown command:
 				default:
 					if (!$this->parseCustomCommands($text, $textParts)) {

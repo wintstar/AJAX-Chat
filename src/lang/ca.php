@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Usuari';
 $lang['password'] = 'Contrasenya';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Tancar canal privat:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Descriu acció:';
 $lang['helpItemCodeAction'] = '/action acció';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Descriu acció en un missatge privat:';
 $lang['helpItemCodeDescribe'] = '/describe NomUsuari acció';
 $lang['helpItemDescIgnore'] = 'Ignorar/Acceptar missatges d\'usuaris:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Tirar els daus:';
 $lang['helpItemCodeRoll'] = '/roll [nombre]d[cares]';
 $lang['helpItemDescNick'] = 'canviar nom d\'usuari:';
 $lang['helpItemCodeNick'] = '/nick nom d\'usuari';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Configuració';
 $lang['settingsBBCode'] = 'Habilitar BBCode:';
 $lang['settingsBBCodeImages'] = 'Habilitar imatge BBCode:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'So per desconnectar i missatges de sortida del ca
 $lang['settingsSoundChatBot'] = 'So pels missatges del xat:';
 $lang['settingsSoundError'] = 'So per missatges d\'error:';
 $lang['settingsSoundPrivate'] = 'So per missatges personals:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Notificació de finestra per als nous missatges:';
 $lang['settingsBlinkInterval'] = 'Interval de notificacions intermitents (milisegons):';
 $lang['settingsBlinkIntervalNumber'] = 'Nombre de notificacions intermitents:';

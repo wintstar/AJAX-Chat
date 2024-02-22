@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Usuario';
 $lang['password'] = 'Contraseña';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Cerrar privado:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Describir acción:';
 $lang['helpItemCodeAction'] = '/action Texto';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Describir acción en mensaje privado:';
 $lang['helpItemCodeDescribe'] = '/describe Usuario Texto';
 $lang['helpItemDescIgnore'] = 'Ignorar/Aceptar mensajes de usuarios:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Tirar dado:';
 $lang['helpItemCodeRoll'] = '/roll [numero]de[lados]';
 $lang['helpItemDescNick'] = 'Cambiar nombre de usuario:';
 $lang['helpItemCodeNick'] = '/nick Usuario';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Configuración';
 $lang['settingsBBCode'] = 'Permitir BBCode:';
 $lang['settingsBBCodeImages'] = 'Permitir BBCode de imagen:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Sonido para mensajes de desconexión y salidas de
 $lang['settingsSoundChatBot'] = 'Sonido para mensajes del Chatbot:';
 $lang['settingsSoundError'] = 'Sonido para mensajes de error:';
 $lang['settingsSoundPrivate'] = 'Sonido para mensajes privados:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Parpadeo del título de la ventana con nuevos mensajes:';
 $lang['settingsBlinkInterval'] = 'Intervalo de parpadeo en milisegundos:';
 $lang['settingsBlinkIntervalNumber'] = 'Número de intervalos de parpadeo:';

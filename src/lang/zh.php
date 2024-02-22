@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = '用户名';
 $lang['password'] = '密码';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = '关闭私人频道：';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = '动作描述：';
 $lang['helpItemCodeAction'] = '/action 文字';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = '在悄悄话中做动作：';
 $lang['helpItemCodeDescribe'] = '/describe 用户名 文字';
 $lang['helpItemDescIgnore'] = '忽略/接受用户消息：';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = '摇骰子：';
 $lang['helpItemCodeRoll'] = '/roll [number]d[sides]';
 $lang['helpItemDescNick'] = '修改用户名：';
 $lang['helpItemCodeNick'] = '/nick Username';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = '设置';
 $lang['settingsBBCode'] = '可用 BBCode：';
 $lang['settingsBBCodeImages'] = 'Enable image BBCode:';
@@ -108,6 +111,7 @@ $lang['settingsSoundEnter'] = '声音提示登录或进入频道信息：';
 $lang['settingsSoundLeave'] = '声音提示退出或离开频道信息：';
 $lang['settingsSoundChatBot'] = '声音提示机器人信息：';
 $lang['settingsSoundPrivate'] = 'Sound for private messages:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsSoundError'] = '声音提示错误信息：';
 $lang['settingsBlink'] = '有新消息时闪烁窗口标题：';
 $lang['settingsBlinkInterval'] = '空闲间隔毫秒数：';

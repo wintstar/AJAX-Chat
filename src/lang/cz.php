@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Jméno uživatele';
 $lang['password'] = 'Heslo';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Ukončit soukromý rozhovor:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Co zrovna dělám:';
 $lang['helpItemCodeAction'] = '/action Text';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'To samé soukromě:';
 $lang['helpItemCodeDescribe'] = '/describe Uživatel Text';
 $lang['helpItemDescIgnore'] = 'Odmítnout/přijmout zprávu od uživatele:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'Hodit kostkou:';
 $lang['helpItemCodeRoll'] = '/roll [číslo]d[počet stran]';
 $lang['helpItemDescNick'] = 'Změnit jméno uživatele:';
 $lang['helpItemCodeNick'] = '/nick Uživatel';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Nastavení';
 $lang['settingsBBCode'] = 'Povolit kódy BBCode:';
 $lang['settingsBBCodeImages'] = 'Povolit image BBCode:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'Zvuk při odhlášení nebo odchodu z místnosti:
 $lang['settingsSoundChatBot'] = 'Zvuk při zprávě chatbota:';
 $lang['settingsSoundError'] = 'Zvuk při chybové zprávě:';
 $lang['settingsSoundPrivate'] = 'Zvuk soukromých zpráv:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Blikání titulku okna při příchozí zprávě:';
 $lang['settingsBlinkInterval'] = 'Interval blikání v milisekundách:';
 $lang['settingsBlinkIntervalNumber'] = 'Počet bliknutí:';

@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Nama';
 $lang['password'] = 'Password';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Menutup Channel Privasi:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Menjelaskan Tindakan:';
 $lang['helpItemCodeAction'] = '/action Teks';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Menjelaskan Tindakan pada pesan pribadi:';
 $lang['helpItemCodeDescribe'] = '/describe NamaPengguna Teks';
 $lang['helpItemDescIgnore'] = 'Mengacuhkan/Menerima Pesan Dari Pengguna Lain:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'Lempar Dadu:';
 $lang['helpItemCodeRoll'] = '/roll [number]d[sides]';
 $lang['helpItemDescNick'] = 'Mengganti Nama:';
 $lang['helpItemCodeNick'] = '/nick Nama';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Pengaturan';
 $lang['settingsBBCode'] = 'Membolehkan BBCode:';
 $lang['settingsBBCodeImages'] = 'Membolehkan gambar BBCode:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'Suara pada saat keluar Channel:';
 $lang['settingsSoundChatBot'] = 'Suara pada saat ChatBot:';
 $lang['settingsSoundError'] = 'Suara pada saat terdapat kesalahan:';
 $lang['settingsSoundPrivate'] = 'Suara pada saat privasi:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Kedipkan Judul Jendela pada saat ada pesan baru:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Jumlah interval kedipan:';

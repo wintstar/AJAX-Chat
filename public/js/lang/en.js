@@ -44,6 +44,7 @@ var ajaxChatLang = {
 	userMenuWho: 'List online users',
 	userMenuList: 'List available channels',
 	userMenuAction: 'Describe action',
+	userMenuBroadcast: 'Create broadcast call',
 	userMenuRoll: 'Roll dice',
 	userMenuNick: 'Change username',
 	userMenuEnterPrivateRoom: 'Enter private room',

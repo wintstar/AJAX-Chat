@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = '使用者帳號';
 $lang['password'] = '密碼';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = '關閉私人房：';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = '描述動作：';
 $lang['helpItemCodeAction'] = '/action 文字';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = '用悄悄話描述動作：';
 $lang['helpItemCodeDescribe'] = '/describe 使用者帳號 文字';
 $lang['helpItemDescIgnore'] = '忽略／接受某人的訊息：';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = '擲骰子：';
 $lang['helpItemCodeRoll'] = '/roll [幾次]d[幾種點]';
 $lang['helpItemDescNick'] = '更換暱稱：';
 $lang['helpItemCodeNick'] = '/nick 使用者帳號';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = '選項';
 $lang['settingsBBCode'] = '啟用BBCode：';
 $lang['settingsBBCodeImages'] = '啟用圖形的BBCode：';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = '登出和離開房間的音效：';
 $lang['settingsSoundChatBot'] = '系統訊息的音效：';
 $lang['settingsSoundError'] = '錯誤訊息的音效：';
 $lang['settingsSoundPrivate'] = 'Sound for private messages:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = '當有新訊息時閃動標題：';
 $lang['settingsBlinkInterval'] = '閃動的間隔時間（毫秒）：';
 $lang['settingsBlinkIntervalNumber'] = '閃動次數：';

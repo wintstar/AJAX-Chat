@@ -174,3 +174,13 @@
 #ajaxChatContent #ajaxChatChatList .deleteSelected {
 	border-color:red;
 }
+
+#ajaxChatContent #ajaxChatChatList .rowEven.broadcast {
+	background-color:#4fdef7;
+}
+#ajaxChatContent #ajaxChatChatList .rowOdd.broadcast {
+	background-color:#0aa5cc;
+}
+#ajaxChatContent #ajaxChatChatList .rowEven > span.alert, #ajaxChatContent #ajaxChatChatList .rowOdd > span.alert {
+	font-weight: bolder;
+}

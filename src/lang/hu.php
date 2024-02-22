@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Felhasználónév';
 $lang['password'] = 'Jelszó';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Privát szoba beázárása:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Akció írása (E/3 személyű beszéd):';
 $lang['helpItemCodeAction'] = '/action szöveg';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Akció privát beszélgetésben:';
 $lang['helpItemCodeDescribe'] = '/describe Nick szöveg';
 $lang['helpItemDescIgnore'] = 'Felhasználó figyelembe vétele/figyelmen kívül hagyása:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'Dobókocka dobás:';
 $lang['helpItemCodeRoll'] = '/roll [szám]d[oldalak]';
 $lang['helpItemDescNick'] = 'Nick cseréje:';
 $lang['helpItemCodeNick'] = '/nick Nick';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Beállítások';
 $lang['settingsBBCode'] = 'BBCode engedélyezése:';
 $lang['settingsBBCodeImages'] = 'Kép BBCode engedélyezése:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'Kilépés szobaüzenetek hangja:';
 $lang['settingsSoundChatBot'] = 'ChatBot üzenetek hangja:';
 $lang['settingsSoundError'] = 'Hibaüzenetek hangja:';
 $lang['settingsSoundPrivate'] = 'Privát üzenetek hangja:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Ablak fejléce villogjon új üzenet esetén:';
 $lang['settingsBlinkInterval'] = 'A villogás intervallumának hossza századmásodpercekben:';
 $lang['settingsBlinkIntervalNumber'] = 'Villogási intervallumok száma:';

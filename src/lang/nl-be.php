@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Gebruikersnaam';
 $lang['password'] = 'Wachtwoord';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Sluit een privékamer:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Beschrijf actie:';
 $lang['helpItemCodeAction'] = '/action Tekst';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Beschrijf actie in privébericht:';
 $lang['helpItemCodeDescribe'] = '/describe Gebruikersnaam Tekst';
 $lang['helpItemDescIgnore'] = 'Negeer/aanvaard berichten van gebruiker:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Werp dobbelsteen:';
 $lang['helpItemCodeRoll'] = '/roll [number]d[sides]';
 $lang['helpItemDescNick'] = 'Wijzig gebruikersnaam:';
 $lang['helpItemCodeNick'] = '/nick Gebruikersnaam';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Instellingen';
 $lang['settingsBBCode'] = 'Inschakelen BBCode:';
 $lang['settingsBBCodeImages'] = 'Inschakelen figuur BBCode:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Geluid voor logout en verlaat berichten:';
 $lang['settingsSoundChatBot'] = 'Geluid voor berichten van de bot:';
 $lang['settingsSoundError'] = 'Geluid voor errorberichten:';
 $lang['settingsSoundPrivate'] = 'Geluid voor privé berichten:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Blink window title on new messages:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';

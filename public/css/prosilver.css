@@ -122,6 +122,15 @@
 #content #chatList .rowEven.private {
 	background-color:#F8D9D0;
 }
+#content .rowEven.broadcast {
+	background-color:#4fdef7;
+}
+#content .rowOdd.broadcast {
+	background-color:#0aa5cc;
+}
+#content .rowEven > span.alert, #content .rowOdd > span.alert {
+	font-weight: bolder;
+}
 #content .guest {
 	color:gray;
 }

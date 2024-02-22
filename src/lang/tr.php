@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Üye adı';
 $lang['password'] = 'Şifre';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Özel bir kanalı kapat:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Aksiyon:';
 $lang['helpItemCodeAction'] = '/action mesaj';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Özel mesajda aksiyon:';
 $lang['helpItemCodeDescribe'] = '/describe üyeismi mesaj';
 $lang['helpItemDescIgnore'] = 'Üyeden gelen mesajları Blokla/KabulEt:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Zarları at:';
 $lang['helpItemCodeRoll'] = '/roll [number]d[sides]';
 $lang['helpItemDescNick'] = 'Üye ismini değiştir:';
 $lang['helpItemCodeNick'] = '/nick üyeismi';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Ayarlar';
 $lang['settingsBBCode'] = 'BBCode u aç:';
 $lang['settingsBBCodeImages'] = 'Resim BBCode u aç:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Çıkış ve kanaldan çıkış sesi:';
 $lang['settingsSoundChatBot'] = 'Chatbot mesajları sesi:';
 $lang['settingsSoundError'] = 'Hata mesajları sesi:';
 $lang['settingsSoundPrivate'] = 'Özel mesajlar sesi:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Yeni mesaj geldiğinde pencere başlığını kırp:';
 $lang['settingsBlinkInterval'] = 'Milisaniye olarak kırpma aralığı:';
 $lang['settingsBlinkIntervalNumber'] = 'Kırpma sayısı aralığı:';

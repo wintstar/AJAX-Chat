@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title']				= 'AJAX Chat';
 $lang['userName']			= 'Användarnamn';
 $lang['password']			= 'Lösenord';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose']		= 'Stäng privat kanal:';
 $lang['helpItemCodeQueryClose']		= '/query';
 $lang['helpItemDescAction']		= 'Beskriv händelse:';
 $lang['helpItemCodeAction']		= '/action Text';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe']		= 'Beskriv händelse i privat meddelande:';
 $lang['helpItemCodeDescribe']		= '/describe Användare Text';
 $lang['helpItemDescIgnore']		= 'Ignorera/acceptera meddelande från användare:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll']		= 'Rulla tärning:';
 $lang['helpItemCodeRoll']		= '/roll [siffra]d[sidor]';
 $lang['helpItemDescNick']		= 'Ändra användarnamn:';
 $lang['helpItemCodeNick']		= '/nick Användarnamn';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings']			= 'Inställningar';
 $lang['settingsBBCode']			= 'Aktivera BBCode:';
 $lang['settingsBBCodeImages']		= 'Aktivera BBCode bilder:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave']		= 'Ljud för Logga ut/lämna Kanal meddelanden:';
 $lang['settingsSoundChatBot']		= 'Ljud för Chatbot meddelanden:';
 $lang['settingsSoundError']		= 'Ljud för felmeddelanden:';
 $lang['settingsSoundPrivate'] = 'Ljud för privata meddelanden:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink']			= 'Blinka fönstrets titel vid nya meddelanden:';
 $lang['settingsBlinkInterval']		= 'Blinkintervall i millisekunder:';
 $lang['settingsBlinkIntervalNumber']	= 'Antal blinkintervaller:';

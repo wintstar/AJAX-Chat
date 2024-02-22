@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Kasutajanimi';
 $lang['password'] = 'Parool';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Sulge privaat-kanal:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Kirjelda tegevust:';
 $lang['helpItemCodeAction'] = '/action Tekst';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Kirjelda tegevust privaat-sõnumis:';
 $lang['helpItemCodeDescribe'] = '/describe Kasutajanimi Tekst';
 $lang['helpItemDescIgnore'] = 'Ignoreeri/Tunnusta sõnumeid kindlalt kasutajalt:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'Veereta täringut:';
 $lang['helpItemCodeRoll'] = '/roll [number]d[küljed]';
 $lang['helpItemDescNick'] = 'Muuda kasutajanimi:';
 $lang['helpItemCodeNick'] = '/nick Kasutajanimi';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Seaded';
 $lang['settingsBBCode'] = 'Luba BBCode:';
 $lang['settingsBBCodeImages'] = 'Luba pildi BBCode:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'Heli väljumise ja kanalitest lahkumise sõnumite
 $lang['settingsSoundChatBot'] = 'Chatboti sõnumite heli:';
 $lang['settingsSoundError'] = 'Veateate heli:';
 $lang['settingsSoundPrivate'] = 'Privaatsõnum sõnumite heli:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Vilguta akna tiitlit uute sõnumite saabumisel:';
 $lang['settingsBlinkInterval'] = 'Vilgutamise intervall millisekundites:';
 $lang['settingsBlinkIntervalNumber'] = 'Vilksatuste arv intervallis:';

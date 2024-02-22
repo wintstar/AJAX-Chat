@@ -8,7 +8,7 @@
  * @Translate by Charge01 @ http://www.thaira2lovers.co.cc
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'ชื่อผู้ใช้';
 $lang['password'] = 'รหัสผ่าน';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'ปิดห้องส่วนตัว:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'บอกสิ่งกระทำ:';
 $lang['helpItemCodeAction'] = '/action สิ่งที่ำกำลังทำ';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'บอกสิ่งที่กระทำในข้อความส่วนตัว:';
 $lang['helpItemCodeDescribe'] = '/describe ชื่อผู้ใช้ ข้อความ';
 $lang['helpItemDescIgnore'] = 'ไม่สนใจ/ยอมรับ ข้อความจากผู้ใช้:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'ทอยลูกเต๋า:';
 $lang['helpItemCodeRoll'] = '/roll [เลข]d[ด้าน]';
 $lang['helpItemDescNick'] = 'เปลี่ยนชื่อผู้ใช้:';
 $lang['helpItemCodeNick'] = '/nick ชื่อผู้ใช้ใหม่';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'ตั้งค่า';
 $lang['settingsBBCode'] = 'เปิดใช้งาน BBCode:';
 $lang['settingsBBCodeImages'] = 'เปิดใช้งาน BBCode ภาพ:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'เสียงสำหรับออกจา�
 $lang['settingsSoundChatBot'] = 'เสียงสำหรับข้อความจาำกระบบ:';
 $lang['settingsSoundError'] = 'เสียงสำหรับข้อความผิดพลาด:';
 $lang['settingsSoundPrivate'] = 'Sound for private messages:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'มีสัญญาณ กระพริบบน Title Bar เมื่อมีข้อความใหม่:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';

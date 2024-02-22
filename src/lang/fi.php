@@ -9,7 +9,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Käyttäjätunnus';
 $lang['password'] = 'Salasana';
@@ -64,6 +64,8 @@ $lang['helpItemDescQueryClose'] = 'Sulje yksityinen kanava:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Kerro, mitä teet:';
 $lang['helpItemCodeAction'] = '/action Teksti';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Kerro yksityisviestissä mitä teet:';
 $lang['helpItemCodeDescribe'] = '/describe Käyttäjätunnus Teksti';
 $lang['helpItemDescIgnore'] = 'Estä tai salli viestejä käyttäjältä:';
@@ -88,6 +90,7 @@ $lang['helpItemDescRoll'] = 'Heitä noppaa:';
 $lang['helpItemCodeRoll'] = '/roll [kertaa]d[sivuja]';
 $lang['helpItemDescNick'] = 'Vaihda käyttäjätunnusta:';
 $lang['helpItemCodeNick'] = '/nick Käyttäjänimi';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Asetukset';
 $lang['settingsBBCode'] = 'BBCode päälle:';
 $lang['settingsBBCodeImages'] = 'Salli kuvat:';
@@ -110,6 +113,7 @@ $lang['settingsSoundLeave'] = 'Ääni poistumiseen keskustelusta ja kanavalta:';
 $lang['settingsSoundChatBot'] = 'Ääni chatbotin viesteille:';
 $lang['settingsSoundError'] = 'Ääni virheilmoituksille:';
 $lang['settingsSoundPrivate'] = 'Ääni varten yksityiset viesteille:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Vilkuta ikkunan nimeä uusista viesteistä:';
 $lang['settingsBlinkInterval'] = 'Vilkuttamisen aika millisekunneissa:';
 $lang['settingsBlinkIntervalNumber'] = 'Vilkutuksen viive:';

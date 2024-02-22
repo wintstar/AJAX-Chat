@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Brbljanje';
 $lang['userName'] = 'Korisničko ime';
 $lang['password'] = 'Lozinka';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Zatvaranje privatnog kanala:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Aktivnost:';
 $lang['helpItemCodeAction'] = '/action tekst';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Aktivnost u privatnoj poruci:';
 $lang['helpItemCodeDescribe'] = '/describe korisnik tekst';
 $lang['helpItemDescIgnore'] = 'Ignoriranje/prihvaćanje poruka od korisnika:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'Bacanje kocke:';
 $lang['helpItemCodeRoll'] = '/roll [broj]d[strane]';
 $lang['helpItemDescNick'] = 'Promjena korisničkog imena:';
 $lang['helpItemCodeNick'] = '/nick korisnik';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Postavke';
 $lang['settingsBBCode'] = 'Omogući BB kôd:';
 $lang['settingsBBCodeImages'] = 'Omogući BB kôd za slike:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'Zvuk za odjavljivanje i poruke napuštanja kanala
 $lang['settingsSoundChatBot'] = 'Zvuk za poruke brbljobota:';
 $lang['settingsSoundError'] = 'Zvuk za poruke pogreške:';
 $lang['settingsSoundPrivate'] = 'Zvuk za poruke privatni:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Treptanje naslova prozora kod novih poruka:';
 $lang['settingsBlinkInterval'] = 'Trajanje treptanja (u milisekundama):';
 $lang['settingsBlinkIntervalNumber'] = 'Broj treptanja:';

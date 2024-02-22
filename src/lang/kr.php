@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = '대화명';
 $lang['password'] = '비밀번호';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = '개인방 닫기:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = '명령 설명:';
 $lang['helpItemCodeAction'] = '/action 설명내용';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = '귓속말로 명령 설명:';
 $lang['helpItemCodeDescribe'] = '/describe 대화명 설명내용';
 $lang['helpItemDescIgnore'] = '대화 차단/허용:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = '주사위 굴리기:';
 $lang['helpItemCodeRoll'] = '/roll [굴린횟수]d[면수]';
 $lang['helpItemDescNick'] = '대화명 변경:';
 $lang['helpItemCodeNick'] = '/nick 대화명';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = '설정';
 $lang['settingsBBCode'] = 'BBCode 사용:';
 $lang['settingsBBCodeImages'] = '이미지 BBCode 사용:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = '로그아웃, 채널 접속해제 소리:';
 $lang['settingsSoundChatBot'] = '시스템 메시지 소리:';
 $lang['settingsSoundError'] = '오류 소리:';
 $lang['settingsSoundPrivate'] = 'Sound for private messages:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = '새로운 메시지 도착 시 타이틀 깜빡임:';
 $lang['settingsBlinkInterval'] = '밀리세컨드 단위 깜빡임 속도:';
 $lang['settingsBlinkIntervalNumber'] = '깜빡임 횟수:';

@@ -594,6 +594,9 @@ var ajaxChat = {
 						case '/privmsgto':
 							this.playSound(this.settings['soundPrivate']);
 							break;
+						case '/broadcast':
+							this.playSound(this.settings['soundBroadcast']);
+							break;
 						default:
 							this.playSound(this.settings['soundSend']);
 					}
@@ -1052,6 +1055,9 @@ var ajaxChat = {
 					+ '<li><a href="javascript:ajaxChat.insertMessageWrapper(\'/action \');">'
 					+ this.lang['userMenuAction']
 					+ '</a></li>'
+					+ '<li><a href="javascript:ajaxChat.insertMessageWrapper(\'/broadcast \');">'
+					+ this.lang['userMenuBroadcast']
+					+ '</a></li>'
 					+ '<li><a href="javascript:ajaxChat.insertMessageWrapper(\'/roll \');">'
 					+ this.lang['userMenuRoll']
 					+ '</a></li>'
@@ -1149,6 +1155,10 @@ var ajaxChat = {
 		if(messageText.indexOf('/action') === 0 || messageText.indexOf('/privaction') === 0) {
 			userClass += ' action';
 			colon = ' ';
+		}
+		if (messageText.indexOf('/broadcast') === 0 || messageText.indexOf('/broadcast') === 0 || messageText.indexOf('/broadcast') === 0) {
+			rowClass += ' broadcast';
+			colon = ' !!! ';
 		}
 		if (messageText.indexOf('/privmsg') === 0 || messageText.indexOf('/privmsgto') === 0 || messageText.indexOf('/privaction') === 0) {
 			rowClass += ' private';
@@ -1654,6 +1664,14 @@ var ajaxChat = {
 							+ '[/color]';
 				}
 				break;
+			case '/broadcast':
+				if(textParts.length > 1) {
+					return	textParts[0]+' '
+							+ '[color='+this.settings['fontColor']+']'
+							+ textParts.slice(1).join(' ')
+							+ '[/color]';
+				}
+				break;
 		}
 		return text;
 	},
@@ -2036,6 +2054,8 @@ var ajaxChat = {
 					return this.replaceCommandPrivActionTo(textParts);
 				case '/action':
 					return this.replaceCommandAction(textParts);
+				case '/broadcast':
+					return this.replaceCommandBroadcast(textParts);
 				case '/invite':
 					return this.replaceCommandInvite(textParts);
 				case '/inviteto':
@@ -2170,6 +2190,16 @@ var ajaxChat = {
 		actionText = this.replaceHyperLinks(actionText);
 		actionText = this.replaceEmoticons(actionText);
 		return	'<span class="action">'
+				+ actionText
+				+ '</span>';
+	},
+
+	replaceCommandBroadcast: function(textParts) {
+		var actionText = textParts.slice(1).join(' ');
+		actionText = this.replaceBBCode(actionText);
+		actionText = this.replaceHyperLinks(actionText);
+		actionText = this.replaceEmoticons(actionText);
+		return	'<span class="alert">'
 				+ actionText
 				+ '</span>';
 	},

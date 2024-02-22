@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Benutzername';
 $lang['password'] = 'Passwort';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Privaten Kanal schließen:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Aktion beschreiben:';
 $lang['helpItemCodeAction'] = '/action Text';
+$lang['helpItemDescBroadcast'] = 'Rundruf senden:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescClear'] = 'Nachrichtenfenster leeren (wiederherstellen mit F5):';
 $lang['helpItemCodeClear'] = '/clear';
 $lang['helpItemDescDescribe'] = 'Aktion in privater Nachricht beschreiben:';
@@ -111,6 +113,7 @@ $lang['settingsSoundLeave'] = 'Klang für Logouts und das Verlassen von Räumen:
 $lang['settingsSoundChatBot'] = 'Klang für Chatbot Nachrichten:';
 $lang['settingsSoundError'] = 'Klang für Fehlermeldungen:';
 $lang['settingsSoundPrivate'] = 'Klang für private Nachrichten:';
+$lang['settingsSoundBroadcast'] = 'Klang für Rundruf:';
 $lang['settingsBlink'] = 'Blinkender Fenstertitel bei neuen Nachrichten:';
 $lang['settingsBlinkInterval'] = 'Blink-Intervall in Millisekunden:';
 $lang['settingsBlinkIntervalNumber'] = 'Anzahl der Blink-Intervalle:';

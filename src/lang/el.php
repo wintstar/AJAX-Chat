@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Όνομα χρήστη';
 $lang['password'] = 'Κωδικός';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Κλεισιμό ενώς πριβέ κανα
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Περιγραφή ενέργειας:';
 $lang['helpItemCodeAction'] = '/action κείμενο';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Περιγραφή ενέργειας με προσωπικό μήνυμα:';
 $lang['helpItemCodeDescribe'] = '/describe όνομα_χρήστη κείμενο';
 $lang['helpItemDescIgnore'] = 'Αγνόηση/αποδοχή μηνυμάτων από χρήστη:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Κύλιση ζαριών:';
 $lang['helpItemCodeRoll'] = '/roll [αριθμός]d[πλευρές]';
 $lang['helpItemDescNick'] = 'Αλλαγή ονόματος:';
 $lang['helpItemCodeNick'] = '/nick όνομα_χρήστη';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Ρυθμίσεις';
 $lang['settingsBBCode'] = 'Ενεργοποίηση BBCode:';
 $lang['settingsBBCodeImages'] = 'Enable image BBCode:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Ήχος για μηνύματα αποχώρισ
 $lang['settingsSoundChatBot'] = 'Ήχος για μηνύματα του chatbot:';
 $lang['settingsSoundError'] = 'Ήχος για μηνύματα λάθους:';
 $lang['settingsSoundPrivate'] = 'Ήχος για προσωπικά μηνύματα:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Αναβόσβημα τίτλου σε νέα μηνύματα:';
 $lang['settingsBlinkInterval'] = 'Ρυθμός αναβοσβήματος σε χιλιοστά του δευτερόλεπτου:';
 $lang['settingsBlinkIntervalNumber'] = 'Αριθμός αναβοσβήματος οθόνης:';

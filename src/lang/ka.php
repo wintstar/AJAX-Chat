@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'მეტსახელი';
 $lang['password'] = 'პაროლი';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'დახურე პირადი არ�
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'აღწერე ქმედება:';
 $lang['helpItemCodeAction'] = '/action ტექსტი';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'აღწერე ქმედება პირად გზავნილში:';
 $lang['helpItemCodeDescribe'] = '/describe მეტსახელი  ტექსტი';
 $lang['helpItemDescIgnore'] = 'მიიღე/გააიგნორირე გზავნილები წევრისგან:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'კამათლების გაგორე�
 $lang['helpItemCodeRoll'] = '/roll [რიცხვი]d[გვერდი]';
 $lang['helpItemDescNick'] = 'მეტსახელის შეცვლა:';
 $lang['helpItemCodeNick'] = '/nick მეტსახელი';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'პარამეტრები';
 $lang['settingsBBCode'] = 'ჩართე BBCode:';
 $lang['settingsBBCodeImages'] = 'ჩართე ნახატის BBCode:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'გასვლის და არხის მ�
 $lang['settingsSoundChatBot'] = 'ჩატბოტის გზავნილების ხმა:';
 $lang['settingsSoundError'] = 'შედომის გზავნილების ხმა:';
 $lang['settingsSoundPrivate'] = 'Sound for private messages:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'ახალ გზავნილზე ფანჯრის დასახელების ციმციმი:';
 $lang['settingsBlinkInterval'] = 'ციმციმის ინტერვალი მილიწამებში:';
 $lang['settingsBlinkIntervalNumber'] = 'ციმციმის ინტერვალების რაოდენობა:';

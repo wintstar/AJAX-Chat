@@ -7,7 +7,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Brugernavn';
 $lang['password'] = 'Adgangskode';
@@ -62,6 +62,8 @@ $lang['helpItemDescQueryClose'] = 'Luk en privat kanal:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'beskrivende handling:';
 $lang['helpItemCodeAction'] = '/action Tekst';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Beskrivende handling i privat besked:';
 $lang['helpItemCodeDescribe'] = '/describe brugernavn Tekst';
 $lang['helpItemDescIgnore'] = 'Ignorer/accepter beskeder fra bruger:';
@@ -86,6 +88,7 @@ $lang['helpItemDescRoll'] = 'kast terninger:';
 $lang['helpItemCodeRoll'] = '/roll [antal]d[sider]';
 $lang['helpItemDescNick'] = 'Skift brugernavn:';
 $lang['helpItemCodeNick'] = '/nick brugernavn';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Indstillinger';
 $lang['settingsBBCode'] = 'Aktiver BBCode:';
 $lang['settingsBBCodeImages'] = 'Aktiver billede BBCode:';
@@ -108,6 +111,7 @@ $lang['settingsSoundLeave'] = 'Lyd ved login og forlad kanal beskeder:';
 $lang['settingsSoundChatBot'] = 'Lyd ved ChatBot beskeder:';
 $lang['settingsSoundError'] = 'Lyd ved fejlmeddelse:';
 $lang['settingsSoundPrivate'] = 'Lyd ved privat beskeder:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Blink vindue titel ved nye beskeder:';
 $lang['settingsBlinkInterval'] = 'Blink interval i millisekonder:';
 $lang['settingsBlinkIntervalNumber'] = 'Antal blink intervaler:';

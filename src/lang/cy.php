@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Enw';
 $lang['password'] = 'Cyfrinair';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Ceuwch sianel breifat:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Disgrifiwch weithred:';
 $lang['helpItemCodeAction'] = '/action Testun';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Disgrifiwch weithred mewn neges breifat:';
 $lang['helpItemCodeDescribe'] = '/describe Testun Enw';
 $lang['helpItemDescIgnore'] = 'Anwybyddu/derbyn negeseuon o ddefnyddiwr:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Rholio dis:';
 $lang['helpItemCodeRoll'] = '/roll [nifer]d[ochrau]'; //posib angen newid hwn
 $lang['helpItemDescNick'] = 'Newid enw:';
 $lang['helpItemCodeNick'] = '/nick Enw';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Gosodiadau';
 $lang['settingsBBCode'] = 'Galluogi BBCode:';
 $lang['settingsBBCodeImages'] = 'Galluogi delweddau BBCode:';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Sain am allgofnodi a negeseuon gadael sianeli:';
 $lang['settingsSoundChatBot'] = 'Sain am negeseuon sgwrsbot:';
 $lang['settingsSoundError'] = 'Sain am wallnegeseuon:';
 $lang['settingsSoundPrivate'] = 'Sain am negeseuon preifat:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Fflachio teitl y ffenestr ar negeseuon newydd:';
 $lang['settingsBlinkInterval'] = 'Cyfwng fflachio mewn milieiliadau:';
 $lang['settingsBlinkIntervalNumber'] = 'Nifer y cyfyngau fflachio:';

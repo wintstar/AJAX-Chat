@@ -8,7 +8,7 @@
  * @link https://blueimp.net/ajax/
  */
 
-$lang = array();
+$lang = [];
 $lang['title'] = 'AJAX Chat';
 $lang['userName'] = 'Usuário';
 $lang['password'] = 'Senha';
@@ -63,6 +63,8 @@ $lang['helpItemDescQueryClose'] = 'Fechar um canal privado:';
 $lang['helpItemCodeQueryClose'] = '/query';
 $lang['helpItemDescAction'] = 'Descrever uma ação:';
 $lang['helpItemCodeAction'] = '/action Texto';
+$lang['helpItemDescBroadcast'] = 'Send broadcast call:';
+$lang['helpItemCodeBroadcast'] = '/broadcast Text';
 $lang['helpItemDescDescribe'] = 'Descrever uma ação em uma mensagem privada:';
 $lang['helpItemCodeDescribe'] = '/describe Usuário Texto';
 $lang['helpItemDescIgnore'] = 'Ignorar/Aceitar mensagens de um usuário:';
@@ -87,6 +89,7 @@ $lang['helpItemDescRoll'] = 'Jogar dados:';
 $lang['helpItemCodeRoll'] = '/roll [números]d[lados]';
 $lang['helpItemDescNick'] = 'Trocar seu nome de usuário:';
 $lang['helpItemCodeNick'] = '/nick Nome';
+$lang['returnToChat'] = 'Return to chat';
 $lang['settings'] = 'Configurações';
 $lang['settingsBBCode'] = 'Permitir BBCode:';
 $lang['settingsBBCodeImages'] = 'Permitir BBCode image (imagem):';
@@ -109,6 +112,7 @@ $lang['settingsSoundLeave'] = 'Som para logout e avisos de saida em canais:';
 $lang['settingsSoundChatBot'] = 'Som para mensagens do chatbot:';
 $lang['settingsSoundError'] = 'Som para mensagens de erro:';
 $lang['settingsSoundPrivate'] = 'Som para mensagens do privado:';
+$lang['settingsSoundBroadcast'] = 'Sound for broadcast call:';
 $lang['settingsBlink'] = 'Título da janela do piscamento em mensagens novas:';
 $lang['settingsBlinkInterval'] = 'Intervalo do piscamento nos milissegundos:';
 $lang['settingsBlinkIntervalNumber'] = 'Número de intervalos do piscamento:';
