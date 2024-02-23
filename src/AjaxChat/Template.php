@@ -66,7 +66,7 @@ class Template
 	{
 		switch ($tagData[1]) {
 			case 'AJAX_CHAT_URL':
-				return $this->ajaxChat->htmlEncode($this->ajaxChat->getChatURL());
+				return $this->ajaxChat->htmlEncode(AJAX_CHAT_URL);
 
 			case 'LANG':
 				return $this->ajaxChat->htmlEncode($this->ajaxChat->getLang((isset($tagData[2]) ? $tagData[2] : null)));
@@ -205,7 +205,7 @@ class Template
 		$styleSheets = '';
 		foreach ($this->ajaxChat->getConfig('styleAvailable') as $style) {
 			$alternate = ($style == $this->ajaxChat->getConfig('styleDefault')) ? '' : 'alternate ';
-			$styleSheets .= '<link rel="'.$alternate.'stylesheet" type="text/css" href="' . $this->ajaxChat->htmlEncode($this->ajaxChat->getChatURL()) . 'css/'.rawurlencode($style).'.css" title="'.$this->ajaxChat->htmlEncode($style).'"/>';
+			$styleSheets .= '<link rel="'.$alternate.'stylesheet" type="text/css" href="' . $this->ajaxChat->htmlEncode(AJAX_CHAT_URL) . 'css/'.rawurlencode($style).'.css" title="'.$this->ajaxChat->htmlEncode($style).'"/>';
 		}
 		return $styleSheets;
 	}

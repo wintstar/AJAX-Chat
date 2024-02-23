@@ -50,7 +50,7 @@ class CustomAJAXChat extends AJAXChat {
 				if($user->data['is_registered']) {
 					return '';
 				} else {
-					return $this->htmlEncode($this->getRequestVar('view') == 'logs' ? $this->getChatURL().'?view=logs' : $this->getChatURL());
+					return $this->htmlEncode($this->getRequestVar('view') == 'logs' ? AJAX_CHAT_URL.'?view=logs' : AJAX_CHAT_URL);
 				}
 
 			default:
