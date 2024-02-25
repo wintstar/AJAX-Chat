@@ -1,16 +1,16 @@
 <div id="ajaxChatContent">
-	<script src="./js/chat.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="./js/custom.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="./js/shoutbox.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="./js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
-	<script src="./js/config.js" type="text/javascript" charset="UTF-8"></script>
-	<div id="ajaxChatChatList" onload="initializeLoginPage();"></div>
+	<script src="[AJAX_CHAT_URL/]js/chat.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="[AJAX_CHAT_URL/]js/custom.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="[AJAX_CHAT_URL/]js/shoutbox.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="[AJAX_CHAT_URL/]js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
+	<script src="[AJAX_CHAT_URL/]js/config.js" type="text/javascript" charset="UTF-8"></script>
+	<div id="ajaxChatChatList"></div>
 	<div id="ajaxChatInputFieldContainer" class="[CLASS_WRITEABLE/]">
 		<input id="ajaxChatInputField" type="text" maxlength="[MESSAGE_TEXT_MAX_LENGTH/]" onkeydown="ajaxChat.handleInputFieldKeyDown(event);" onkeyup="ajaxChat.handleInputFieldKeyUp(event);"/>
 	</div>
 	<script type="text/javascript">
 		// <![CDATA[
-			var ajax_chat_url = "./";
+			var ajax_chat_url = "[AJAX_CHAT_URL/]";
 
 			ajaxChatConfig.ajaxURL = './?ajax=true&shoutbox=true';
 
