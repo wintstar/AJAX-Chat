@@ -38,6 +38,12 @@ $dbTableNames['invitations']	= 'ajax_chat_invitations';
 /*
  * Configurations:
  */
+
+// If root url not correct (css and js files are not found), then enter the root url here.
+// e.g. 'https://yoursite.com', 'https://www.yoursite.com' !no slash at the end!
+// If everything is correct, leave it at 'null;'.
+$root_url = null;
+
 // The Integrations Directory src/AjaxChat/Integrations/*
 // Standard = 'standalone' (* e.g. 'phpbb3', will be integrate with phpBB):
 $integration = 'standalone';

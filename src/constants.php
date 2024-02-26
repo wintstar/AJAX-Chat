@@ -9,6 +9,8 @@
  * @link https://blueimp.net/ajax/
  */
 
+ $config = \AjaxChat\Loader::readConfigFile();
+
 // Define Chat url
 define('AJAX_CHAT_URL', getURL());
 
@@ -61,7 +63,10 @@ function getURL(): string
 	$exploded = explode('.', $parsed['host']);
 	$is_subdomain = (count($exploded) > 2);
 
-	if ($_SERVER['SERVER_NAME'] == 'localhost') {
+	if ($config['root_url'] != null) {
+		// if manuell set root url
+		return $config['root_url'] . '/';
+	} elseif ($_SERVER['SERVER_NAME'] == 'localhost') {
 		// if Server localhost:
 		return $url . basename($root) . '/';
 	} elseif ($is_subdomain == true) {
