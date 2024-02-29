@@ -33,6 +33,8 @@ define('AJAX_CHAT_GUEST', 0);
  */
 function getURL(): string
 {
+	global $config;
+
 	$secure = false;
 
 	// Check is https or not.
